@@ -1,38 +1,67 @@
-<link href='http://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
-
-
-#ipython-main-app {
-    position: relative;
-}
-#jupyter-main-app {
-    position: relative;
-}
-.CodeMirror{
-    font-family: "Source Code Pro", source-code-pro,Consolas, monospace;
-    font-size: 12pt;
-}
-.prompt{
-    display: None;
-}
-.cm-header {
-    font-size: 80%;
-    font-family: "times";
-}
-div.text_cell_render {
-    font-family: "times";
-    font-size: 12pt;
-}
-.output_png {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.warning{
-    color: rgb( 240, 20, 20 )
+<style>
+    @font-face {
+        font-family: "Computer Modern";
+        src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
     }
+    #notebook { /* centers the page content */
+    padding-left:8%;
+    padding-right:9%;
+    }
+    #ipython-main-app {
+        position: relative;
+    }
+    #jupyter-main-app {
+        position: relative;
+    }
+    div.cell{
+        width:98%;
+        margin-left:4% !important;*/
+        margin-right:4%;
+    }
+    h1 {
+        font-family: "Charis SIL", Palatino, serif;
+    }
+    h4{
+        margin-top:12px;
+        margin-bottom: 3px;
+       }
+    div.text_cell_render{
+        font-family: Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        line-height: 145%;
+        font-size: 12pt;
+        width:99%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .output_png {
+        display: block;/*table-cell;*/
+        text-align: center;
+        align: center;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    div.output_area pre {font-weight: normal; text-align: justify; }
+    .warning{
+        color: rgb( 240, 20, 20 )
+        }
+    .CodeMirror{
+            font-family: "Source Code Pro", source-code-pro,Consolas, monospace;
+    }
+    .prompt{
+        display: None;
+    }
+    .text_cell_render h5 {
+        font-weight: 300;
+        font-size: 16pt;
+        color: #4057A1;
+        font-style: italic;
+        margin-bottom: .5em;
+        margin-top: 0.5em;
+        display: block;
+    }
+</style>
 <script>
     MathJax.Hub.Config({
                         TeX: {
