@@ -29,6 +29,8 @@ Jupyter notebook --no-browser --port=8889
 ssh -N -f -L localhost:8889:localhost:8888 tuc41004@vav6.chem.temple.edu  
 
 # Finally, open a browser on your local machine and type: localhost:[local port #] e.g., localhost:8888
+
+---------------------------------------------------------------------------------------------------------------------------------
 # NOTE: (IF python 2)
 # Enter in the token from the remote terminal inside the prompt on your local browser. 
 example:
