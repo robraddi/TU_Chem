@@ -26,7 +26,7 @@ Jupyter notebook --no-browser --port=8889
 # Then, on the local computer we need to secure a connection with the remote location specifying the port number of the remote and the local followed by your username@hostname.
 # e.g., ssh -N -f -L localhost:[remote port #]:localhost:[local port #] username@hostname  
 ## Local terminal:
-ssh -N -f -L localhost:8889:localhost:8888 tuc41004@vav6.chem.temple.edu  
+ssh -N -f -L localhost:8889:localhost:8888 rraddi@vav6.chem.temple.edu  
 
 # Finally, open a browser on your local machine and type: localhost:[local port #] e.g., localhost:8888
 
@@ -37,8 +37,8 @@ example:
 
 [I 08:47:55.211 NotebookApp] Writing notebook server cookie secret to /run/user/21006/jupyter/notebook_cookie_secret
 [I 08:48:01.859 NotebookApp] JupyterLab beta preview extension loaded from /home/...
-[I 08:48:01.859 NotebookApp] JupyterLab application directory is /home/tuc41004/anaconda2/share/jupyter/lab
-[I 08:48:01.906 NotebookApp] Serving notebooks from local directory: /home/tuc41004
+[I 08:48:01.859 NotebookApp] JupyterLab application directory is /home/rraddi/anaconda2/share/jupyter/lab
+[I 08:48:01.906 NotebookApp] Serving notebooks from local directory: /home/rraddi
 [I 08:48:01.906 NotebookApp] 0 active kernels
 [I 08:48:01.906 NotebookApp] The Jupyter Notebook is running at:
 [I 08:48:01.907 NotebookApp] http://localhost:8888/?token=2fb1f102fdb595adba129862ce35sdavadsgv5347661efa1f050
