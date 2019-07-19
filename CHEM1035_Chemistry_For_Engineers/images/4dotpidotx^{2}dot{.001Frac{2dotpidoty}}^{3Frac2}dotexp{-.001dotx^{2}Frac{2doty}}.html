@@ -8,24 +8,17 @@
 <body>
 
 
-<link href="js/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">    
-<script src="js/require.min.v2.3.4.js"  data-main='./js/' ></script>
-<script>
-    require.config({
-      map: {
-        '*': {
-          'ipyvolume': 'ipyvolume_v0.5.2',
-        }
-      }})
-</script>
 
-<script src="js/embed-amd_v0.14.0.js"></script>
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js" crossorigin="anonymous"></script>
+
 <script type="application/vnd.jupyter.widget-state+json">
 {
   "version_major": 2,
   "version_minor": 0,
   "state": {
-    "13731b04c44746e4bb2e1b5c62be3e5d": {
+    "181c6486f6b7471c82f64195ff296718": {
       "model_name": "VBoxModel",
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "1.5.0",
@@ -40,12 +33,12 @@
         "_view_name": "VBoxView",
         "box_style": "",
         "children": [
-          "IPY_MODEL_ad4463be1a114f7483b8c18685d02710"
+          "IPY_MODEL_b2524028f67b4212a264016394e6abba"
         ],
-        "layout": "IPY_MODEL_224b6c92e30743cea74b8fda320a3872"
+        "layout": "IPY_MODEL_623ad2b275c347d6921970f08a39404f"
       }
     },
-    "ad4463be1a114f7483b8c18685d02710": {
+    "b2524028f67b4212a264016394e6abba": {
       "model_name": "FigureModel",
       "model_module": "ipyvolume",
       "model_module_version": "~0.5.2",
@@ -61,7 +54,7 @@
         "ambient_coefficient": 0.5,
         "animation": 1000.0,
         "animation_exponent": 1.0,
-        "camera": "IPY_MODEL_8b9f251b3ee84d3ab27f11b96750ad0f",
+        "camera": "IPY_MODEL_70bc5ceb3c55459bb4878528a2c34208",
         "camera_center": [
           0.0,
           0.0,
@@ -75,8 +68,8 @@
         "displayscale": 1.0,
         "downscale": 1,
         "eye_separation": 6.4,
-        "height": 400,
-        "layout": "IPY_MODEL_a968991f0c154de8ac76a7bf08719a2b",
+        "height": 500,
+        "layout": "IPY_MODEL_356d263c52074d79ad5be6696a1a6493",
         "matrix_projection": [
           0.0,
           0.0,
@@ -114,14 +107,14 @@
           0.0
         ],
         "meshes": [
-          "IPY_MODEL_054e49916b7641cfa542703037b3052a",
-          "IPY_MODEL_1faeb87f26524d0aa792803a65e57fa7"
+          "IPY_MODEL_36affe5f5c814eee8d708b6bc955c5e0",
+          "IPY_MODEL_256a4470ad2f4a2b9aed9d91f7445cef"
         ],
         "mouse_mode": "normal",
         "panorama_mode": "no",
         "render_continuous": false,
         "scatters": [],
-        "scene": "IPY_MODEL_aaa8eb207ec7425aa264f70dca8a63bd",
+        "scene": "IPY_MODEL_4c9a16f22893403398e4cbb99add98cb",
         "selection_mode": "replace",
         "selector": "lasso",
         "show": "Volume",
@@ -156,7 +149,7 @@
           "axes.x.color": "orange"
         },
         "volumes": [],
-        "width": 300,
+        "width": 400,
         "xlabel": "\\nu(m/s)",
         "xlim": [
           0.0,
@@ -174,7 +167,7 @@
         ]
       }
     },
-    "8b9f251b3ee84d3ab27f11b96750ad0f": {
+    "70bc5ceb3c55459bb4878528a2c34208": {
       "model_name": "PerspectiveCameraModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -332,7 +325,7 @@
         "zoom": 1.0
       }
     },
-    "a968991f0c154de8ac76a7bf08719a2b": {
+    "356d263c52074d79ad5be6696a1a6493": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -384,7 +377,7 @@
         "width": null
       }
     },
-    "054e49916b7641cfa542703037b3052a": {
+    "36affe5f5c814eee8d708b6bc955c5e0": {
       "model_name": "MeshModel",
       "model_module": "ipyvolume",
       "model_module_version": "~0.5.2",
@@ -397,9 +390,9 @@
         "_view_module_version": "~0.5.2",
         "_view_name": "MeshView",
         "color": "orange",
-        "line_material": "IPY_MODEL_85aea3de343a4b898e89f90248b91dd9",
+        "line_material": "IPY_MODEL_655e8797ad854402945f5799934a6eab",
         "lines": null,
-        "material": "IPY_MODEL_6d1705262d474874a7519f3ef8b0879f",
+        "material": "IPY_MODEL_1076755308cb4243854d3766bcdc72fe",
         "sequence_index": 0,
         "texture": null,
         "triangles": [
@@ -478,7 +471,7 @@
         }
       ]
     },
-    "85aea3de343a4b898e89f90248b91dd9": {
+    "655e8797ad854402945f5799934a6eab": {
       "model_name": "ShaderMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -538,7 +531,7 @@
         "wireframeLinewidth": 1.0
       }
     },
-    "6d1705262d474874a7519f3ef8b0879f": {
+    "1076755308cb4243854d3766bcdc72fe": {
       "model_name": "ShaderMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -598,7 +591,7 @@
         "wireframeLinewidth": 1.0
       }
     },
-    "1faeb87f26524d0aa792803a65e57fa7": {
+    "256a4470ad2f4a2b9aed9d91f7445cef": {
       "model_name": "MeshModel",
       "model_module": "ipyvolume",
       "model_module_version": "~0.5.2",
@@ -611,7 +604,7 @@
         "_view_module_version": "~0.5.2",
         "_view_name": "MeshView",
         "color": "red",
-        "line_material": "IPY_MODEL_b4a1869b257c4da7b8cfe61559e6b5ff",
+        "line_material": "IPY_MODEL_5b99cfb07c2c4b26bbb45174c21234d0",
         "lines": [
           {
             "dtype": "uint32",
@@ -621,7 +614,7 @@
             ]
           }
         ],
-        "material": "IPY_MODEL_16a55cfc185c4d7fbf63842e4859a3cf",
+        "material": "IPY_MODEL_2d8ccbca29d1496cb86d86bfe25e335c",
         "sequence_index": 0,
         "texture": null,
         "triangles": null,
@@ -692,7 +685,7 @@
         }
       ]
     },
-    "b4a1869b257c4da7b8cfe61559e6b5ff": {
+    "5b99cfb07c2c4b26bbb45174c21234d0": {
       "model_name": "ShaderMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -752,7 +745,7 @@
         "wireframeLinewidth": 1.0
       }
     },
-    "16a55cfc185c4d7fbf63842e4859a3cf": {
+    "2d8ccbca29d1496cb86d86bfe25e335c": {
       "model_name": "ShaderMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -812,7 +805,7 @@
         "wireframeLinewidth": 1.0
       }
     },
-    "aaa8eb207ec7425aa264f70dca8a63bd": {
+    "4c9a16f22893403398e4cbb99add98cb": {
       "model_name": "SceneModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -932,7 +925,7 @@
         "visible": true
       }
     },
-    "224b6c92e30743cea74b8fda320a3872": {
+    "623ad2b275c347d6921970f08a39404f": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
@@ -988,10 +981,9 @@
 }
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "13731b04c44746e4bb2e1b5c62be3e5d"}
+{"version_major": 2, "version_minor": 0, "model_id": "181c6486f6b7471c82f64195ff296718"}
 </script>
 
-        
 
 </body>
 </html>
