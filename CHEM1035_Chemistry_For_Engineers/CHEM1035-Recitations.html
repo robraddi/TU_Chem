@@ -13981,7 +13981,7 @@ As temperature increases, the width of the distribution also increase. These tre
 </table>
 <hr>
 <h2 id="Wave-particle-Duality">Wave-particle Duality<a class="anchor-link" href="#Wave-particle-Duality">&#182;</a></h2><p>Einstein figured out a very intriguing notion during his pursuit of the theory of relativity. One major finding was that light carries momentum, $E = pc$ <strong>(FOR LIGHT PARTICLES ONLY)</strong>. Hence, light is particle-like.</p>
-<p>In 1923 de Broglie developed a relation that describes matter having wave-like properties.  We know that momentum is the product of mass and velocity, $p=mv$.</p>
+<p>In 1923 de Broglie developed a relation that describes matter (proton, electron, baseball, etc.) having wave-like properties.  We know that momentum is the product of mass and velocity, $p=mv$.</p>
 $$ \lambda = \frac{h}{p}  $$<p>where momentum, $p$ is multiplied by Planck's constant, h ($6.626*10^{-34}$ J s) to obtain the wavelength, $\lambda$.</p>
 <p><strong>Example: Baseball (0.1 kg) is thrown 10 m/s (~22 mph)</strong></p>
 <p>Then,</p>
@@ -14072,8 +14072,8 @@ $$ m = -l,-l+1,...,l$$<table>
 <h5 id="Spin-quantum-number,-$m_{s}$">Spin quantum number, $m_{s}$<a class="anchor-link" href="#Spin-quantum-number,-$m_{s}$">&#182;</a></h5>$$\text{possible values are ±1/2}$$<h5 id="Pauli's-Principle:">Pauli's Principle:<a class="anchor-link" href="#Pauli's-Principle:">&#182;</a></h5><p>No two electrons can have the same quantum numbers.</p>
 <hr>
 <h2 id="Intro-to-Quantum-Mechanics">Intro to Quantum Mechanics<a class="anchor-link" href="#Intro-to-Quantum-Mechanics">&#182;</a></h2><p>The wavefunction, $\psi(x)$</p>
-$$ \psi(x) = Asin(\frac{n\pi x}{L}) $$<h4 id="Time-Independent-$Schr\ddot{o}dinger$-Equation">Time-Independent $Schr\ddot{o}dinger$ Equation<a class="anchor-link" href="#Time-Independent-$Schr\ddot{o}dinger$-Equation">&#182;</a></h4>$$\widehat{H}\psi(x) = E\psi(x)$$$$ \text{Operator $F^{\underline{n}}$ = Eigenvalue $F^{\underline{n}}$} $$<h4 id="Hamiltonian-Operator-in-1-D">Hamiltonian Operator in 1-D<a class="anchor-link" href="#Hamiltonian-Operator-in-1-D">&#182;</a></h4>$$ \widehat{H} = -\frac{\hbar}{2m}(\frac{\partial^{2}}{\partial x^{2}}) + V(x)$$<p>Let the kinetic energy and the potential energy be defined as the following:</p>
-$$ K.E. = -\frac{\widehat{p}^{2}}{2m} = -\frac{\hbar^{2}}{2m}(\frac{\partial^{2}}{\partial x^{2}}),$$<p>and Hooke's law (springs) will define the potential energy of our bonds.</p>
+$$ \psi(x) = Asin(\frac{n\pi x}{L}) $$<h4 id="Time-Independent-$Schr\ddot{o}dinger$-Equation">Time-Independent $Schr\ddot{o}dinger$ Equation<a class="anchor-link" href="#Time-Independent-$Schr\ddot{o}dinger$-Equation">&#182;</a></h4>$$\hat{H}\psi(x) = E\psi(x)$$$$ \text{Operator $\space f^{\underline{n}}$ = Eigenvalue $\space f^{\underline{n}}$} $$<h4 id="Hamiltonian-Operator-in-1-D">Hamiltonian Operator in 1-D<a class="anchor-link" href="#Hamiltonian-Operator-in-1-D">&#182;</a></h4>$$ \hat{H} = -\frac{\hbar^{2}}{2m}(\frac{\partial^{2}}{\partial x^{2}}) + V(x)$$<p>Let the kinetic energy and the potential energy be defined as the following:</p>
+$$ E_{k} = \frac{1}{2}mv^{2} = \frac{\hat{p}^{2}}{2m} \equiv -\frac{\hbar^{2}}{2m}(\frac{\partial^{2}}{\partial x^{2}}),$$<p>and Hooke's law (springs) will define the potential energy of our bonds.</p>
 $$F = -K_{f}x,$$<p>where $ F = -\frac{dV(X)}{dx} \implies Fdx = dV(x)$</p>
 $$ \int Fdx = \int -K_{f}xdx = \int dV(x) $$$$ V(x) = \frac{1}{2}k_{f}x^{2} $$<p>Recall:</p>
 <p><img src="http://jwilson.coe.uga.edu/emt668/emat6680.f99/challen/assignment2/image30.gif" height="300" width="300" align="center" ></p>
@@ -14081,7 +14081,7 @@ $$ \int Fdx = \int -K_{f}xdx = \int dV(x) $$$$ V(x) = \frac{1}{2}k_{f}x^{2} $$<p
 <p><br></p>
 \begin{equation}
 \begin{aligned}
-  \widehat{H}\psi(x)\hspace{0.5cm} = \hspace{0.5cm} -\frac{\hbar^{2}}{2m}(\frac{\partial^{2} \psi(x)}{\partial x^{2}})\hspace{0.5cm}&amp;&amp; +\hspace{0.5cm} V(x)\psi(x)\\
+  \hat{H}\psi(x)\hspace{0.5cm} = \hspace{0.5cm} -\frac{\hbar^{2}}{2m}(\frac{\partial^{2} \psi(x)}{\partial x^{2}})\hspace{0.5cm}&amp;&amp; +\hspace{0.5cm} V(x)\psi(x)\\
 \label{aligned:Pn}
  \text{Kinetic Energy} &amp;&amp; \text{Potential Energy}
 \end{aligned}
@@ -14091,7 +14091,7 @@ $$ \int Fdx = \int -K_{f}xdx = \int dV(x) $$$$ V(x) = \frac{1}{2}k_{f}x^{2} $$<p
 <p>we need to plug $Asin(n\pi x/L)$ in for $\psi(x)$ and solve.</p>
 <p>Note that if we take the derivative of $sin(x)$ with respect to x two times, we get back a -$sin(x)$.
 This is called an <strong>eigenfunction of the Hamiltonian</strong>.</p>
-$$\widehat{H}\psi(x) = E\psi(x)$$$$ \widehat{H}\psi(x)\hspace{0.5cm} = \hspace{0.5cm} -\frac{\hbar^{2}}{2m}(\frac{\partial^{2} Asin(\frac{n\pi x}{L})}{\partial x^{2}})\hspace{0.5cm},$$<p>where $\hbar = h/(2\pi)$ and we know that</p>
+$$\hat{H}\psi(x) = E\psi(x)$$$$ \hat{H}\psi(x)\hspace{0.5cm} = \hspace{0.5cm} -\frac{\hbar^{2}}{2m}(\frac{\partial^{2} Asin(\frac{n\pi x}{L})}{\partial x^{2}})\hspace{0.5cm},$$<p>where $\hbar = h/(2\pi)$ and we know that</p>
 $$(\frac{\partial^{2} Asin(\frac{n\pi x}{L})}{\partial x^{2}}) = -\frac{n^{2}}{L^{2}}Asin(\frac{n\pi x}{L}) $$<p>Then,</p>
 $$ E\psi(x) = \frac{h^{2}n^{2}}{8mL^{2}} Asin(\frac{n\pi x}{L}) \implies E = \frac{h^{2}n^{2}}{8mL^{2}}$$
 </div>
