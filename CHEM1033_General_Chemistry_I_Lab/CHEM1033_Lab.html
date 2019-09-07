@@ -13057,7 +13057,31 @@ ul.typeahead-list  > li > a.pull-right {
 
     </style>
 <style type="text/css">
-    <style>
+    
+
+
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13121,16 +13145,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13141,12 +13157,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -13182,7 +13196,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13209,7 +13223,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Temple-University,-General-Chemistry-I-Lab-(CHEM1033)---Fall-2018"><span style="color:Blue">Temple University, General Chemistry I Lab (CHEM1033) - Fall 2018</span><a class="anchor-link" href="#Temple-University,-General-Chemistry-I-Lab-(CHEM1033)---Fall-2018">&#182;</a></h1><h2 id="Experiments">Experiments<a class="anchor-link" href="#Experiments">&#182;</a></h2><h3 id="Teaching-Assistant:-Rob-Raddi">Teaching Assistant: Rob Raddi<a class="anchor-link" href="#Teaching-Assistant:-Rob-Raddi">&#182;</a></h3><script src="custom/gtag.js" type="text/javascript"></script> 
+<h1 id="Temple-University,-General-Chemistry-I-Lab-(CHEM1033)"><span style="color:Blue">Temple University, General Chemistry I Lab (CHEM1033)</span><a class="anchor-link" href="#Temple-University,-General-Chemistry-I-Lab-(CHEM1033)">&#182;</a></h1><h2 id="Experiments">Experiments<a class="anchor-link" href="#Experiments">&#182;</a></h2><h3 id="Teaching-Assistant:-Rob-Raddi">Teaching Assistant: Rob Raddi<a class="anchor-link" href="#Teaching-Assistant:-Rob-Raddi">&#182;</a></h3><script src="custom/gtag.js" type="text/javascript"></script> 
 <script>
     gtag();
 </script><style>
@@ -13286,8 +13300,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1."><span style="color:blue">1.</span><a class="anchor-link" href="#1.">&#182;</a></h4><h1 id="Experiment-#1-Measurement-and-Density">Experiment #1 Measurement and Density<a class="anchor-link" href="#Experiment-#1-Measurement-and-Density">&#182;</a></h1><p>This is experiment is very straightforward.</p>
-<p>Something not so straightforward...</p>
+<h4 id="1."><span style="color:blue">1.</span><a class="anchor-link" href="#1.">&#182;</a></h4><h1 id="Experiment-#1-Measurement-and-Density">Experiment #1 Measurement and Density<a class="anchor-link" href="#Experiment-#1-Measurement-and-Density">&#182;</a></h1><p>This experiment presents us with the historical beauty of <a href="https://en.wikipedia.org/wiki/Archimedes%27_principle">Archimedes principle or water displacement</a> (250 BCE).</p>
 <h4 id="Vernier-Callipers:-Learn-how-to-read-a-Vernier-scale-JavaScript-Applet"><a href="https://chemapps.stolaf.edu/swingjs/site/swingjs/examples/applets/_Vernier_Callipers_.html">Vernier Callipers: Learn how to read a Vernier scale JavaScript Applet</a><a class="anchor-link" href="#Vernier-Callipers:-Learn-how-to-read-a-Vernier-scale-JavaScript-Applet">&#182;</a></h4><p><br></p>
 <h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
@@ -13296,7 +13309,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2."><span style="color:blue">2.</span><a class="anchor-link" href="#2.">&#182;</a></h4><h1 id="Experiment-#2-Determining-Avogadro's-Number">Experiment #2 Determining Avogadro's Number<a class="anchor-link" href="#Experiment-#2-Determining-Avogadro's-Number">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><p>This lab is designed to help students build dimensional analysis skills as well as provide a brief introduction for the organization of molecules at the surface.</p>
+<h4 id="2."><span style="color:blue">2.</span><a class="anchor-link" href="#2.">&#182;</a></h4><h1 id="Experiment-#2-Determining-Avogadro's-Number">Experiment #2 Determining Avogadro's Number<a class="anchor-link" href="#Experiment-#2-Determining-Avogadro's-Number">&#182;</a></h1><p>This lab is designed to help students build dimensional analysis skills as well as provide a brief introduction for the organization of molecules at the surface.</p>
 <h3 id="Calculations">Calculations<a class="anchor-link" href="#Calculations">&#182;</a></h3><h3 id="Part-A.-Determine-Avogadro's-Number-From-the-Density-of-Copper">Part A. Determine Avogadro's Number From the Density of Copper<a class="anchor-link" href="#Part-A.-Determine-Avogadro's-Number-From-the-Density-of-Copper">&#182;</a></h3><h2 align=justify; style='font-size: 12pt;
                   font-family: times;
                   margin-top: 0.0in;
@@ -13351,50 +13364,50 @@ div#notebook {
     <p> $$ V_{\text{Carbon atom}}  = \frac{4}{3}\pi r^{3} = \frac{4}{3}\pi \frac{d}{2}^{3} = \frac{4}{3}\pi (\frac{h}{36})^{3} $$ </p>
     <p> 6. Determine Avogadro's number.</p>
     <p> $$ N_{A} = (\frac{\text{1 Carbon Atom}}{V_{\text{Carbon atom}}})\times(\rho_{\text{Carbon}})^{-1}\times(\frac{\text{12.0107 g Carbon}}{\text{1 mol Carbon}}) $$ </p>
-</h2><p><br><br><br><br><br><br><br><br><br></p>
-<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</h2><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3."><span style="color:blue">3.</span><a class="anchor-link" href="#3.">&#182;</a></h4><h1 id="Experiment-#3-The-Empirical-Formula-of-Selected-Hydrates">Experiment #3 The Empirical Formula of Selected Hydrates<a class="anchor-link" href="#Experiment-#3-The-Empirical-Formula-of-Selected-Hydrates">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="3."><span style="color:blue">3.</span><a class="anchor-link" href="#3.">&#182;</a></h4><h1 id="Experiment-#3-The-Empirical-Formula-of-Selected-Hydrates">Experiment #3 The Empirical Formula of Selected Hydrates<a class="anchor-link" href="#Experiment-#3-The-Empirical-Formula-of-Selected-Hydrates">&#182;</a></h1><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4."><span style="color:blue">4.</span><a class="anchor-link" href="#4.">&#182;</a></h4><h1 id="Experiment-#4-Empirical-Formula-and-Stoichiometry">Experiment #4 Empirical Formula and Stoichiometry<a class="anchor-link" href="#Experiment-#4-Empirical-Formula-and-Stoichiometry">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="4."><span style="color:blue">4.</span><a class="anchor-link" href="#4.">&#182;</a></h4><h1 id="Experiment-#4-Empirical-Formula-and-Stoichiometry">Experiment #4 Empirical Formula and Stoichiometry<a class="anchor-link" href="#Experiment-#4-Empirical-Formula-and-Stoichiometry">&#182;</a></h1><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="5."><span style="color:blue">5.</span><a class="anchor-link" href="#5.">&#182;</a></h4><h1 id="Experiment-#5-Reactions-and-Solubility">Experiment #5 Reactions and Solubility<a class="anchor-link" href="#Experiment-#5-Reactions-and-Solubility">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="5."><span style="color:blue">5.</span><a class="anchor-link" href="#5.">&#182;</a></h4><h1 id="Experiment-#5-Reactions-and-Solubility">Experiment #5 Reactions and Solubility<a class="anchor-link" href="#Experiment-#5-Reactions-and-Solubility">&#182;</a></h1><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="6."><span style="color:blue">6.</span><a class="anchor-link" href="#6.">&#182;</a></h4><h1 id="Experiment-#6-Standardization-of-a-base-and-Titration-of-a-Vinegar-Solution">Experiment #6 Standardization of a base and Titration of a Vinegar Solution<a class="anchor-link" href="#Experiment-#6-Standardization-of-a-base-and-Titration-of-a-Vinegar-Solution">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="6."><span style="color:blue">6.</span><a class="anchor-link" href="#6.">&#182;</a></h4><h1 id="Experiment-#6-Standardization-of-a-base-and-Titration-of-a-Vinegar-Solution">Experiment #6 Standardization of a base and Titration of a Vinegar Solution<a class="anchor-link" href="#Experiment-#6-Standardization-of-a-base-and-Titration-of-a-Vinegar-Solution">&#182;</a></h1><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="7."><span style="color:blue">7.</span><a class="anchor-link" href="#7.">&#182;</a></h4><h1 id="Experiment-#7-Titration-of-an-Unknown-Acid-&#8211;-Determination-of-Molar-Mass">Experiment #7 Titration of an Unknown Acid &#8211; Determination of Molar Mass<a class="anchor-link" href="#Experiment-#7-Titration-of-an-Unknown-Acid-&#8211;-Determination-of-Molar-Mass">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="7."><span style="color:blue">7.</span><a class="anchor-link" href="#7.">&#182;</a></h4><h1 id="Experiment-#7-Titration-of-an-Unknown-Acid-&#8211;-Determination-of-Molar-Mass">Experiment #7 Titration of an Unknown Acid &#8211; Determination of Molar Mass<a class="anchor-link" href="#Experiment-#7-Titration-of-an-Unknown-Acid-&#8211;-Determination-of-Molar-Mass">&#182;</a></h1><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="8."><span style="color:blue">8.</span><a class="anchor-link" href="#8.">&#182;</a></h4><h1 id="Experiment-#8-Conductimetric-Titrations">Experiment #8 Conductimetric Titrations<a class="anchor-link" href="#Experiment-#8-Conductimetric-Titrations">&#182;</a></h1><h4 id="WHY?-This-lab-is-continuation-of-the-various-application-of-titrations.">WHY? This lab is continuation of the various application of titrations.<a class="anchor-link" href="#WHY?-This-lab-is-continuation-of-the-various-application-of-titrations.">&#182;</a></h4><p>Where is conductivity found in environmental applications?</p>
+<h4 id="8."><span style="color:blue">8.</span><a class="anchor-link" href="#8.">&#182;</a></h4><h1 id="Experiment-#8-Conductimetric-Titrations">Experiment #8 Conductimetric Titrations<a class="anchor-link" href="#Experiment-#8-Conductimetric-Titrations">&#182;</a></h1><p>This lab is continuation of the various application of titrations.</p>
+<p>Where is conductivity found in environmental applications?</p>
 <p>• Water treatment</p>
 <p>• Aquacultures</p>
 <p>• Irrigation/ Agriculture</p>
@@ -13415,21 +13428,21 @@ $$G \frac{1}{R} = \frac{\kappa A}{l} $$<p>A = Area of electrode ($m^{2}$)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="9."><span style="color:blue">9.</span><a class="anchor-link" href="#9.">&#182;</a></h4><h1 id="Experiment-#9-Using-the-Ideal-Gas-Law">Experiment #9 Using the Ideal Gas Law<a class="anchor-link" href="#Experiment-#9-Using-the-Ideal-Gas-Law">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="9."><span style="color:blue">9.</span><a class="anchor-link" href="#9.">&#182;</a></h4><h1 id="Experiment-#9-Using-the-Ideal-Gas-Law">Experiment #9 Using the Ideal Gas Law<a class="anchor-link" href="#Experiment-#9-Using-the-Ideal-Gas-Law">&#182;</a></h1><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="10."><span style="color:blue">10.</span><a class="anchor-link" href="#10.">&#182;</a></h4><h1 id="Experiment-#10-Heats-of-Reaction-and-Solution">Experiment #10 Heats of Reaction and Solution<a class="anchor-link" href="#Experiment-#10-Heats-of-Reaction-and-Solution">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="10."><span style="color:blue">10.</span><a class="anchor-link" href="#10.">&#182;</a></h4><h1 id="Experiment-#10-Heats-of-Reaction-and-Solution">Experiment #10 Heats of Reaction and Solution<a class="anchor-link" href="#Experiment-#10-Heats-of-Reaction-and-Solution">&#182;</a></h1><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="11."><span style="color:blue">11.</span><a class="anchor-link" href="#11.">&#182;</a></h4><h1 id="Experiment-#11-Solution-Preparation-and-Beers-Law">Experiment #11 Solution Preparation and Beers Law<a class="anchor-link" href="#Experiment-#11-Solution-Preparation-and-Beers-Law">&#182;</a></h1><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><p>This lab was designed to help students develop the skills for determining the amount of a substance inside another substance by linear regression, where the equation of a line is given by Beer's Law.</p>
+<h4 id="11."><span style="color:blue">11.</span><a class="anchor-link" href="#11.">&#182;</a></h4><h1 id="Experiment-#11-Solution-Preparation-and-Beers-Law">Experiment #11 Solution Preparation and Beers Law<a class="anchor-link" href="#Experiment-#11-Solution-Preparation-and-Beers-Law">&#182;</a></h1><p>This lab was designed to help students develop the skills for determining the amount of a certain species inside some solution by linear regression, where the equation of a line is given by Beer's Law.</p>
 <h3 id="Theory:">Theory:<a class="anchor-link" href="#Theory:">&#182;</a></h3><p><img title="upload.wikimedia.org" src='https://upload.wikimedia.org/wikipedia/commons/3/3a/BW_EM_spectrum.png' width="900" height="900" align="center" ></p>
 <p><img title="upload.wikimedia.org" src='https://upload.wikimedia.org/wikipedia/commons/f/f2/Absorption_or_emission_spectroscopy.png' width="300" height="300" align="center" ></p>
 <h3 id="Derivation-of-Beer's-Law:">Derivation of Beer's Law:<a class="anchor-link" href="#Derivation-of-Beer's-Law:">&#182;</a></h3><p>Here is an image of the situation we wish to model:</p>
@@ -13460,7 +13473,12 @@ $$a = (P · l) + E$$<p>where $P$ is the number of C atoms in the conjugated chai
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Appendix:"><span style="color:blue">Appendix:</span><a class="anchor-link" href="#Appendix:">&#182;</a></h4><p>External Links:</p>
+<h4 id="Appendix:"><span style="color:blue">Appendix:</span><a class="anchor-link" href="#Appendix:">&#182;</a></h4><h6 id="Some-of-the-Main-Types-of-Reactions:"><span style="color:blue">Some of the Main Types of Reactions:</span><a class="anchor-link" href="#Some-of-the-Main-Types-of-Reactions:">&#182;</a></h6><h5 id="1)-Combination-(synthesis)">1) Combination (synthesis)<a class="anchor-link" href="#1)-Combination-(synthesis)">&#182;</a></h5>$$ \mathrm{A}+\mathrm{B} \rightarrow \mathrm{C} $$$$ {2H_{2}}_{(g)} + {O_{2}}_{(g)}  \rightarrow  {2H_{2}O}_{(g)}\tag{1} $$<h5 id="2)-Decomposition">2) Decomposition<a class="anchor-link" href="#2)-Decomposition">&#182;</a></h5>$$ \mathrm{C} \rightarrow \mathrm{A}+\mathrm{B}   $$$$ {2H_{2}O}_{(g)} \rightarrow {2H_{2}}_{(g)} + {O_{2}}_{(g)} \tag{1}$$<h5 id="3)-Single-Displacement">3) Single Displacement<a class="anchor-link" href="#3)-Single-Displacement">&#182;</a></h5>$$ \mathrm{AB}+\mathrm{C} \rightarrow \mathrm{CB}+\mathrm{A} $$$${{CuSO}_{4}}_{(aq)} + Zn_{(s)} \rightarrow {Zn{SO}_{4}}_{(aq)}+Cu_{(s)}\tag{1}$$<h5 id="4)-Double-Displacement">4) Double Displacement<a class="anchor-link" href="#4)-Double-Displacement">&#182;</a></h5>$$ \mathrm{AB}+\mathrm{CD} \rightarrow \mathrm{AD}+\mathrm{BC} $$$$ \mathrm{AgNO}_{3}+\mathrm{NaCl} \rightarrow \mathrm{AgCl}+\mathrm{NaNO}_{3}\tag{1}$$$$ {NaHCO_{3}}_{(aq)} + {CH_{3}COOH}_{(aq)} \rightarrow {H_{2}CO_{3}}_{(aq)} + {NaCH_{3}COO}_{(s)} \rightarrow {H_{2}O}_{(l)} + {CO_{2}}_{(g)} + {NaCH_{3}COO}_{(s)}\tag{2}$$<h5 id="5)-Neutralization">5) Neutralization<a class="anchor-link" href="#5)-Neutralization">&#182;</a></h5><p>Double displacement reactions between strong acids and strong bases results in <strong>salt</strong> and <strong>water</strong>:</p>
+$$\mathrm{HCl}_{(aq)}+\mathrm{NaOH}_{(aq)} \rightarrow \mathrm{NaCl}_{(aq)}+\mathrm{H}_{2} \mathrm{O}_{(l)}\tag{1}$$<p>Double displacement reactions between acids and bases (water as solvent) results in <strong>salt</strong> :</p>
+$${NaHCO_{3}}_{(aq)} + {CH_{3}COOH}_{(aq)} \rightarrow {H_{2}CO_{3}}_{(aq)} + {NaCH_{3}COO}_{(s)}\tag{2}$$<h5 id="6)-Combustion">6) Combustion<a class="anchor-link" href="#6)-Combustion">&#182;</a></h5><p>These reactions always result in a change in enthalpy, $\Delta H_{combust} &lt; 0$ and forms $CO_{2}$ and $H_{2}O$.</p>
+$$CH_{4} + 2O_{2} \rightleftharpoons CO_{2} + 2H_{2}O\hspace{0.2cm};\hspace{0.2cm} \Delta H &lt; 0 \tag{1}$$<p>Suppose wood has the chemical formula $\mathbf{C}_{6} \mathbf{H}_{12} \mathbf{O}_{6}$. Then,</p>
+$$\mathbf{C}_{6} \mathbf{H}_{12} \mathbf{O}_{6} \quad+6 \mathbf{O}_{2}\rightleftharpoons\quad 6 \mathrm{CO}_{2} \quad+\quad 6 \mathbf{H}_{2} \mathbf{O}\hspace{0.2cm};\hspace{0.2cm} \Delta H &lt;0 \tag{2}$$<h5 id="7)-Redox">7) Redox<a class="anchor-link" href="#7)-Redox">&#182;</a></h5>$${{CuSO}_{4}}_{(aq)} + Zn_{(s)} \rightarrow {Zn{SO}_{4}}_{(aq)}+Cu_{(s)}\tag{1}$$<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4><hr>
+<p>External Links:</p>
 <ol>
 <li><p><a href="https://www.wolframalpha.com">Wolfram Alpha</a> - Computational engine based on a vast collection of built-in data, algorithms and methods - Free version offers limited user interface.</p>
 </li>

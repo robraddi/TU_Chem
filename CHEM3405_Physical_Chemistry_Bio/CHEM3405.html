@@ -13057,7 +13057,31 @@ ul.typeahead-list  > li > a.pull-right {
 
     </style>
 <style type="text/css">
-    <style>
+    
+
+
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13121,16 +13145,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13141,12 +13157,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -13182,7 +13196,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13346,10 +13360,10 @@ $$\hat{H}\psi(x_{1}, x_{2},…x_{n}) = E\psi(x_{1}, x_{2},…x_{n}).$$<p>It turn
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="Introduction-to-Hartree-Fock-and-Basis-Sets:">Introduction to Hartree Fock and Basis Sets:<a class="anchor-link" href="#Introduction-to-Hartree-Fock-and-Basis-Sets:">&#182;</a></h2><h3 id="Hartree-Fock-method">Hartree Fock method<a class="anchor-link" href="#Hartree-Fock-method">&#182;</a></h3><ul>
-<li>approximation (<strong>variational approach</strong>) for the determination of $\psi$ and $E$ of a quantum many-body system in a stationary state</li>
+<li>approximation (<strong>variational approach</strong>) for the determination of $\Psi$ and $E$ of a quantum many-body system in a stationary state</li>
 </ul>
 <p>This does a iterative search for $\psi$ where $E'$ is smallest compared to the actual E.</p>
-$$E'=\int \psi^{*} H\psi d\tau = &lt;\psi^{*}|H|\psi&gt;$$$$E'=\int \psi^{*} E\psi d\tau = E \int \psi^{*}\psi = E$$$$E′ &gt; E$$
+$$E'=\int \Psi^{*} H\Psi d\tau = &lt;\Psi^{*}|H|\Psi&gt;$$$$E'=\int \Psi^{*} E\Psi d\tau = E \int \Psi^{*}\Psi = E$$$$E′ &gt; E$$
 </div>
 </div>
 </div>
@@ -13359,22 +13373,14 @@ $$E'=\int \psi^{*} H\psi d\tau = &lt;\psi^{*}|H|\psi&gt;$$$$E'=\int \psi^{*} E\p
 <h3 id="Slater-Type-Orbitals-(STO&#8217;s)">Slater-Type Orbitals (STO&#8217;s)<a class="anchor-link" href="#Slater-Type-Orbitals-(STO&#8217;s)">&#182;</a></h3><h4 id="Abbreviation:-STO-nG,-where-n-is-an-integer-that-represents-the-number-of-primitive-Gaussian-functions-within-a-single-basis-function.">Abbreviation: STO-nG, where n is an integer that represents the number of primitive Gaussian functions within a single basis function.<a class="anchor-link" href="#Abbreviation:-STO-nG,-where-n-is-an-integer-that-represents-the-number-of-primitive-Gaussian-functions-within-a-single-basis-function.">&#182;</a></h4><ul>
 <li>minimal basis set (cheaper computationally)</li>
 </ul>
-<p>$n$ primitive Gaussian orbitals are fitted to a single Slater-type orbital (STO).  The core and valence orbitals are represented by the same number of primitive Gaussian functions $\mathbf \phi_i$. For example, an STO-3G basis set for the 1s, 2s and 2p orbital of the carbon atom are all linear combination of 3 primitive Gaussian functions. For example, a STO-3G s orbital is given by:</p>
+<p>For example, consider oxygen’s electronic configuration $1s^2 2s^2 2p^4$. We represent molecular orbitals (MOs) as a superposition of atomic orbitals (AOs):</p>
+$$\mathbf \Psi_{STO-3G}= \sum_{i}^{m} C_i\psi_{(STO-3G)}(i) = C_1\psi_{STO-3G}(1s) + C_2\psi_{STO-3G}(2s) + C_3\psi_{STO-3G}(2p_{x}) + C_4\psi_{STO-3G}(2p_{y}) + C_5\psi_{STO-3G}(2p_{z}),$$<p>where $n$ primitive Gaussian orbitals are fitted to a single Slater-type orbital (STO).  The core and valence orbitals are represented by the same number of primitive Gaussian functions $\mathbf \phi_i$. For example, an STO-3G basis set for the 1s, 2s and 2p orbital of the carbon atom are all linear combination of 3 primitive Gaussian functions. For example, a STO-3G s orbital is given by:</p>
 <!--A minimum basis set is where only sufficient orbitals are used to contain all the electrons in the neutral atom. Thus for the hydrogen atom, only a single 1s orbital is needed, while for a carbon atom, 1s, 2s and three 2p orbitals are needed. The core and valence orbitals are represented by the same number of primitive Gaussian functions $\mathbf \phi_i$.-->
 
 
-
-
 $$\mathbf \psi_{STO-3G}(s)= \sum_{i}^{n} c_i\phi_i = c_1\phi_1 + c_2\phi_2 + c_3\phi_3 ,$$<p>where</p>
-$$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}$$$$\mathbf \phi_2 = \left (\frac{2\alpha_2}{\pi} \right ) ^{3/4}e^{-\alpha_2 r^2}$$$$\mathbf \phi_3 = \left (\frac{2\alpha_3}{\pi} \right ) ^{3/4}e^{-\alpha_3 r^2}$$<p>The $\alpha_i$'s are tabulated values for each element and contained in a library within Spartan. The $c_i$'s are what is changing iteratively.</p>
-<h4 id="Recall-that-oxygen&#8217;s-electronic-configuration-is-$1s^2-2s^2-2p^4$.-For-singlet,-the-method-treats-electrons-as-indistinguishable-(2-electrons-in-an-orbital-are-not-labeled).-For-triplet,-the-method-labels-&#945;-and-&#946;-electrons-to-2-electrons-in-an-orbital-(convention-is-to-start-from-&#945;-as-the-lowest-energy-one).">Recall that oxygen&#8217;s electronic configuration is $1s^2 2s^2 2p^4$. For singlet, the method treats electrons as <strong>indistinguishable</strong> (2 electrons in an orbital are not labeled). For triplet, the method labels &#945; and &#946; electrons to 2 electrons in an orbital (convention is to start from &#945; as the lowest energy one).<a class="anchor-link" href="#Recall-that-oxygen&#8217;s-electronic-configuration-is-$1s^2-2s^2-2p^4$.-For-singlet,-the-method-treats-electrons-as-indistinguishable-(2-electrons-in-an-orbital-are-not-labeled).-For-triplet,-the-method-labels-&#945;-and-&#946;-electrons-to-2-electrons-in-an-orbital-(convention-is-to-start-from-&#945;-as-the-lowest-energy-one).">&#182;</a></h4><h4 id="6-31G-the-core-orbital-is-a-CGTO-made-of-6-Gaussians,-and-the-valence-is-described-by-two-orbitals-&#8212;-one-CGTO-made-of-3-Gaussians,-and-one-single-Gaussian.">6-31G the core orbital is a CGTO made of 6 Gaussians, and the valence is described by two orbitals &#8212; one CGTO made of 3 Gaussians, and one single Gaussian.<a class="anchor-link" href="#6-31G-the-core-orbital-is-a-CGTO-made-of-6-Gaussians,-and-the-valence-is-described-by-two-orbitals-&#8212;-one-CGTO-made-of-3-Gaussians,-and-one-single-Gaussian.">&#182;</a></h4><h4 id="6-31G*-[or-6-31G(d)]-is-6-31G-with-added-d-polarization-functions-on-non-hydrogen-atoms.">6-31G* [or 6-31G(d)] is 6-31G with added d polarization functions on non-hydrogen atoms.<a class="anchor-link" href="#6-31G*-[or-6-31G(d)]-is-6-31G-with-added-d-polarization-functions-on-non-hydrogen-atoms.">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<!--
+$$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}$$$$\mathbf \phi_2 = \left (\frac{2\alpha_2}{\pi} \right ) ^{3/4}e^{-\alpha_2 r^2}$$$$\mathbf \phi_3 = \left (\frac{2\alpha_3}{\pi} \right ) ^{3/4}e^{-\alpha_3 r^2}$$<p>The $\alpha_i$'s and $c_i$'s are tabulated values for each element and contained in a library within Spartan. The $C_{i}$'s are what is changing iteratively.</p>
+<h4 id="For-singlet,-the-method-treats-electrons-as-indistinguishable-(2-electrons-in-an-orbital-are-not-labeled).-For-triplet,-the-method-labels-&#945;-and-&#946;-electrons-to-2-electrons-in-an-orbital-(convention-is-to-start-from-&#945;-as-the-lowest-energy-one).">For singlet, the method treats electrons as <strong>indistinguishable</strong> (2 electrons in an orbital are not labeled). For triplet, the method labels &#945; and &#946; electrons to 2 electrons in an orbital (convention is to start from &#945; as the lowest energy one).<a class="anchor-link" href="#For-singlet,-the-method-treats-electrons-as-indistinguishable-(2-electrons-in-an-orbital-are-not-labeled).-For-triplet,-the-method-labels-&#945;-and-&#946;-electrons-to-2-electrons-in-an-orbital-(convention-is-to-start-from-&#945;-as-the-lowest-energy-one).">&#182;</a></h4><h4 id="6-31G-the-core-orbital-is-a-CGTO-made-of-6-Gaussians,-and-the-valence-is-described-by-two-orbitals-&#8212;-one-CGTO-made-of-3-Gaussians,-and-one-single-Gaussian.">6-31G the core orbital is a CGTO made of 6 Gaussians, and the valence is described by two orbitals &#8212; one CGTO made of 3 Gaussians, and one single Gaussian.<a class="anchor-link" href="#6-31G-the-core-orbital-is-a-CGTO-made-of-6-Gaussians,-and-the-valence-is-described-by-two-orbitals-&#8212;-one-CGTO-made-of-3-Gaussians,-and-one-single-Gaussian.">&#182;</a></h4><h4 id="6-31G*-[or-6-31G(d)]-is-6-31G-with-added-d-polarization-functions-on-non-hydrogen-atoms.">6-31G* [or 6-31G(d)] is 6-31G with added d polarization functions on non-hydrogen atoms.<a class="anchor-link" href="#6-31G*-[or-6-31G(d)]-is-6-31G-with-added-d-polarization-functions-on-non-hydrogen-atoms.">&#182;</a></h4><!--
 | STO-2G | α1 | c1 | α2 | c2 |
 | :--: | :--: | :--: | :--: | :--: | 
 | 1s | 0.151623  | 0.678914 | 0.851819 | 0.430129 |
@@ -13464,9 +13470,9 @@ $$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}
 <th style="text-align:center">Multiplicity</th>
 <th style="text-align:center">HOMO energy  (eV)</th>
 <th style="text-align:center">LUMO energy (eV)</th>
-<th style="text-align:center">LUMO energy (hartrees)</th>
 <th style="text-align:center">Total Energy (eV)</th>
-<th style="text-align:center">Number of Basis $f^{\underline{n}}$'s</th>
+<th style="text-align:center">Total Energy (hartrees)</th>
+<th style="text-align:center">Total number of Basis $f^{\underline{n}}$'s</th>
 </tr>
 </thead>
 <tbody>

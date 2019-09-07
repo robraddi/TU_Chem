@@ -13057,7 +13057,31 @@ ul.typeahead-list  > li > a.pull-right {
 
     </style>
 <style type="text/css">
-    <style>
+    
+
+
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13121,16 +13145,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13141,12 +13157,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -13182,7 +13196,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13209,7 +13223,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Temple-University,-Chemistry-for-Engineers-(CHEM1035)---Spring-2019"><span style="color:Blue">Temple University, Chemistry for Engineers (CHEM1035) - Spring 2019</span><a class="anchor-link" href="#Temple-University,-Chemistry-for-Engineers-(CHEM1035)---Spring-2019">&#182;</a></h1><h2 id="Lessons-&amp;-Practice-Problems">Lessons &amp; Practice Problems<a class="anchor-link" href="#Lessons-&amp;-Practice-Problems">&#182;</a></h2><h3 id="Teaching-Assistant:-Rob-Raddi">Teaching Assistant: Rob Raddi<a class="anchor-link" href="#Teaching-Assistant:-Rob-Raddi">&#182;</a></h3><script src="custom/gtag.js" type="text/javascript"></script> 
+<h1 id="Temple-University,-Chemistry-for-Engineers-(CHEM1035)"><span style="color:Blue">Temple University, Chemistry for Engineers (CHEM1035)</span><a class="anchor-link" href="#Temple-University,-Chemistry-for-Engineers-(CHEM1035)">&#182;</a></h1><h2 id="Lessons-&amp;-Practice-Problems">Lessons &amp; Practice Problems<a class="anchor-link" href="#Lessons-&amp;-Practice-Problems">&#182;</a></h2><h3 id="Teaching-Assistant:-Rob-Raddi">Teaching Assistant: Rob Raddi<a class="anchor-link" href="#Teaching-Assistant:-Rob-Raddi">&#182;</a></h3><script src="custom/gtag.js" type="text/javascript"></script> 
 <script>
     gtag();
 </script><style>
@@ -13981,7 +13995,7 @@ As temperature increases, the width of the distribution also increase. These tre
 </table>
 <hr>
 <h2 id="Wave-particle-Duality">Wave-particle Duality<a class="anchor-link" href="#Wave-particle-Duality">&#182;</a></h2><p>Einstein figured out a very intriguing notion during his pursuit of the theory of relativity. One major finding was that light carries momentum, $E = pc$ <strong>(FOR LIGHT PARTICLES ONLY)</strong>. Hence, light is particle-like.</p>
-<p>In 1923 de Broglie developed a relation that describes matter (proton, electron, baseball, etc.) having wave-like properties.  We know that momentum is the product of mass and velocity, $p=mv$.</p>
+<p>In 1923 de Broglie developed a relation that describes matter having wave-like properties.  We know that momentum is the product of mass and velocity, $p=mv$.</p>
 $$ \lambda = \frac{h}{p}  $$<p>where momentum, $p$ is multiplied by Planck's constant, h ($6.626*10^{-34}$ J s) to obtain the wavelength, $\lambda$.</p>
 <p><strong>Example: Baseball (0.1 kg) is thrown 10 m/s (~22 mph)</strong></p>
 <p>Then,</p>
@@ -14071,9 +14085,9 @@ $$ m = -l,-l+1,...,l$$<table>
 </table>
 <h5 id="Spin-quantum-number,-$m_{s}$">Spin quantum number, $m_{s}$<a class="anchor-link" href="#Spin-quantum-number,-$m_{s}$">&#182;</a></h5>$$\text{possible values are ±1/2}$$<h5 id="Pauli's-Principle:">Pauli's Principle:<a class="anchor-link" href="#Pauli's-Principle:">&#182;</a></h5><p>No two electrons can have the same quantum numbers.</p>
 <hr>
-<h2 id="Intro-to-Quantum-Mechanics">Intro to Quantum Mechanics<a class="anchor-link" href="#Intro-to-Quantum-Mechanics">&#182;</a></h2><p>The wavefunction, $\psi(x)$</p>
+<h2 id="Intro-to-Quantum-Mechanics">Intro to Quantum Mechanics<a class="anchor-link" href="#Intro-to-Quantum-Mechanics">&#182;</a></h2><h3 id="1-D-time-independent-$Schr\ddot{o}dinger$-Equation-&amp;-1-D-Particle-in-a-Box">1-D time-independent $Schr\ddot{o}dinger$ Equation &amp; 1-D Particle in a Box<a class="anchor-link" href="#1-D-time-independent-$Schr\ddot{o}dinger$-Equation-&amp;-1-D-Particle-in-a-Box">&#182;</a></h3><p>The wavefunction, $\psi(x)$</p>
 $$ \psi(x) = Asin(\frac{n\pi x}{L}) $$<h4 id="Time-Independent-$Schr\ddot{o}dinger$-Equation">Time-Independent $Schr\ddot{o}dinger$ Equation<a class="anchor-link" href="#Time-Independent-$Schr\ddot{o}dinger$-Equation">&#182;</a></h4>$$\hat{H}\psi(x) = E\psi(x)$$$$ \text{Operator $\space f^{\underline{n}}$ = Eigenvalue $\space f^{\underline{n}}$} $$<h4 id="Hamiltonian-Operator-in-1-D">Hamiltonian Operator in 1-D<a class="anchor-link" href="#Hamiltonian-Operator-in-1-D">&#182;</a></h4>$$ \hat{H} = -\frac{\hbar^{2}}{2m}(\frac{\partial^{2}}{\partial x^{2}}) + V(x)$$<p>Let the kinetic energy and the potential energy be defined as the following:</p>
-$$ E_{k} = \frac{1}{2}mv^{2} = \frac{\hat{p}^{2}}{2m} \equiv -\frac{\hbar^{2}}{2m}(\frac{\partial^{2}}{\partial x^{2}}),$$<p>and Hooke's law (springs) will define the potential energy of our bonds.</p>
+$$ E_{k} = \frac{1}{2}mv^{2} = \frac{\hat{p}^{2}}{2m} = -\frac{\hbar^{2}}{2m}(\frac{\partial^{2}}{\partial x^{2}}),$$<p>and Hooke's law (springs) will define the potential energy of our bonds.</p>
 $$F = -K_{f}x,$$<p>where $ F = -\frac{dV(X)}{dx} \implies Fdx = dV(x)$</p>
 $$ \int Fdx = \int -K_{f}xdx = \int dV(x) $$$$ V(x) = \frac{1}{2}k_{f}x^{2} $$<p>Recall:</p>
 <p><img src="http://jwilson.coe.uga.edu/emt668/emat6680.f99/challen/assignment2/image30.gif" height="300" width="300" align="center" ></p>

@@ -13057,7 +13057,31 @@ ul.typeahead-list  > li > a.pull-right {
 
     </style>
 <style type="text/css">
-    <style>
+    
+
+
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13121,16 +13145,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13141,12 +13157,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -13182,7 +13196,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13209,7 +13223,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Temple-University,-General-Chemistry-Lab-II-(CHEM1034)---Spring-2019"><span style="color:Blue">Temple University, General Chemistry Lab II (CHEM1034) - Spring 2019</span><a class="anchor-link" href="#Temple-University,-General-Chemistry-Lab-II-(CHEM1034)---Spring-2019">&#182;</a></h1><h3 id="Teaching-Assistant:-Rob-Raddi">Teaching Assistant: Rob Raddi<a class="anchor-link" href="#Teaching-Assistant:-Rob-Raddi">&#182;</a></h3><h4 id="Office:-BE102">Office: BE102<a class="anchor-link" href="#Office:-BE102">&#182;</a></h4>
+<h1 id="Temple-University,-General-Chemistry-Lab-II-(CHEM1034)-"><span style="color:Blue">Temple University, General Chemistry Lab II (CHEM1034) </span><a class="anchor-link" href="#Temple-University,-General-Chemistry-Lab-II-(CHEM1034)-">&#182;</a></h1><h3 id="Teaching-Assistant:-Rob-Raddi">Teaching Assistant: Rob Raddi<a class="anchor-link" href="#Teaching-Assistant:-Rob-Raddi">&#182;</a></h3><h4 id="Office:-BE102">Office: BE102<a class="anchor-link" href="#Office:-BE102">&#182;</a></h4>
 </div>
 </div>
 </div>
