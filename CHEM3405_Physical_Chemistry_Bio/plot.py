@@ -7,10 +7,10 @@ import scipy ############################# Linest
 from scipy import stats ################## Statistic Functions
 import matplotlib ######################## Plotting
 # Import Publication Style Fonts for Figures:
-matplotlib.use('Agg')
-fontfamily={'family':'sans-serif','sans-serif':['Arial']}
+#matplotlib.use('Agg')
+#fontfamily={'family':'sans-serif','sans-serif':['Arial']}
 from matplotlib import pyplot as plt
-plt.rc('font', **fontfamily)
+#plt.rc('font', **fontfamily)
 import matplotlib.cm as cm
 
 # }}}
