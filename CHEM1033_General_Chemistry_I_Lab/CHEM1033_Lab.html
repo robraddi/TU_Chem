@@ -13057,31 +13057,7 @@ ul.typeahead-list  > li > a.pull-right {
 
     </style>
 <style type="text/css">
-    
-
-
-
-<style>
-div.header {
-    display: block; text-align: center;
-    /*position: running(header);*/
-    position: header;
-}
-div.footer {
-    display: block; text-align: right;
-    /*position: running(footer);*/
-    position: footer;
-}
-@page {
-    @top-center { content: element(header) }
-}
-@page {
-    @bottom-center { content: element(footer) }
-}
-
-
-
-<style>
+    <style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13145,8 +13121,16 @@ div.footer {
         margin-top: 0.5em;
         display: block;
     }
+    .footer{
+    text-align: center;
+    font-family: arial, helvetica;
+    font-size: 11px;
+    }
+
 </style>
-<script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13157,10 +13141,12 @@ div.footer {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
-                }
+                    styles: {'.MathJax_Display': {"margin": 4}},
+                    linebreaks: { automatic: true }}
         });
 </script>
+
+
 
     </style>
 
@@ -13196,7 +13182,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13359,7 +13345,7 @@ div#notebook {
     <p> $$ V_{Stearic} = (\rho_{Steric Acid})^{-1}\times m_{stearic} $$</p>
     <p> $$  $$ </p>
     <p> 4. Calculate the thickness of the monolayer, h where the volume of stearic acid in the monolayer can be approximated by $V=\pi r^{2}h$. </p>  
-    <p> $$ h = \frac{\pi r^{2}}{V} = \frac{\pi (\frac{d}{2})^{2}}{V} $$ </p>
+    <p> $$ h = \frac{V}{\pi r^{2}} = \frac{V}{\pi(\frac{d}{2})^{2}} $$ </p>
     <p> 5. Determine the volume of a carbon atom. <br/> Note that h/18 can be used as a good approximation for the diameter of a carbon atom.</p>  
     <p> $$ V_{\text{Carbon atom}}  = \frac{4}{3}\pi r^{3} = \frac{4}{3}\pi \frac{d}{2}^{3} = \frac{4}{3}\pi (\frac{h}{36})^{3} $$ </p>
     <p> 6. Determine Avogadro's number.</p>
