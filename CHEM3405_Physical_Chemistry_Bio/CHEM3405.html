@@ -13018,70 +13018,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
-    
-
-
-
-<style>
-div.header {
-    display: block; text-align: center;
-    /*position: running(header);*/
-    position: header;
-}
-div.footer {
-    display: block; text-align: right;
-    /*position: running(footer);*/
-    position: footer;
-}
-@page {
-    @top-center { content: element(header) }
-}
-@page {
-    @bottom-center { content: element(footer) }
-}
-
-
-
-<style>
+    <style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13145,8 +13082,16 @@ div.footer {
         margin-top: 0.5em;
         display: block;
     }
+    .footer{
+    text-align: center;
+    font-family: arial, helvetica;
+    font-size: 11px;
+    }
+
 </style>
-<script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13157,10 +13102,12 @@ div.footer {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
-                }
+                    styles: {'.MathJax_Display': {"margin": 4}},
+                    linebreaks: { automatic: true }}
         });
 </script>
+
+
 
     </style>
 
@@ -13196,7 +13143,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13895,9 +13842,9 @@ $$ \Delta E \propto \frac{1}{k}$$<table>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4."><span style="color:blue">4.</span><a class="anchor-link" href="#4.">&#182;</a></h4><p><strong>Literature Review:</strong></p>
+<h4 id="4."><span style="color:blue">4.</span><a class="anchor-link" href="#4.">&#182;</a></h4><p><strong>Literature Discussion/Review:</strong></p>
 <h5 id="Juffmann,-Thomas,-et-al.-Real-time-single-molecule-imaging-of-quantum-interference-Nature-nanotechnology-7.5-(2012):-297.">Juffmann, Thomas, et al. <a href="https://www-nature-com.libproxy.temple.edu/articles/nnano.2012.34.pdf">Real-time single-molecule imaging of quantum interference</a> Nature nanotechnology 7.5 (2012): 297.<a class="anchor-link" href="#Juffmann,-Thomas,-et-al.-Real-time-single-molecule-imaging-of-quantum-interference-Nature-nanotechnology-7.5-(2012):-297.">&#182;</a></h5><h5 id="Supplementary-Information"><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fnnano.2012.34/MediaObjects/41565_2012_BFnnano201234_MOESM583_ESM.pdf">Supplementary Information</a><a class="anchor-link" href="#Supplementary-Information">&#182;</a></h5><p><a href="https://phys.libretexts.org/Ancillary_Materials/Visualizations_and_Simulations/PhET_Simulations/PhET%3A_Wave_Interference">Applet for double slit</a></p>
-<p>Some of the figures below were taken from these <a href="http://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide14.pdf">MIT course notes</a>.</p>
+<p><a href="http://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide14.pdf">MIT course notes</a>.</p>
 
 </div>
 </div>
@@ -13906,38 +13853,43 @@ $$ \Delta E \propto \frac{1}{k}$$<table>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <!--
-<img src="images/coherence_and_decoherence.pdf" title="http://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide14.pdf" width="700" height="700" align="center" >
+<img src="images/coherence_and_decoherence.pdf" title="" width="700" height="700" align="center" >
+-->
+
+<!--
+<img src="images/Laser_setup.pdf" width="800" height="800" align="center">
+<img src="images/single_slit.pdf" width="400" height="400" align="center" >
+**Figure** Intensity distribution for a single-slit diffraction.
+-->
+
+<!--
+Fluorescent dyes: 
+phthalocyanine ($PcH_{2}$), $C_{32}H_{18}N_{8}$, mass m = 514 AMU ,  number of atoms N = 58
+phthalocyanine derivative ($F_{24}PcH_{2}$), $C_{48}H_{26}F_{24}N_{8}O_{8}$ , m = 1,298 AMU, N = 114,
+-------------------
+###### Calculating de Broglie Wavelength
+$ sin( \theta_{n}) = n \lambda/d, where \lambda = h/p = h/mv$
+Using a speed of $v = 150 m \space s^{-1}$ we can calculate the wavelength for each molecule.
+For $PcH2$:  $\lambda = 5.18 pm$
+For $F_{24}PcH2$:  $\lambda = 2.05 pm$
+**Very small wavelengths!**
 -->
 
 
-<p><img src="images/Laser_setup.pdf" title="Juffmann" width="800" height="800" align="center"></p>
-<p><img src="images/single_slit.pdf" title="http://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide14.pdf" width="400" height="400" align="center" ></p>
-<p><strong>Figure</strong> Intensity distribution for a single-slit diffraction.</p>
-<p>Fluorescent dyes:</p>
-<p>phthalocyanine ($PcH_{2}$), $C_{32}H_{18}N_{8}$, mass m = 514 AMU ,  number of atoms N = 58</p>
-<p>phthalocyanine derivative ($F_{24}PcH_{2}$), $C_{48}H_{26}F_{24}N_{8}O_{8}$ , m = 1,298 AMU, N = 114,</p>
-<hr>
-<h6 id="Calculating-de-Broglie-Wavelength">Calculating de Broglie Wavelength<a class="anchor-link" href="#Calculating-de-Broglie-Wavelength">&#182;</a></h6><p>$ sin( \theta_{n}) = n \lambda/d, where \lambda = h/p = h/mv$</p>
-<p>Using a speed of $v = 150 m \space s^{-1}$ we can calculate the wavelength for each molecule.</p>
-<p>For $PcH2$:  $\lambda = 5.18 pm$</p>
-<p>For $F_{24}PcH2$:  $\lambda = 2.05 pm$</p>
-<p><strong>Very small wavelengths!</strong></p>
-<p><img src="images/figure4.pdf" title="Juffmann" width="500" height="500" align="center" ></p>
-<p><strong>Figure 4.</strong> Comparison of interference patterns for $PcH2$ and $F_{24}PcH2$.</p>
-<p><strong>Key points:</strong></p>
-<ul>
-<li><p>"Spectral coherence is achieved when by sorting the arriving molecules according to their longitudinal velocity and their respective freefall height from earth's gravitational field."</p>
-</li>
-<li><p>Molecules with greater speeds will be at the top of figure 4., and slower molecules will be at the bottom.</p>
-</li>
-<li><p>Altering of interference patterns:</p>
-<ul>
-<li>Changing the period or width of the slits</li>
-<li>changing the distance between grating and window (the $L$ values) in figure 1.</li>
-<li>grating thickness (and corresponding van der Waals phase shift)</li>
-</ul>
-</li>
-</ul>
+
+<!--
+<img src="images/figure4.pdf" title="Juffmann" width="500" height="500" align="center" >
+**Figure 4.** Comparison of interference patterns for $PcH2$ and $F_{24}PcH2$.
+**Key points:**
+- "Spectral coherence is achieved when by sorting the arriving molecules according to their longitudinal velocity and their respective freefall height from earth's gravitational field."
+- Molecules with greater speeds will be at the top of figure 4., and slower molecules will be at the bottom.
+- Altering of interference patterns:
+  - Changing the period or width of the slits
+  - changing the distance between grating and window (the $L$ values) in figure 1.
+  - grating thickness (and corresponding van der Waals phase shift)
+-->
+
+
 <!--
 The van der Waals interaction between the polarizable molecule and the dielectric grating wall was taken into account in the phase of the grating transmission function. The phase term
 $$\psi = exp(iC3D[1/\Delta x^{3} + 1/(s – \Delta x^{3}]/\hbar v)$$
@@ -13952,7 +13904,11 @@ $$\psi = exp(iC3D[1/\Delta x^{3} + 1/(s – \Delta x^{3}]/\hbar v)$$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<iframe width="560" height="315" align="center" title="41565_2012_BFnnano201234_MOESM585_ESM.mov" src="images/41565_2012_BFnnano201234_MOESM585_ESM.mov" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<!--<iframe width="560" height="315" align="center" src="images/41565_2012_BFnnano201234_MOESM585_ESM.mov" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
+
+
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13960,7 +13916,101 @@ $$\psi = exp(iC3D[1/\Delta x^{3} + 1/(s – \Delta x^{3}]/\hbar v)$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="5."><span style="color:blue">5.</span><a class="anchor-link" href="#5.">&#182;</a></h4><p><strong>Computer Lab #3 — Harmonic Oscillator</strong></p>
-<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<p><strong>Goal:</strong></p>
+<p><strong>“The ability of quantum mechanics calculations to predict vibrational spectra.”</strong></p>
+<p>In lecture, we learned about 1D Harmonic Oscillator solutions to the Schrödinger equation, $\psi_{v}(x)$, $v = 0, 1, 2, ...$, for a particle subjected to a harmonic potential 􏰂$V(X) = \frac{1}{2}k_{f}x^{2}$􏰁􏰄. We found the energies of each vibrational state to be</p>
+$$ E_{v} = (v + \frac{1}{2})h\nu, \tag{1}$$<p>where h is Planck’s constant, and $\nu􏰋 = \frac{1}{2\pi}􏰌\sqrt{\frac{k_{f}}{\mu}}$ 􏰏􏰐 is the harmonic oscillator frequency, which depends on the force constant $k_{f}$ (units N.$m^{-1}$) and the reduced mass 􏰑$\mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}}$􏰒􏰌􏰒􏰍 (assuming the vibration is for a two-particle system of masses $m_{1}$ and $m_{2}$). Let’s explore how well this simple harmonic approximation compares to more detailed quantum calculations of diatomic molecules.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<!--
+### Density Functional Theory (DFT)
+A technique that has gained considerable ground in recent years to become one of the most widely used techniques for the calculation of molecular structure is density functional theory (DFT). Its advantages include less demanding computational effort, less computer time, and—in some cases (particularly d-metal complexes)— better agreement with experimental values than is obtained from Hartree–Fock procedures.
+The central focus of DFT is the electron density, ρ, rather than the wavefunction ψ. The ‘functional’ part of the name comes from the fact that the energy of the molecule is a function of the electron density, written E[ρ], and the electron density is itself a function of position, ρ(r), and in mathematics a function of a function is called a func- tional. The occupied orbitals are used to construct the electron density from
+$$ \rho(r) = \sum_{} | \psi_{m}(r)|^{2} $$
+and are calculated from the Kohn–Sham equations, which are like the Hartree–Fock equations except for a term VXC, called the exchange–correlation potential:
+$$ \{ h_{1} + j_{0} \int \frac{\rho(2)}{r_{12}}d\tau_{2} + V_{XC}(1) \} \psi_{m}(1) = \epsilon_{m}\psi_{m}(1) $$
+The first term on the left is the usual one-electron kinetic and potential energy con- tribution and the second term is the potential energy of repulsion between electrons 1 and 2. The challenge in DFT is to construct the exchange–correlation potential and computational chemists use several approximate expressions for VXC.
+The Kohn–Sham equations are solved iteratively and self-consistently. First, we guess the electron density. For this step it is common to use a superposition of atomic electron densities. Next, the Kohn–Sham equations are solved to obtain an initial set of orbitals. This set of orbitals is used to obtain a better approximation to the electron density and the process is repeated until the density and the exchange–correlation energy are constant to within some tolerance.
+------------------------
+One of the most important concepts for discussing beam results and calculating the state-to-state collision cross-section is the potential energy surface of a reaction, the potential energy as a function of the relative positions of all the atoms taking part in the reaction. Potential energy surfaces may be constructed from experimental data, with the techniques described in Section 22.6, and from results of quantum chemical calculations. Density functional theory (DFT, Section 10.7c) provides a relatively cheap way of incorporating electron correlation and is increasingly being applied to reactive systems.
+-->
+
+
+
+
+<h4 id="Procedure"><strong>Procedure</strong><a class="anchor-link" href="#Procedure">&#182;</a></h4><p><strong>Part A.</strong> Let’s consider the diatomic molecule CO, carbon monoxide. Spartan has a database of experimental vibrational spectra for a small number of molecules, and CO is one of them. Perform the following steps:</p>
+<ol>
+<li><p>Build the molecule, and optimize its geometry</p>
+<p>a. Build 􏰔$C \equiv O$ 􏰕 molecule.</p>
+<p>b. Setup &gt; Calculations ...</p>
+<p>c. Calculate Equilibrium Geometry for the Ground State, using <span style='color:Red'><b>DFT-B3LYP</b></span> with a modest basis set <span style='color:Red'><b>6-31G*</b></span>. Set total charge to “<span style='color:Red'><b>Neutral</b></span>” with <span style='color:Red'><b>0</b></span> unpaired electrons, and make sure the checkbox for <span style='color:Red'><b>Vibrational Modes</b></span> is selected.</p>
+<p>d. The calculation should complete quickly.</p>
+</li>
+<li><p>Inspect the calculated vibrational spectra.</p>
+<p>a. Go to the Display &gt; Spectra menu.</p>
+<p>b. Click on the plus icon and add the <span style='color:Red'><b>Calculated IR spectrum and Experimental IR spectrum</b></span>. You should see good agreement between the two spectra. Clicking and dragging near the computed spectral peak will “lock on” to the peak and display a numerical value for the predicted peak, and animate the bond-stretching vibrational mode. Note that these spectra are reported in wavenumbers ($cm^{-1}$), which is very typical of chemical spectroscopic measurements. The wavenumber  $\tilde{\nu}$ is the reciprocal of the wavelength, 􏰋􏰖$\tilde{\nu} = \frac{1}{\lambda}$􏰌􏰗 . Thus, the frequency in Hz ($s^{-1}$),􏰋 $\nu = c\tilde{\nu}$, can be obtained simply by multiplying $\tilde{\nu}$ by the speed of light, $2.998 × 10􏰓􏰃􏰙^{10} cm.s^{-1}$.</p>
+</li>
+</ol>
+$$\nu = \frac{c}{\lambda} = \tilde{\nu} c  = (2104\space cm^{-1}) (2.998 × 10􏰓􏰃􏰙^{10} cm.s^{-1}) = 6.308x10^{13} Hz$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Part B. Vibrational Modes.</strong> It can be shown that there are <strong>3N-6</strong> and <strong>3N-5</strong> vibrational modes (in which N is the number of atoms in molecule) for non-linear and linear molecules; respectively. For example, we have 1 vibrational mode for CO molecule—as it is a linear molecule and N=2—which corresponds with 􏰔$C \equiv O$􏰕 bond-stretching.
+For this part, let’s try to evaluate vibrational modes of $H_{2}O$ and $HCN$ ($H—􏰔C\equiv N$􏰛) molecules. To do so, calculate Equilibrium Geometry for the Ground State of these molecules, using <span style='color:Red'><b>DFT- B3LYP</b></span> with a modest basis set <span style='color:Red'><b>6-31G*</b></span>. Set total charge to “<span style='color:Red'><b>Neutral</b></span>” with <span style='color:Red'><b>0</b></span> unpaired electrons, and make sure the checkbox for <span style='color:Red'><b>Vibrational Modes</b></span> is selected.</p>
+<p><b>Quick Note: <span style='color:Blue'>The most fundamental difference between DFT and MO theory is that DFT optimizes electron density while MO theory optimizes a wave function.</span></b></p>
+<h4 id="Questions:">Questions:<a class="anchor-link" href="#Questions:">&#182;</a></h4><p><strong>Part A:</strong> In part A, you found the wavenumber corresponded to CO bond-stretching using DFT method. Convert the wavenumber 􏰋􏰖 of the predicted peak to frequency 􏰋.
+Answer (􏰋 from DFT):</p>
+<p>Now, let’s compare this frequency to the frequency of light we expect to be absorbed for excitation from the v = 0 → v = 1 states of a Harmonic Oscillator, given in Equation (1). The reported force constant for CO is $k_{f} = 1820\space N.m^{-1}$. To calculate the reduced mass, assume that the masses of the carbon and oxygen atoms are 12 $m_{p}$ and 16 $m_{p}$, where $m_{p} = 1.672 × 10^{-27}\space kg$􏰞􏰄􏰟 is the mass of the proton. Are these results comparable to the quantum mechanical calculations?
+Answer (􏰋 from Harmonic Oscillator calculation):</p>
+$$ \mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}} = 1.147x10^{-26} \space kg $$$$ E_{v} = (v + \frac{1}{2})h\nu = (v + \frac{1}{2})\hbar􏰌\sqrt{\frac{k_{f}}{\mu}} = 6.302x10^{-20} \space J,$$<p>where $\tilde{\nu} = 2115 cm^{-1}$. The value obtained from $CO$'s calculated IR spectrum (Spartan) is $2104\space cm^{-1}$, which is different by approximately $11 cm^{-1}$.</p>
+<p><strong>Part B: Vibrational Modes.</strong> Based on your results, complete the following table for H2O and HCN molecules.</p>
+<table>
+<thead><tr>
+<th style="text-align:center">Molecule</th>
+<th style="text-align:center">$\text{Wavenumber},\space \tilde{\nu}\space (cm^{-1})$</th>
+<th style="text-align:center">$$\text{Which atoms are involved in each vibrational mode?}\\ \text{Also, classify each one in terms of Symmetric-stretch, Asymmetric stretch, and Bending.}$$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$H_{2}O$</td>
+<td style="text-align:center">$\tilde{\nu_{1}} = 3554 \text{ (symmetric stretch)} \\ \tilde{\nu_{2}} = 1628 \text{ (bend)} \\ \tilde{\nu_{3}} = 3669\text{ (asymmetric stretch)}$</td>
+<td style="text-align:center"><img src="http://www1.lsbu.ac.uk/water/images/v1.gif" title="http://www1.lsbu.ac.uk/water/images/v1.gif" width="300" height="300" align="center"></td>
+</tr>
+<tr>
+<td style="text-align:center">$HCN$</td>
+<td style="text-align:center">$\tilde{\nu_{1}} = 3313 \text{ (C-H stretching)} \\ \tilde{\nu_{2}} = 2109 \text{ ($C\equiv N$ stretching)} \\ \tilde{\nu_{3}} = 731\text{ ($H-C\equiv N$ bending)} \\ \tilde{\nu_{4}} = 731\text{ ($H-C\equiv N$ bending)} $</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4><!--
+import numpy as np
+v = 1.
+mp = 1.672*10**(-27.)
+c = 2.998*10**8. # m/s
+m1 = 12.*mp
+m2 = 16.*mp
+mu = m1*m2/(m1+m2) # kg
+print("mu = %0.4G kg"%mu)
+h = 6.626*10**(-34.) # J s
+kf = 1820. # N/m
+nu = 1/(2.*np.pi)*np.sqrt(kf/mu)
+print("nu = %0.4G Hz"%(nu/c))
+E = (v+0.5)*h*nu
+print("E = %0.4G J"%E)
+###############################
+nu = 6.308*10**(13.) # Hz
+print("E (light) = %0.4G J"%(nu*h))
+-->
 </div>
 </div>
 </div>
