@@ -13206,12 +13206,12 @@ div#notebook {
 </tr>
 <tr>
 <td style="text-align:left"><a href="#2.">2.</a></td>
-<td style="text-align:left">Introduction to Spartan</td>
+<td style="text-align:left">Spartan I: Introduction to Spartan</td>
 <td style="text-align:center">10.9</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#3.">3.</a></td>
-<td style="text-align:left">Particle in a Box (PIB) - Polyenes</td>
+<td style="text-align:left">Spartan II: Particle in a Box (PIB) - Polyenes</td>
 <td style="text-align:center">9.1-9.4, 10.9</td>
 </tr>
 <tr>
@@ -13221,7 +13221,7 @@ div#notebook {
 </tr>
 <tr>
 <td style="text-align:left"><a href="#5.">5.</a></td>
-<td style="text-align:left">Harmonic Oscillator</td>
+<td style="text-align:left">Spartan III: Harmonic Oscillator</td>
 <td style="text-align:center">9.6-9.8</td>
 </tr>
 <tr>
@@ -13231,32 +13231,37 @@ div#notebook {
 </tr>
 <tr>
 <td style="text-align:left"><a href="#7.">7.</a></td>
-<td style="text-align:left">-</td>
+<td style="text-align:left">Spartan IV: Peptide backbone dihedral scan</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#8.">8.</a></td>
-<td style="text-align:left">-</td>
+<td style="text-align:left">Chimera I: Getting familiar with X-ray and NMR structures (MDM2)</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#9.">9.</a></td>
-<td style="text-align:left">-</td>
+<td style="text-align:left">Chimera II: Calculating ∆SASA</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#10.">10.</a></td>
-<td style="text-align:left">-</td>
+<td style="text-align:left">Exam Review</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#11.">11.</a></td>
-<td style="text-align:left">-</td>
+<td style="text-align:left">Simbiology I: binding reactions</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#12.">12.</a></td>
-<td style="text-align:left">-</td>
+<td style="text-align:left">Simbiology II: folding intermediates</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#13.">13.</a></td>
+<td style="text-align:left">Review for Final</td>
 <td style="text-align:center">-</td>
 </tr>
 </tbody>
@@ -13506,8 +13511,8 @@ $$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}
 <td style="text-align:center">STO-3G</td>
 <td style="text-align:center">2</td>
 <td style="text-align:center">triplet</td>
-<td style="text-align:center">-12.39</td>
-<td style="text-align:center">10.27</td>
+<td style="text-align:center">$\alpha,\beta$ = -12.39, 10.27</td>
+<td style="text-align:center">—</td>
 <td style="text-align:center">-2007.4729</td>
 <td style="text-align:center">-73.804150</td>
 <td style="text-align:center">5</td>
@@ -13516,8 +13521,8 @@ $$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}
 <td style="text-align:center">3-21G</td>
 <td style="text-align:center">2</td>
 <td style="text-align:center">triplet</td>
-<td style="text-align:center">-15.93</td>
-<td style="text-align:center">44.34</td>
+<td style="text-align:center">$\alpha,\beta$ = -15.93, 4.67</td>
+<td style="text-align:center">$\alpha,\beta$ = 44.34, 47.62</td>
 <td style="text-align:center">-2023.5075</td>
 <td style="text-align:center">-74.393657</td>
 <td style="text-align:center">9</td>
@@ -13526,8 +13531,8 @@ $$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}
 <td style="text-align:center">6-31G*</td>
 <td style="text-align:center">2</td>
 <td style="text-align:center">triplet</td>
-<td style="text-align:center">-16.44</td>
-<td style="text-align:center">23.89</td>
+<td style="text-align:center">$\alpha,\beta$ = -16.44, 3.50</td>
+<td style="text-align:center">$\alpha,\beta$ = 23.89, 25.65</td>
 <td style="text-align:center">-2034.1230</td>
 <td style="text-align:center">-74.783934</td>
 <td style="text-align:center">15</td>
@@ -13535,6 +13540,14 @@ $$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}
 </tbody>
 </table>
 <!--
+| Basis set | Unpaired electrons | Multiplicity | HOMO energy  (eV)    | LUMO energy (eV) | Total Energy (eV)  | Total Energy (hartrees) | Total number of Basis $f^{\underline{n}}$'s |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| STO-3G    | 0   | singlet  |   -11.10    |  6.39   | -2003.6014 | -73.661817 |   5       |
+| 3-21G     | 0   | singlet  |   -14.96    |  1.24   | -2020.0746 | -74.267450 |   9       |
+| 6-31G\*   | 0   | singlet  |   -15.67    |  0.16   | -2030.6596 | -74.656604 |   15      |
+| STO-3G    | 2   | triplet  |   -12.39    |  10.27  | -2007.4729 | -73.804150 |   5       |
+| 3-21G     | 2   | triplet  |   -15.93    |  44.34  | -2023.5075 | -74.393657 |   9       |
+| 6-31G\*   | 2   | triplet  |   -16.44    |  23.89  | -2034.1230 | -74.783934 |   15      |
 ## from output: 
 Job type: Single point.
 Method: RHF
@@ -14027,10 +14040,17 @@ HW5: Chapter 11: #9, 27, 35, 36, 38, 44
 -->
 
 
+<p><strong>10.19 Suppose that a molecular orbital has the form N(0.145A+0.844B). Find a linear combination of the orbitals A and B that has <u>zero overlap</u> with this combination.</strong></p>
+<p>If we are looking for zero overlap, then we are looking for a function that is orthogonal to the function that was given.  Furthermore, we are looking for a molecular orbital that has the same form as $N(0.145A+ 0.844B)$, which would be: $N(aA+ bB)$.</p>
+<!--
+<iframe src="images/0.25dotx+0.75doty_and_-0.75dotx-0.25doty.html" width="500" height="500" align="center"></iframe>
+-->
 
 
 
-<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+$$\int \psi\psi\prime d\tau = \int N(0.145A+ 0.844B)N(aA+ bB) d\tau = 0$$$$\int N^{2} (0.145A+ 0.844B)(aA+ bB) d\tau = 0$$$$N^{2} \int [0.145a \overbrace{A^{2}}^{1} + 0.145b\overbrace{AB}^{0} + 0.844a\overbrace{BA}^{0} + 0.844b\overbrace{B^{2}}^{1}] d\tau = 0,$$<p>where we know that the overlap integral goes to zero i.e., $\int ABd\tau=0$ and we know: $\int A^{2}d\tau=1$, $\int B^{2}d\tau=1$.</p>
+<p>Therefore, after integration we are left with</p>
+$$N^{2}( 0.145a + 0.844b )= 0 $$$$\implies a = -\frac{0.844}{0.145}b$$$$\therefore \space N(0.844A - 0.145B) \text { or } N(-0.844A + 0.145B)$$<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14059,6 +14079,27 @@ HW5: Chapter 11: #9, 27, 35, 36, 38, 44
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="10."><span style="color:blue">10.</span><a class="anchor-link" href="#10.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="11."><span style="color:blue">11.</span><a class="anchor-link" href="#11.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="12."><span style="color:blue">12.</span><a class="anchor-link" href="#12.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="13."><span style="color:blue">13.</span><a class="anchor-link" href="#13.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
