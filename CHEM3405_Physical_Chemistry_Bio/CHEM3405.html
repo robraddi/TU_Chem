@@ -14182,16 +14182,11 @@ $$2(3)^2 = 18$$
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>15. The ground-state radial wavefunction for the hydrogen-like atom (i.e. a 1s orbital) is $R(r) = 2(Z/a_{0})^{3/2} exp(-Zr/a_{0})$. What is the most probable radius r for the electron?</strong></p>
 <p>Then, we need to find the value of r that maximizes P(r). <strong>Take first derivative and set equal to zero. Solve for r.</strong></p>
-$$d P=\left[\frac{1}{\sqrt{\pi} a_{0}^{3 / 2}} e^{-r / a_{0}}\right]^{2} 4 \pi r^{2} d r=\frac{4}{a_{0}^{3}} r^{2} e^{-2 r / a_{0}} d r$$$$2 r e^{-2 r / a_{0}}-\frac{2}{a_{0}} r^{2} e^{-2 r / a_{0}}=0$$$$2 r e^{-2 r / a_{0}}[1 - \frac{r}{a_{0}}] = 0 \implies r = a_{0} = 0.529 Å$$<!--
-$$P(r) = \int_{0}^{\pi} \int_{0}^{2\pi} \int R^{2}|\Psi(\theta,\phi)|^{2} r^{2}sin(\theta)dr d\theta d\psi$$
-$$= \int r^{2} R^{2} dr \int_{0}^{\pi} \overbrace{\int_{0}^{2\pi} |\Psi(\theta,\phi)|^{2}sin(\theta) d\theta d\psi}^{1}$$
-$$ = \int r^{2} R^{2} dr \int_{0}^{\pi} = \int r^{2} (2(Z/a_{0})^{3/2} exp(-Zr/a_{0}))^{2} dr$$
-$$ P(r) = r^{2} \frac{4Z^{3}}{a_{0}^{3}} exp(-2Zr/a_{0}) $$
-$$\frac{d\space P(r)}{dr} =  \frac{4Z^{3}}{a_{0}^{3}} r(\frac{2a_{0}e^{-2rZ/a_{0}} - Z}{a}) = 0$$
-$$\implies Z = 2a_{0}e^{-2Zr/a_{0}} \implies e^{-2Zr/a_{0}} = \frac{Z}{2a_{0}}$$
-Then, take the natural log of both sides and rearrange for $r$:
-$$ r = -\frac{a_{0}}{2Z} ln(\frac{Z}{2a_{0}}) = 0.0149 Å$$
--->
+$$d P=\left[\frac{1}{\sqrt{\pi} a_{0}^{3 / 2}} e^{-r / a_{0}}\right]^{2} 4 \pi r^{2} d r=\frac{4}{a_{0}^{3}} r^{2} e^{-2 r / a_{0}} d r$$$$2 r e^{-2 r / a_{0}}-\frac{2}{a_{0}} r^{2} e^{-2 r / a_{0}}=0$$$$2 r e^{-2 r / a_{0}}[1 - \frac{r}{a_{0}}] = 0 \implies r = a_{0} = 0.529 Å$$<hr>
+<h4 id="Side-Notes-for-15.:">Side Notes for 15.:<a class="anchor-link" href="#Side-Notes-for-15.:">&#182;</a></h4>$$P(r) = \int_{0}^{\pi} \int_{0}^{2\pi} \int R^{2}|\Psi(\theta,\phi)|^{2} r^{2}sin(\theta)dr d\theta d\psi$$$$= \int r^{2} R^{2} dr \overbrace{ \int_{0}^{\pi} \int_{0}^{2\pi} \underbrace{|\Psi(\theta,\phi)|^{2}}_{\frac{1}{4\pi}}sin(\theta) d\theta d\psi}^{1},$$<p>hence</p>
+$$\int_{0}^{\pi} \int_{0}^{2\pi} sin(\theta) d\theta d\psi = 4\pi$$<p>Therefore, the general forms are:</p>
+$$P(r) = 4\pi r^{2} \psi^{2}$$<p>and</p>
+$$ P(r) = r^{2}R(r)^{2}$$
 </div>
 </div>
 </div>
@@ -14306,6 +14301,19 @@ $$\psi_{VB} = (2p_{z})_{a} (1) (2p_{z})_{b}(2)+(2p_{z})_{a}(2)(2p_{z})_{b}(1)$$
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
