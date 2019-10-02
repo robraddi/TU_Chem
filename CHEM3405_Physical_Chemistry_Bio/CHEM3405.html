@@ -13761,6 +13761,7 @@ Ttest_indResult(statistic=4.8394636216671625, pvalue=0.0006820430952265224)
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Recall: The zero-point energy, $E_{1}$ = -13.6 eV for Hydrogen.</p>
 <p><strong>2. Why doesn't PIB do a great job for certain energy levels?</strong></p>
+<p>As we increase to larger levels i.e., as $n \rightarrow \infty$; $\lambda \rightarrow 0$ and the <a href="https://en.wikipedia.org/wiki/Correspondence_principle">correspondence principle</a> states that the particle behaves more classical.</p>
 
 </div>
 </div>
@@ -13983,7 +13984,9 @@ For this part, let’s try to evaluate vibrational modes of $H_{2}O$ and $HCN$ (
 Answer (from DFT):</p>
 <p>Now, let’s compare this frequency to the frequency of light we expect to be absorbed for excitation from the v = 0 → v = 1 states of a Harmonic Oscillator, given in Equation (1). The reported force constant for CO is $k_{f} = 1820\space N.m^{-1}$. To calculate the reduced mass, assume that the masses of the carbon and oxygen atoms are 12 $m_{p}$ and 16 $m_{p}$, where $m_{p} = 1.672 × 10^{-27}\space kg$ is the mass of the proton. Are these results comparable to the quantum mechanical calculations?
 Answer (from Harmonic Oscillator calculation):</p>
-$$ \mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}} = 1.147x10^{-26} \space kg $$$$ E_{v} = (v + \frac{1}{2})h\nu = (v + \frac{1}{2})\hbar\sqrt{\frac{k_{f}}{\mu}} = 6.302x10^{-20} \space J,$$<p>where $\tilde{\nu} = 2115 cm^{-1}$. The value obtained from $CO$'s calculated IR spectrum (Spartan) is $2104\space cm^{-1}$, which is different by approximately $11 cm^{-1}$.</p>
+$$ \mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}} = 1.147x10^{-26} \space kg $$<p>Now, calculating the energy for $v =1$:</p>
+$$ E_{v} = (v + \frac{1}{2})h\nu = (v + \frac{1}{2})\hbar\sqrt{\frac{k_{f}}{\mu}} = 6.302x10^{-20} \space J,$$<p>where $\tilde{\nu} = 2115 cm^{-1}$. The value obtained from $CO$'s calculated IR spectrum (Spartan) is $2104\space cm^{-1}$, which is different by approximately $11 cm^{-1}$.</p>
+<p>The QM harmonic oscillator models the potential energy through Hooke's Law, $V(X) = \frac{1}{2}k_{f}x^{2}$ where $k_{f} = m \omega^2$ and $\omega = 2\pi \nu$. Thinking of the bond as a spring with a mass $m$ attached to the end is a very nice model for the $C=O$ stretch, therefore the answer is (as it should be) close to the DFT calculations from <em>Spartan</em>.</p>
 <p><strong>Part B: Vibrational Modes.</strong> Based on your results, complete the following table for H2O and HCN molecules.</p>
 <table>
 <thead><tr>
@@ -14050,7 +14053,174 @@ HW5: Chapter 11: #9, 27, 35, 36, 38, 44
 
 $$\int \psi\psi\prime d\tau = \int N(0.145A+ 0.844B)N(aA+ bB) d\tau = 0$$$$\int N^{2} (0.145A+ 0.844B)(aA+ bB) d\tau = 0$$$$N^{2} \int [0.145a \overbrace{A^{2}}^{1} + 0.145b\overbrace{AB}^{0} + 0.844a\overbrace{BA}^{0} + 0.844b\overbrace{B^{2}}^{1}] d\tau = 0,$$<p>where we know that the overlap integral goes to zero i.e., $\int ABd\tau=0$ and we know: $\int A^{2}d\tau=1$, $\int B^{2}d\tau=1$.</p>
 <p>Therefore, after integration we are left with</p>
-$$N^{2}( 0.145a + 0.844b )= 0 $$$$\implies a = -\frac{0.844}{0.145}b$$$$\therefore \space N(0.844A - 0.145B) \text { or } N(-0.844A + 0.145B)$$<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+$$N^{2}( 0.145a + 0.844b )= 0 $$$$\implies a = -\frac{0.844}{0.145}b$$$$\therefore \space N(0.844A - 0.145B) \text { or } N(-0.844A + 0.145B)$$<p><strong>11.27 Consider the electrostatic model of the hydrogen bond. The N–C distance of the hydrogen bonded groups in proteins, such as occur in an a helix, is 0.29 nm. How much energy (in kJ mol−1) is required to break the hydrogen bond (a) in a vacuum (εr = 1),
+(b) in a membrane (essentially a liquid hydrocarbon with εr = 2.0), and (c) in water (εr = 80.0)?</strong></p>
+<p><strong>11.44 We can explore bond torsion in ethane to understand the barrier to internal rotation of one bond relative to another in saturated carbon chains, such as those found in lipids. The potential energy of a CH3 group in ethane as it is rotated around the C–C bond can be written V = 12 V0(1 + cos 3f), where f is the azimuthal angle (24) and V0 = 11.6 kJ mol−1. (a) What is the change in potential energy between the trans and fully eclipsed conformations? (b) Show that for small variations in angle, the torsional (twisting) motion around the C–C bond can be expected to be that of a harmonic oscillator. (c) Estimate the vibrational frequency of this torsional oscillation.</strong></p>
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Practice-Problems:">Practice Problems:<a class="anchor-link" href="#Practice-Problems:">&#182;</a></h4><!--
+import numpy as np
+c = 3.00*10**8. # m/s
+h = 6.626*10**(-34.)
+me = 9.109*10**(-31.)
+l = 10**(-10.)
+print("%0.3G"%(h/(2*np.pi)/(2*10**-9.)))
+-->
+
+
+<p><strong>1. Draw a picture of a sinusoidal wave $g(x, t)$, annotated with the wavelength $λ$, phase velocity $v$, and amplitude $A$. Write down the mathematical form of the function $g(x, t)$ describing this wave.</strong></p>
+$$ g(x,t) = Acos(\frac{2\pi}{\lambda}(x-\nu t) + \phi) $$<p>Or equivlantly,</p>
+$$ g(x,t) = Asin(\frac{2\pi}{\lambda}(x-\nu t)) $$<p>Therefore, when $\phi = \pi$ we get the curve in Figure 1.</p>
+<p><img src="images/sin.png" width="200" height="200" align="center"></p>
+<p style="text-align: center"><b>Figure 1.</b> $\psi(x) = Asin(\frac{2\pi}{\lambda}x+\pi)$</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>2. A light wave (with phase velocity c = 3.00 × 108 m s-1) has a wavelength of 1 μm.</strong></p>
+<p>Note that the visible region $\in \{400,...,700\}nm$.</p>
+<p><strong>(a) What frequency is the light?</strong></p>
+$$c=\lambda \nu \implies \nu = \frac{c}{\lambda} = 3x10^{14}\space Hz$$<p><strong>(b) Is it in the visible range?</strong></p>
+$$\frac{10^{9}\space nm }{1\space m}\frac{10^{-6} \space m}{} = 10^{3} nm$$<p>$ \therefore$ this wavelength is just outside of the visible region.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>3. An electron has a deBroglie wavelength of $1 Å$ = $1 × 10^{-10}\space m$.</strong></p>
+<p><strong>(a) What is its momentum?</strong></p>
+$$p = \frac{h}{\lambda} = 7x10^{-24} \space J.s.m^{-1}$$<p><strong>(b) Given the mass of the electron ($m_{e} = 9.109x10^{-31} \space kg$), what is the electron’s velocity?</strong></p>
+<p>Linear momentum is just:</p>
+$$ p = mv \implies v = \frac{p}{m} = 7x10^{6} m.s^{-1}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>4. Suppose we have confined an electron to a very small space, such that we can measure its position to an uncertainty of $∆x = 1 \space nm$. If we measure the momentum, what is the lower limit in the expected uncertainty $∆p$?</strong></p>
+<p>Heisenberg's Uncertainty Principle (1927):</p>
+$$\Delta x \Delta p \underline{&gt;} \frac{\hbar}{2} \implies \Delta p \underline{&gt;} \frac{\hbar}{2 \Delta x} = 5.27x10^{-26} J.s.m^{-1}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>5. Write down the 1D time-independent Schrodinger equation.</strong></p>
+$$ \hat{H}\psi(x) = \overbrace{-\frac{\hbar^{2}}{2m}(\frac{\partial^{2} \psi(x)}{\partial x^{2}})}^{\text{Kinetic Energy}} + \overbrace{V(x)\psi(x)}^{\text{Potential Energy}} = E\psi(x)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>6. Write down normalized Particle-In-a-Box (PIB, i.e. $V(x) = 0$ inside a box of length $L$) wavefunctions $\psi_{n}(x)$ for $n=1, 2 \space and \space3$, and their corresponding energies $E_{n}$.</strong></p>
+<p>Just plug $n=1, 2 \space and \space3$ into the equations below...</p>
+$$\psi(x) = \sqrt{\frac{2}{L}}sin(\frac{n\pi x}{L}),$$<p>where the eigenvalue of the Hamiltonian operator for PIB is just</p>
+$$E = \frac{h^{2}n^{2}}{8mL^{2}} $$<p><strong>7. Draw the PIB wavefunctions $\psi_{n}(x)$ for $n=1, 2 \space and \space3$.</strong></p>
+<p><a href="#Particle-in-a-Box-(PIB">Click here to see image of PIB wavefunctions</a>)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>8. Draw the probability distributions $P_{n}(x)$ for $n=1, 2 \space and \space3$.</strong></p>
+<p><a href="#Particle-in-a-Box-(PIB">Look at the image of PIB wavefunctions</a>) for $n=1, 2 \space and \space3$ and reflect the negative portion of the curve into the positive region.</p>
+<p><strong>9. Suppose I give you an unnormalized wavefunction $\psi(x)$, and the information that $\int |\psi(x)|^{2}dx = 0.5$ . What number $c$ will produce a normalized wavefunction $c\psi(x)$ ?</strong></p>
+$$\int c\psi(x)^{*}c\psi(x)dx = 0.5 \implies \frac{c^{2}}{0.5}\int |\psi(x)|^{2}dx = 1$$$$\frac{c^{2}}{0.5}=1 \implies c = \sqrt{0.5}$$<p><strong>10. For PIB wavefunction $\psi_{n}(x)$, $n=2$, what is the probability that the electron will be found on the right most quarter of the box, i.e. $3L/4 &lt; x &lt; L$? (Hint: draw a picture!)</strong></p>
+<p>Due to symmetry:</p>
+$$ P(x) = 0.25$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>11. A diatomic $C=O$ molecule is excited from a $v=1$ vibrational state to a $v=2$ state by a light wave.</strong> 
+<strong>(a) If the harmonic oscillator force constant is $1860 N/m$, calculate the frequency of the light. (Hint: you will need to consider the reduced mass $μ$).</strong></p>
+<p>The harmonic oscillator frequency is just</p>
+$$\nu = \frac{1}{2\pi}\sqrt{\frac{k_{f}}{\mu}},$$<p>where $\mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}}$. See lab for more details.</p>
+<p><strong>(b) Based on the frequency you compute, what kind of light is this (e.g. radio waves, UV, etc...)?</strong></p>
+<p>See lab for more details.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>12. State how the energies En of the hydrogen-like wavefunctions depend on quantum numbers n, l and m?</strong></p>
+$$E = -\frac{13.6 \space eV}{n^{2}} \implies E_{n} \propto -\frac{1}{n^{2}}$$$$E_{l,m_{l}} = l(l+1)\frac{\hbar^{2}}{2I} = \frac{|J|^{2}}{2I},$$<p>where</p>
+$$ |J| = \sqrt{l(l+1)}\hbar$$<p><strong>13. The ground state of the hydrogen atom has an ionization energy of 13.6 eV. What is the ionization energy for the ground state of $He^{+}$?</strong></p>
+$$ E_{n} = -\frac{Z^{2}(13.6 \space eV)}{n^{2}} = \frac{-4(13.6)}{1^{2}},$$<p>where</p>
+$$I = -E \implies I = 54.4 \space eV$$<p><strong>14. What is the maximum number of electrons that can occupy n=3 states in an atom? (remember to count spin states too!)</strong></p>
+<p>$n = 3, \space l = {0,1,2}, \space m_{l} {-2,-1,0,1,2}$</p>
+<p>Max number of electrons in subshell is $2(2l+1)$, and the max number of electrons in a shell is $2n^{2}$.</p>
+<p>Therefore,</p>
+$$\sum_{i}^{3} 2(2l_{i}+1) = 2(2(1)+1)+2(2(2)+1)+2(2(3)+1)= 18$$<p>or</p>
+$$2(3)^2 = 18$$<p><strong>15. The ground-state radial wavefunction for the hydrogen-like atom (i.e. a 1s orbital) is R(r) = 2(Z/a0)3/2 exp(-Zr/a0). What is the most probable radius r for the electron?</strong></p>
+<p><strong>16. State the definition of angular momentum.</strong></p>
+<p>The total angular momentum is defined as</p>
+$$ |J| = \sqrt{l(l+1)}\hbar,$$<p>where each component can be represented as</p>
+$$ |J| = \sqrt{J_{x}^{2}+J_{y}^{2}+J_{z}^{2}}$$<p><strong>17. State how angular momenta terms |J| and Jz are quantized for particle-on-a-ring (in terms of quantum numbers m and l.)</strong></p>
+$$ |J| = \sqrt{l(l+1)}\hbar, $$<p>where $l\in {0,1,2,...}$,  $J_{z} = {-\hbar, 0, \hbar}$ and $m_{l} = {-1,0,1}$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>18. What are the key differences between valence bond theory and M.O. theory?</strong></p>
+<p>Valance bond theory (VB) says electrons live in sparate valance orbitals $\psi_{a},\psi_{b}$. When they overlap a bond is formed. $\psi_{VB} = \psi_{a}(1)\psi_{b}(2)\pm\psi_{a}(2)\psi_{b}(1)$ approximates by considering electrons in A.O valance shell.</p>
+<p>Molecular orbital theory (M.O.) says that neuclei share electrons and $\psi$'s are spread over multiple nuclei.  M.O. theory also constructs linear combinations of A.O.'s and is able to predict bond orders, orbital overlap, and make predictions about bond characteristics.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>19. Draw a π orbital as a sum of two p-orbitals (2pz)a and (2pz)b, centered on nuclei a and b, respectively. Write down a VB wavefunction for this arrangement.</strong></p>
+<p><img src="https://www.grandinetti.org/resources/Teaching/Chem121/Lectures/MolecularOrbitalTheory/sigmaporbitals.gif" width="400" height="400" align="center"></p>
+$$\psi_{VB} = (2p_{z})_{a} (1) (2p_{z})_{b}(2)+(2p_{z})_{a}(2)(2p_{z})_{b}(1)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>20. Discuss why the peptide bond is planar, in terns of the concepts of resonance and hybridization.</strong></p>
+<p><img src="https://qph.fs.quoracdn.net/main-qimg-d878a9c5cc1953ab9ff30ad5900b4caa" width="400" height="400" align="center"></p>
+<p><strong>21. Which of the following multiple-electron wavefunctions are valid (i.e. are anti-symmetric)?</strong></p>
+<p>Use the inversion operator: $\psi(x_{1},x_{2}) = - psi(x_{2},x_{1})$</p>
+<p><strong>a. 1sa(1) + 1sb(2)</strong></p>
+<p>$\psi = 1sa(2) + 1sb(1)$</p>
+<p>$\therefore$ symmetric</p>
+<p><strong>b. 1sa(1) 1sb(2) + 1sa(2) 1sb(1)</strong></p>
+<p>$\psi = 1sa(2) 1sb(1) + 1sa(1) 1sb(2)$</p>
+<p>$\therefore$ symmetric</p>
+<p><strong>c. 1sa(1) 1sb(2) - 1sa(2) 1sb(1)</strong></p>
+<p>$\psi = 1sa(2) 1sb(1) - 1sa(1) 1sb(2) = -(1sa(1) 1sb(2) - 1sa(2) 1sb(1))$</p>
+<p>$\therefore$ antisymmetric</p>
+<p><strong>22. Is the overlap integral $S$ for the orbitals shown below non-zero? Why or why not? Will these orbitals form a chemical bond? If so, will it be a $σ$ or a $π$ bond? What kind of symmetry will might have, $g$ or $u$?</strong></p>
+<p><img src="images/orbitals_1s_2p.png" width="300" height="300" align="center"></p>
+<p>Why not? Consider $CH_{4}$!</p>
+<p>Note: Look at the shaded regions.</p>
+<p>Answer: $\sigma$-bond and $\sigma_{g}$</p>
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
