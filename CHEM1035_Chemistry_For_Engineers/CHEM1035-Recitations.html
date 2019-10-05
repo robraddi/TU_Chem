@@ -13057,31 +13057,7 @@ ul.typeahead-list  > li > a.pull-right {
 
     </style>
 <style type="text/css">
-    
-
-
-
-<style>
-div.header {
-    display: block; text-align: center;
-    /*position: running(header);*/
-    position: header;
-}
-div.footer {
-    display: block; text-align: right;
-    /*position: running(footer);*/
-    position: footer;
-}
-@page {
-    @top-center { content: element(header) }
-}
-@page {
-    @bottom-center { content: element(footer) }
-}
-
-
-
-<style>
+    <style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13145,8 +13121,16 @@ div.footer {
         margin-top: 0.5em;
         display: block;
     }
+    .footer{
+    text-align: center;
+    font-family: arial, helvetica;
+    font-size: 11px;
+    }
+
 </style>
-<script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13157,8 +13141,8 @@ div.footer {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
-                }
+                    styles: {'.MathJax_Display': {"margin": 4}},
+                    linebreaks: { automatic: true }}
         });
 </script>
 
@@ -13599,7 +13583,7 @@ $$ Avg. = &lt;m&gt; = \frac{1}{N_{Total}}\sum_{j}{m_{j}N_{j}} = \frac{70(9)+71(6
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3."><span style="color:blue">3.</span><a class="anchor-link" href="#3.">&#182;</a></h4><h2 id="Chemical-Groups:">Chemical Groups:<a class="anchor-link" href="#Chemical-Groups:">&#182;</a></h2><p><img src="images/Chemical_Groups.pdf" width="900/2" height="600/2" align="center" ></p>
+<h4 id="3."><span style="color:blue">3.</span><a class="anchor-link" href="#3.">&#182;</a></h4><h2 id="Chemical-Groups:">Chemical Groups:<a class="anchor-link" href="#Chemical-Groups:">&#182;</a></h2><p><img src="images/Chemical_Groups.png" width="900/2" height="600/2" align="center" ></p>
 <p><img src="http://faculty.sdmiramar.edu/fgarces/ChemComon/Tutorial/ChemNomen/ChemNomenclatureTutorial/c_Pic_Nomenclature/Oxyanion.gif" height="600" width="600" align="center" ></p>
 <h2 id="Acids-and-Bases">Acids and Bases<a class="anchor-link" href="#Acids-and-Bases">&#182;</a></h2><table>
 <thead><tr>
@@ -13713,7 +13697,7 @@ $$ N_{2} (g) + 3 H_{2} (g) \rightarrow 2NH_{3} (g) \hspace{1cm} \Delta H \text{ 
 <h4 id="Calculate-the-theoretical-yield.">Calculate the theoretical yield.<a class="anchor-link" href="#Calculate-the-theoretical-yield.">&#182;</a></h4>$$ (\frac{1kg}{1000g})(\frac{17.031g}{\text{mol $NH_{3}$}})(\frac{\text{2767}}{}) = \text{47.124 kg} $$<h4 id="Calculate-the-actual-yield,-where-the-percent-yield-was-98%.">Calculate the actual yield, where the percent yield was 98%.<a class="anchor-link" href="#Calculate-the-actual-yield,-where-the-percent-yield-was-98%.">&#182;</a></h4><p>We know % yield is defined by:</p>
 $$ \text{% Yield} = \frac{\text{Actual Yield}}{\text{Theoretical Yield}}\times \text{100 %} $$<p>Rearrange for the actual yield</p>
 $$ \text{Actual Yield} =  \frac{\text{% Yield}\times\text{Theoretical Yield}}{\text{100 %}} =
-\frac{\text{98%}\times\text{47.124 kg}}{\text{100%}} = \text{46.18 kg}$$<h2 id="Answers-to-Chemical-Structure-Worksheet:">Answers to Chemical Structure Worksheet:<a class="anchor-link" href="#Answers-to-Chemical-Structure-Worksheet:">&#182;</a></h2><p><img src="images/Chemical_Structure_Worksheet.pdf" width="900/2" height="600/2" align="center" ></p>
+\frac{\text{98%}\times\text{47.124 kg}}{\text{100%}} = \text{46.18 kg}$$<h2 id="Answers-to-Chemical-Structure-Worksheet:">Answers to Chemical Structure Worksheet:<a class="anchor-link" href="#Answers-to-Chemical-Structure-Worksheet:">&#182;</a></h2><p><img src="images/Chemical_Structure_Worksheet.png" width="900/2" height="600/2" align="center" ></p>
 <hr>
 
 </div>
@@ -14933,7 +14917,7 @@ $$ 0 &gt; \Delta H - T\Delta S \implies T &gt; \frac{\Delta H}{\Delta S}  $$<p>C
 $$ \Delta G = \Delta G° + RTlnQ = 0 \implies \Delta \mathrm{G}^{\circ}=-\mathrm{RT} \ln \mathrm{K}_{\mathrm{sp}}$$<p>Now, we substitute $\Delta \mathrm{G}^{\circ}$ into the following equation and rearrange to solve for $\ln K_{\mathrm{sp}}$.</p>
 $$\Delta \mathrm{G}^{\circ}=\Delta \mathrm{H}^{\circ}-\mathrm{T} \Delta \mathrm{S}^{\circ}$$$$\ln K_{\mathrm{sp}}=-\frac{\Delta \mathrm{H}^{\circ}}{\mathrm{R}}\left(\frac{1}{\mathrm{T}}\right)+\frac{\Delta \mathrm{S}^{\circ}}{\mathrm{R}}$$<p>Note that this equation represents a straight line:</p>
 $$y = m x + b $$<p>What does this plot look like?</p>
-<p><img title="www.chem.purdue.edu" src="https://www.chem.purdue.edu/gchelp/howtosolveit/Thermodynamics/ThermoArt/LnK_vs_inv_T.JPG" width ="300" height="300" align="center" ></p>
+<p>&lt;img title="www.chem.purdue.edu" src="<a href="https://www.chem.purdue.edu/gchelp/howtosolveit/Thermodynamics/ThermoArt/LnK_vs_inv_T.JPG">https://www.chem.purdue.edu/gchelp/howtosolveit/Thermodynamics/ThermoArt/LnK_vs_inv_T.JPG</a>" width ="300" height="300" align="center" &gt;</p>
 
 </div>
 </div>
