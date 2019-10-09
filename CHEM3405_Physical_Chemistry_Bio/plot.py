@@ -63,7 +63,7 @@ def simple_plot(x,y,xlabel='x',ylabel='y',name=None,size=111,Type='scatter',
         xLine=None,yLine=None,
         annotate_text=None,text_x=0,text_y=0,
         annotate_x=0,annotate_y=0,
-        arrow='->'):
+        arrow=None):
     '''
     Returns a plot and saves it to the working directory
     unless stated otherwise.
@@ -137,10 +137,14 @@ def simple_plot(x,y,xlabel='x',ylabel='y',name=None,size=111,Type='scatter',
             mark.set_size(fontsize=16)
             mark.set_rotation(s=15)
     if annotate_text != None:
-        ax.annotate(r'%s'%annotate_text,
-                xy=(annotate_x,annotate_y),xytext=(text_x,text_y),
-                arrowprops=dict(facecolor='black', arrowstyle=arrow),
-                fontsize=16)
+        if arrow==None:
+            ax.annotate(r'%s'%annotate_text,
+                    xy=(annotate_x,annotate_y),fontsize=16)
+        else:
+            ax.annotate(r'%s'%annotate_text,
+                    xy=(annotate_x,annotate_y),xytext=(text_x,text_y),
+                    arrowprops=dict(facecolor='black', arrowstyle=arrow),
+                    fontsize=16)
     if xLine!=None:
         ax.axhline(xLine)
     if yLine!=None:
