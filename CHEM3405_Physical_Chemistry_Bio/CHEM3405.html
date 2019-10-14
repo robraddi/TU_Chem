@@ -13018,7 +13018,70 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    <style>
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
+<style type="text/css">
+    
+
+
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13082,16 +13145,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13102,12 +13157,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -13232,12 +13285,12 @@ div#notebook {
 <tr>
 <td style="text-align:left"><a href="#7.">7.</a></td>
 <td style="text-align:left">Spartan IV: PES of H2 &amp; Peptide backbone dihedral scan</td>
-<td style="text-align:center">-</td>
+<td style="text-align:center">10.9;11.13;11.17</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#8.">8.</a></td>
 <td style="text-align:left">Chimera I: Getting familiar with X-ray and NMR structures (MDM2)</td>
-<td style="text-align:center">-</td>
+<td style="text-align:center">11.3-11.4;</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="#9.">9.</a></td>
@@ -14439,9 +14492,9 @@ Summary of the potential surface scan: N B1 SCF
 </ol></li>
 </ol>
 
-**Questions:**
+<b>Questions:</b>
 
-**1. What intramolecular forces do you think are important in determining these minima?**
+<b>1. What intramolecular forces do you think are important in determining these minima?</b>
 
 Varying $\psi$ the $C—C_{\alpha}$ bond clearly shows the electrostatic intramolecular forces that play a role between the carbonyl and the amine group. Display the partial charges for each of the atoms. Take note of the change for each of the rotations. 
 
@@ -14452,7 +14505,7 @@ Varying $\psi$ the $C—C_{\alpha}$ bond clearly shows the electrostatic intramo
 <p><strong>NOTE: This is the direction your scan should proceed:</strong></p><p><img src="images/ramachandran.png" width="350" height="350" align="center"></p>
 <p><br>
 <img src="images/dihedral_scan.png" width="650" height="650" align="center"></p>
-<section class="footnotes">
+<p><b>Figure 1.</b> Dihedral scan about the $\psi$ angle of alanine with N-term capped with aldehyde and C-terminus capped with an NH<sub>2</sub> group.</p><section class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>Cornell, W. D., Cieplak, P., Bayly, C. I., Gould, I. R., Merz, K. M., Ferguson, D. M., et al. (1995). A second generation force field for the simulation of proteins, nucleic acids, and organic molecules. <em>Journal of the American Chemical Society</em>, <em>117</em>(19), 5179–5197. doi:10.1021/ja00124a002<a href="#fnref1" class="footnote-back">↩</a></p></li>
@@ -14464,7 +14517,154 @@ Varying $\psi$ the $C—C_{\alpha}$ bond clearly shows the electrostatic intramo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="8."><span style="color:blue">8.</span><a class="anchor-link" href="#8.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="8."><span style="color:blue">8.</span><a class="anchor-link" href="#8.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Computer Lab – Chimera 1</strong></p>
+<p><strong>Goal</strong>: The purpose of this lab is to get familiar with protein structures determined by X-ray crystallography vs. nuclear magnetic resonance methods.</p>
+<p><strong>Introduction</strong></p>
+<p>In this exercise, we will use a protein called MDM2 as an example. MDM2 is an important protein in cancer—it has the ability to bind the transactivation domain of tumor suppressor protein p53, downregulating its ability to activate transcription. Many researchers have sought to develop anti-cancer drugs that target the binding site of MDM2, blocking p53 from binding, and thus upregulating the tumor suppressor activity of p53. Several of these drugs are currently in clinical trials.<a href="#fn_Cornell" class="footnote-ref" id="fnref_Cornell"><sup>1</sup></a></p>
+<p>The first high-resolution atomic structure of MDM2 bound to p53 came from an X-ray crystal structure by Kussie et al. (1996).<a href="#fn_Hoe" class="footnote-ref" id="fnref_Hoe"><sup>2</sup></a> This structure shows a small helical region of p53 that binds a hydrophobic cleft in MDM2. To get these proteins to co-crystallize well, constructs with only residues 17-125 of MDM2, and residues 15-29 of p53, were used. Only the atomic structures of residues 25-109 could be resolved, however.</p><p><img src="images/MDM2-p53.png" align="center" width="300" height="300"></p>
+<p style="text-align:center;font-wight:bold;">The X-ray crystal structure of MDM2-p53 (PDB ID: 1YCR)</p><p>In 2005, Uhrinova et al. used 2D NMR spectroscopy to determine the <em>apo</em> structure of MDM2 (“<em>apo</em>” = unbound by ligand).<a href="#fn_Kussie" class="footnote-ref" id="fnref_Kussie"><sup>3</sup></a> This structure contains more residues (1-119) but most of the terminal regions are unstructured.</p><p><img src="images/apo-MDM2.png" align="center" width="300" height="300"></p>
+<p style="text-align:center;font-wight:bold;">The NMR structure of <em>apo</em>-MDM2 (PDB ID: 1Z1M)</p>
+<p><strong>Viewing and visualizing PDB files</strong></p>
+<p>To find a given PDB structure, open a browser and go to <a href="http://pdb.org">http://pdb.org</a>. In the search window, type in the PDB ID, which will bring you to the entry page. This page has a great deal of useful information about the protein sequence and structure.</p>
+<p>To view the contents of the deposited PDB file containing the atomic coordinates, click on the <strong>Display Files</strong> drop-down in the upper right and choose <strong>PDB File</strong>. The full contents (text) of the PDB file should be viewable in your browser.</p>
+<p>To view the molecular structure in 3D, open the <strong>Chimera</strong> application and choose <strong>File &gt; Fetch</strong> <strong>by ID …</strong> Type the PDB ID into the text field and click <strong>Fetch</strong>. The ribbon structure of the protein should appear, which you can rotate in 3D by clicking and dragging.</p><!-- Page 2 -->
+
+<p>Chimera Tips:</p><ol type="1">
+<li>
+<p>To view side chain atoms: Actions &gt; Atoms/Bonds &gt; show</p>
+</li>
+<li>
+<p>A number of “preset” renderings are be found under the Presets menu</p>
+</li>
+<li>
+<p>To select atoms, Control-click</p>
+</li>
+<li>
+<p>To select multiple atoms Shift-Control click</p>
+</li>
+<li>
+<p>Option-click and mouse drag to translate the view</p>
+</li>
+<li>
+<p>If your view gets off-center for any reason, try Action &gt; Focus to recenter.</p>
+</li>
+</ol><p><strong>Procedure</strong></p>
+<p>Use (1) the information in the Protein Data Bank (visual inspection of the *.pdb file, and molecular visualization in Chimera), and (2) the original publications (posted on Blackboard) to answer the questions below.</p>
+<p><strong>X-ray crystal structure of MDM2-p53</strong></p>
+<p><strong>PDB</strong>: The atomic coordinates for this structure are deposited in the Protein Data Bank</p>
+<p>under PDB ID: <strong>1YCR</strong>.</p>
+<p><strong>Publication</strong>: Kussie, P. H., Gorina, S., Marechal, V., Elenbaas, B., Moreau, J., Levine, A. J., &amp; Pavletich, N. P. (1996). Structure of the MDM2 oncoprotein bound to the p53 tumor suppressor transactivation domain. <em>Science</em>, <em>274</em>(5289), 948–953.</p>
+<p>Last week we learned about X-ray crystallography, and how it can be used to determine the atomic structure of proteins. Recall that this involves: (1) collecting diffraction data (i.e. the intensities of a large number of diffraction spots and their identification with Miller indices and a unit cell), and (2) using a model of protein electron density to calculate (by Fourier Transform) computed structure factors <em>F</em><sub>c</sub> that can be compared to the observed structure factors |<em>F</em><sub>o</sub>|.<a href="#fn_Uhrinova" class="footnote-ref" id="fnref_Uhrinova"><sup>4</sup></a></p>
+<p>The resolution of the computed electron density depends on the number of diffraction spots (i.e. the number of “reflections”). To give you some sense of the resolution of the final model, consider Figure 1 from Kussie et al (1996) below:</p><p><img src="images/electron_density_map.png" align="center" width="600" height="600"></p>
+<p><b>Figure.</b> MIR electron density map of the X. laevis MDM2-p53 interface at 3.0 A resolution, contoured at 1.0 a, with the refined 2.3 A resolution atomic model in a stick representation. Stereo view focuses on the interactions of Phe19, Trp23, and Leu26 of p53 (labeled) with the (x2 helix of MDM2.</p>
+<p>As you can see, the final model of the electron density really is “blobby”, but it is high-resolution enough that backbone and side-chain atoms (solid black lines, hard to see, I know) can be fit unambiguously. Some regions of this density may be too diffuse to fit (often the thermally mobile termini). For these regions, the protein structure is typically left undefined (hence, “missing residues” are common in X-ray crystal structures.)</p><!-- Page 3 -->
+
+<ol start="4" type="1">
+<li>
+<p>Note that we are careful here to denote <em>absolute values</em> of <em>F</em><sub>o</sub> because of the so-called “phase problem” in which only <em>intensities</em> can be measured, not phase shifts.</p>
+</li>
+</ol><p style="text-align:center"><b>Table 1.</b> Statistics from the crystallographic analysis.</p><p><img src="images/crystallographic_analysis.png" align="center" width="600" height="600"></p>
+<!-- Insert Table -->
+
+
+<p><strong>Questions</strong></p><ol type="1">
+<li>
+<p>Consider <strong>Table 1</strong> from Kussie et al. (1996), in which statistics are given for a number of similar crystal structures the authors obtained.</p>
+
+<ol type="a">
+<li>
+<p>Why is the number of unique reflections smaller than the total number?</p>
+</li>
+<li>
+<p>Explain the correlation between the number of unique reflections and the resolution of the crystal structure.</p>
+</li>
+</ol></li>
+<li>
+<p>The <em>R</em>-factor is a measure of the quality of the (electron density) model, defined as <em>R</em> = Σ|<em>F</em><sub>o</sub> - <em>F</em><sub>c</sub>|/ Σ|<em>F</em><sub>o</sub>|, where <em>F</em><sub>o</sub> and <em>F</em><sub>c</sub> are the observed and calculated structure factors, respectively. Because of the iterative refinement of computed structure factors from the observed data, there is a danger of overfitting. A more useful measure is called the <em>R</em><sub>free</sub> value, where 10% of the observed structure factors are left out of the data set, so they can be used for testing the predictions.</p>
+
+<ol start="3" type="a">
+<li>
+<p>Which should have the larger value, <em>R</em> or <em>R</em><sub>free</sub>?</p>
+</li>
+<li>
+<p>Based on the reported values for (human) MDM2-p53, do you think overfitting is a problem for this structure?</p>
+</li>
+</ol></li>
+</ol><p>3. Why doesn’t this structure have any hydrogens?</p>
+<p>In Chimera, go to <strong>Tools</strong> &gt; <strong>Higher-Order Structure</strong> &gt; <strong>Unit Cell</strong>, and click <strong>Outline</strong>. Click on <strong>Make Copies</strong> to see the symmetrical copies of MDM2 inside the unit cell.</p><ol start="4" type="1">
+<li>
+<p>What are the unit cell dimensions <em>a</em>, <em>b</em> and <em>c</em>? (in Å, see also <a href="http://pdb.org">http://pdb.org</a>)</p>
+</li>
+<li>
+<p>What <em>shape</em> is the unit cell?</p>
+</li>
+<li>
+<p>Visualize the side chains using wire-frame (<strong>Actions</strong> &gt; <strong>Atoms/Bonds</strong> &gt; <strong>Wire</strong>).</p>
+
+<ol type="a">
+<li>
+<p>Based on what you can see, does it look like there are strong interactions between unit cell copies?</p>
+</li>
+<li>
+<p>How careful do you think we need to be about such crystal packing artifacts when interpreting X-ray structures of proteins?</p>
+</li>
+</ol></li>
+</ol><p>Recall that the crystallographic B-factor reports how diffuse the model of electronic density is for each atom. It is highly correlated to thermal motion. In Chimera, color the protein by B-factor, using <strong>Actions</strong> &gt; <strong>Color</strong> &gt; <strong>all options…</strong> &gt; <strong>Tools</strong> &gt; <strong>Render by Attribute</strong> (choose bfactor in the pull-down menu for Attribute:, then click Apply)</p>
+<p>7. What parts of the protein have the most thermal motion?</p>
+<p><strong>NMR structure of <em>apo-</em>MDM2</strong></p>
+<p><strong>PDB</strong>: The atomic coordinates for this structure are deposited in the Protein Data Bank</p>
+<p>under PDB ID: <strong>1Z1M</strong>.</p>
+<p><strong>Publication</strong>: Uhrinova, S., Uhrin, D., Powers, H., Watt, K., Zheleva, D., Fischer, P., et al. (2005). Structure of Free MDM2 N-terminal Domain Reveals Conformational Adjustments that Accompany p53-binding. <em>Journal of Molecular Biology</em>, <em>350</em> (3), 587– 598. doi:10.1016/j.jmb.2005.05.010</p>
+<p>Solution structures of proteins are usually determined using 2D NMR spectroscopy. Two-dimensional techniques measure how the magnetization of one kind of nuclei (say, <sup>1</sup>H) is affected by another kind of nuclei (say, <sup>15</sup>N). The first step in 2D NMR is to <em>assign</em> the various magnetic resonances to particular protons. As long as the spectroscopic peaks are disperse (i.e. well-defined and far enough apart to be distinguished from one another), assignment is possible because resonance can only occur for nearby (through-bond) nuclei. For example, Figure 1 in</p>
+<p>Uhrinova et al. (2005) shows HSQC (heteronuclear single quantum coherence) spectra disperse enough to assign (a) backbone NH protons and (b) side-chain protons.</p><p><img src="images/HSQC.png" align="center" width="700" height="670"></p>
+<p>Figure. Assigned HSQC spectra of MDM2<sup>N</sup>. (a) <sup>1</sup>H,<sup>15</sup>N HSQC spectrum. Folded peaks are shown in grey. <sup>H</sup>N–<sup>N</sup>H assignments are indicated by residue number. (b) A portion of the <sup>1</sup>H,<sup>13</sup>C HSQC spectrum showing methyl groups, with assignments indicated by residue and atom identifier (based on CNS notation).</p><p><!-- Page 4 --></p>
+<p>Once the peaks are assigned, studies of NMR relaxation times can determine the presence of Nuclear Overhauser Effects, or <strong>NOEs</strong>. An NOE is a short-range transfer of nuclear spin polarization from one nuclei to another that occurs through <em>space</em> (rather than through-bond). Like its optical cousin FRET (Förster Resonance Energy Transfer), it is an induced-dipole-dipole interaction that falls off as ~1/<em>r</em><sup>6</sup>. If an NOE is observed between two protons, it means that they must be close in three-dimensional space, with the strength of the NOE related to proximity, for example:</p><ol type="1">
+<li>
+<p>Strong NOEs: 1.7 Å to 2.5 Å</p>
+</li>
+<li>
+<p>Medium strong NOEs: 2.5 Å to 3.5 Å</p>
+</li>
+<li>
+<p>Medium weak NOEs: 3.5 Å to 4.5 Å</p>
+</li>
+<li>
+<p>Weak NOEs: 4.5 Å to 5.5 Å</p>
+</li>
+</ol><p>A set of measured NOE distances can put enough restraints on the set of possible protein structures, so as to completely determine the solution conformation. A computer is used to explore possible structures that best satisfy the NOE distance restraints, generating an <em>ensemble</em> of different conformations, each equally compatible with the experimental restraints.</p>
+<p><strong>Questions</strong></p>
+<p>In Chimera, load structure <strong>1Z1M</strong>.</p><ol type="1">
+<li>
+<p>Why does this structure include protons, whereas the X-ray crystal structure does not?</p>
+</li>
+<li>
+<p>Why are there so many structures in this PDB?</p>
+</li>
+<li>
+<p>Obviously, there are very few NOE distance restraints for the N-terminal region. The modeled ensemble has many possible conformations for this region. How well do you think this represents reality? In other words: how much is the conformational heterogeneity an artifact of the computer models used for structural refinement, versus a real feature of the MDM2 N-terminal region? Can you think of any other experimental biophysical methods that you could use to answer this question?</p>
+</li>
+</ol><p>Bonus: Load both the X-ray structure (1YCR) and the NMR structure (1Z1M) into Chimera and align them using <strong>Tools</strong> &gt; <strong>Structure Comparison</strong> &gt; <strong>MatchMaker</strong> (select 1YCR as the reference, and shift-click to select all NMR structures to match).</p>
+<p>4. Can you see any changes in the binding cleft as described by Uhrinova et al.?</p><p><hr></p>
+<ol>
+<li id="fn_Cornell"><p>Cornell, W. D., Cieplak, P., Bayly, C. I., Gould, I. R., Merz, K. M., Ferguson, D. M., et al. (1995). A second generation force field for the simulation of proteins, nucleic acids, and organic molecules. <em>Journal of the American Chemical Society</em>, <em>117</em>(19), 5179–5197. doi:10.1021/ja00124a002<a href="#fnref_Cornell" class="footnote-back">↩</a></p></li>
+<li id="fn_Hoe"><p>Hoe, K. K., Verma, C. S., &amp; Lane, D. P. (2014). Drugging the p53 pathway: understanding the route to clinical efficacy. <em>Nature Reviews Drug Discovery</em>, <em>13</em>(3), 217–236. doi:10.1038/nrd4236<a href="#fnref_Hoe" class="footnote-back">↩</a></p></li>
+<li id="fn_Kussie"><p>Kussie, P. H., Gorina, S., Marechal, V., Elenbaas, B., Moreau, J., Levine, A. J., &amp; Pavletich, N. P. (1996). Structure of the MDM2 oncoprotein bound to the p53 tumor suppressor transactivation domain. <em>Science</em>, <em>274</em>(5289), 948–953.<a href="#fnref_Kussie" class="footnote-back">↩</a></p></li>
+<li id="fn_Uhrinova"><p>Uhrinova, S., Uhrin, D., Powers, H., Watt, K., Zheleva, D., Fischer, P., et al. (2005). Structure of Free MDM2 N-terminal Domain Reveals Conformational Adjustments that Accompany p53-binding. <em>Journal of Molecular Biology</em>, <em>350</em>(3), 587–598. doi:10.1016/j.jmb.2005.05.010<a href="#fnref_Uhrinova" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
