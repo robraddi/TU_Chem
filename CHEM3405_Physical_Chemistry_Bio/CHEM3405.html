@@ -14491,7 +14491,7 @@ Summary of the potential surface scan: N B1 SCF
 <li><p>Click the green “+” to add a plot, with the molecule as the x-axis and E_kcal as the y-axis. Click the Merge button (little black triangle) to super impose the plot with the conformation. Cycle through to animation and see if you can identify the beta-sheet and alpha-helix minima.</p></li>
 </ol></li>
 </ol>
-<p><b>Questions:</b></p><p><b>1. What intramolecular forces do you think are important in determining these minima?</b></p><p><b>Maximum:</b> Varying $\psi$ the $C—C_{\alpha}$ bond clearly shows the non-bonded interactions that play a role between the carbonyl and the amine group. Take note of the proximal changes for each of the rotations.</p><p><b>Minimum:</b> Stabilization of peptide backbone (lowest energy) would take place at most favorable positions of lowest non-bonding interactions while aligning hydrogen bond donor/acceptor (180°).</p><p><strong><br />
+<p><b>Questions:</b></p><p><b>1. What <b><u>intra</u></b>molecular forces do you think are important in determining these minima?</b></p><p>Stabilization of peptide backbone (lowest energy) would take place at most favorable positions of lowest non-bonding interactions. Think about the peptide bond (between the carbonyl group of the first AA and amino group of the second AA) and its partial double bond character due to resonance. Varying $\psi$ the $C—C_{\alpha}$ bond clearly shows the non-bonded interactions that play a role between the carbonyl — $NH_{2}$ as well as the carbonyl — carbonyl upon rotation. Take note of the proximal changes for each of the rotations.<br><b>Note: The $\psi$ and $\phi$ angles are the 2 DOF that allow polypeptides to fold.</b> </p><p><strong><br />
 </strong></p>
 <p><strong>NOTE: This is the direction your scan should proceed:</strong></p><p><img src="images/ramachandran.png" width="350" height="350" align="center"></p>
 <p><br>
@@ -14662,14 +14662,136 @@ Summary of the potential surface scan: N B1 SCF
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="9."><span style="color:blue">9.</span><a class="anchor-link" href="#9.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="9."><span style="color:blue">9.</span><a class="anchor-link" href="#9.">&#182;</a></h4><p><strong>Computer Lab – Chimera 2</strong></p>
+<p><strong>Goal</strong>: The purpose of this lab is to get familiar analyzing protein-protein interfaces, and examine some of the energetic factors that contribute to favorable binding.</p>
+<p><strong>Introduction</strong></p>
+<p>Recall our friend from the last exercise, the MDM2-p53 complex (PDB ID: 1YCR).</p>
+<img src="images/MDM2-p53.png" align="center" width="300" height="300">
+<p style="text-align:center;font-wight:bold;">The X-ray crystal structure of MDM2-p53 (PDB ID: 1YCR)</p>
+<p>Let’s investigate how the p53 helix interacts with the MDM2 receptor.</p>
+<p><strong>Finding interacting residues</strong></p>
+<ol type="1">
+<li><p><u>Load the structure</u> using <strong>File</strong> &gt; <strong>Fetch by ID</strong> … The ribbon structure of the protein complex should be shown</p></li>
+<li><p><u>Select the p53 helix</u> by Control-clicking (holding the CNTL key and clicking with the mouse) on p53, then press the up-arrow key to select the entire chain.</p></li>
+<li><p><u>Find the receptor residues interacting with p53</u> using <strong>Tools &gt; Surface/Binding Analysis</strong>.</p>
+<ol type="a">
+<li><p>In the “Atoms to Check” panel, click on the “Designate” buttons with the correct options so as to calculate interactions between the p53 helix (selected) and other atoms in the model.</p></li>
+<li><p>In the “Clash/Contact Parameters” panel, click on “Contact” (not “Clash”). Then click on “Apply” below.</p></li>
+<li><p>You should see a number of atoms in the helix and receptor selected. To select the <em>residues</em> involved, press the up-arrow key.</p></li>
+<li><p>Visualize these residues using <strong>Actions</strong> &gt; <strong>Atoms/Bonds</strong> &gt; <strong>show</strong>. It may be helpful to <strong>Actions</strong> &gt; <strong>Color</strong> &gt; <strong>by element</strong>. (rendering as wire with a width of 4 works well too)</p></li>
+</ol></li>
+</ol>
+<p><strong><br />
+</strong></p>
+<p><strong>Questions</strong></p>
+<p><b>1. Which residues of p53 have the most interactions with the MDM2 receptor?</b></p>
+<p><b>2. Which residues would you say are making hydrophobic interactions, and which have polar interactions?</b></p>
+<p><strong>Measuring surface area changes upon binding</strong></p>
+<ol type="1">
+<li><p><span class="underline">Select the entire complex</span> by control-clicking on any residue, and pressing the up-arrow key until the entire structure is selected.</p></li>
+<li><p><span class="underline">Show the entire surface</span> using <strong>Actions</strong> &gt; <strong>Surface &gt; show</strong>.</p></li>
+<li><p><span class="underline">Calculate the total volume and surface area</span> using <strong>Tools &gt; Surface/Binding Analysis &gt; Measure Volume and Area</strong>. The values are reported in units of Å<sup>3</sup> and Å<sup>2</sup>, respectively. Write down these values in the table below.</p></li>
+</ol>
+
+<p>Repeat these calculations for …</p><ol type="a">
+<li><p>… the MDM2 receptor by itself (select the p53 helix and delete it using <strong>Actions</strong> &gt; <strong>Atoms/Bonds</strong> &gt; <strong>delete</strong>.), and</p></li>
+<li><p>… the p53 helix by itself (reload 1YCR, select MDM2 only and delete it)</p></li>
+</ol><table>
+<thead>
+<tr class="header">
+<th></th>
+<th>1YCR (entire complex)</th>
+<th>MDM2</th>
+<th>p53</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Volume (Å<sup>3</sup>)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Surface Area (Å<sup>2</sup>)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><!--
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>1YCR (entire complex)</th>
+<th>MDM2</th>
+<th>p53</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Volume (Å<sup>3</sup>)</td>
+<td>13.07E3</td>
+<td>11.11E3</td>
+<td>1531</td>
+</tr>
+<tr class="even">
+<td>Surface Area (Å<sup>2</sup>)</td>
+<td>4556</td>
+<td>4354</td>
+<td>1092</td>
+</tr>
+</tbody>
+</table>
+-->
+
+<p><strong>Questions</strong></p>
+<p><b>1. What is the total change in surface area upon binding of the p53 helix to MDM2?</b></p><!--$$4354 + 1092 – 4556 = 890 Å^{2}$$-->
+
+<p><b>2. Using the data from Figure 1a of Chen et al. (2013) below, make a rough estimate of the binding affinity of p53 helix (i.e. its dissociation constant <em>K</em><sub>d</sub>). Ask your TA for the actual answer</b></p><!--$$ {K_{d}}_{ExP} = 410 nM$$-->
+
+
+<p><img src="images/Chen_et_al.png" width="600" height="600" align="center"></p>
+<p><p><strong>Figure 1a</strong> from Chen et al. (2013)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p></p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Chen, J., Sawyer, N., &amp; Regan, L. (2013). Protein-protein interactions: General trends in the relationship between binding affinity and interfacial buried surface area. <em>Protein Science</em>, <em>22</em>(4), 510–515. doi:10.1002/pro.2230<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="10."><span style="color:blue">10.</span><a class="anchor-link" href="#10.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="10."><span style="color:blue">10.</span><a class="anchor-link" href="#10.">&#182;</a></h4><p><strong>Midterm Review:</strong></p>
+<p><strong>12.37 When benzophenone is illuminated with ultraviolet radiation, it is excited into a singlet state. This singlet changes rapidly into a triplet, which phosphoresces. Triethylamine acts as a quencher for the triplet. In an experiment in methanol as solvent, the phosphorescence intensity Iphos varied with amine concentration as shown below. A time-resolved laser spectroscopy experiment had also shown that the half-life of the fluorescence in the absence of quencher is 29 ms. What is the value of kQ?</strong></p>
+<table>
+<thead><tr>
+<th style="text-align:center">Species</th>
+<th style="text-align:center">$\text{}$</th>
+<th style="text-align:center">$\text{}$</th>
+<th style="text-align:center">$\text{}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">[Q]/(moldm−3)</td>
+<td style="text-align:center">0.0010</td>
+<td style="text-align:center">0.0050</td>
+<td style="text-align:center">0.0100</td>
+</tr>
+<tr>
+<td style="text-align:center">Iphos/(arbitraryunits)</td>
+<td style="text-align:center">0.41</td>
+<td style="text-align:center">0.25</td>
+<td style="text-align:center">0.16</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
