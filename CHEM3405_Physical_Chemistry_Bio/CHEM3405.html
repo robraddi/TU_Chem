@@ -13018,7 +13018,70 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    <style>
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
+<style type="text/css">
+    
+
+
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13082,16 +13145,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13102,12 +13157,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -15166,31 +15219,30 @@ $$ \eta_{T} = 1 - \frac{\phi_{F}}{\phi_{F,0}}  = 1 - \frac{0.9\phi_{F,0}$}{\phi_
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="11."><span style="color:blue">11.</span><a class="anchor-link" href="#11.">&#182;</a></h4><h3>Midterm Review #2:</h3><p>&lt;!--</p>
-<p><p><strong>Physical constants</strong></p></p>
-<p><p>Boltzmann’s constant <em>k</em><sub>B</sub> = 1.38 × 10<sup>-23</sup> J K<sup>-1</sup></p></p>
-<p><p>Avogadro’s constant <em>N</em><sub>A</sub> = 6.022 × 10<sup>23</sup> mol<sup>−1</sup></p></p>
-<p><p>Ideal gas constant <em>R</em> = <em>k</em><sub>B</sub> <em>N</em><sub>A</sub> = 8.314 J K<sup>-1</sup> mol<sup>-1</sup></p></p>
-<p><blockquote></p>
-<p><p>= 1.987 cal K<sup>-1</sup> mol<sup>-1</sup></p>
-&lt;/blockquote&gt;</p>
-<p><p>bar (pressure) 1 bar = 10,000 Pa. = 10,000 N m<sup>-2</sup></p></p>
-<p><p>= 0.987 atm</p></p>
-<p><p>Planck’s constant <em>h</em> = 6.626 × 10<sup>-34</sup> J s</p></p>
-<p><p>ℏ = <em>h</em>/2π = 1.054 × 10<sup>-34</sup> J s</p></p>
-<p><p>The speed of light <em>c</em> = 3.00 × 10<sup>8</sup> m s<sup>-1</sup></p></p>
-<p><p>Electron charge <em>e</em> = 1.602 × 10<sup>-19</sup> C</p></p>
-<p><p>Electron mass <em>m­</em><sub>e</sub> = 9.109 × 10<sup>-31</sup> kg</p></p>
-<p><p>Proton mass <em>m­</em><sub>p</sub> = 1.672 × 10<sup>-27</sup> kg</p></p>
-<p><p>Permittivity of free space ε<sub>0</sub> = 8.854 × 10<sup>-12</sup> C<sup>2</sup> J<sup>-1</sup> m<sup>-1</sup></p></p>
-<p><p>Bohr radius <em>a</em><sub>0</sub> = 4πε<sub>0</sub>ℏ<sup>2</sup>/<em>m<sub>e</sub>e</em><sup>2</sup> = 0.529 Å</p></p>
-<p><p><strong>Conversions</strong></p></p>
-<p><p>1 kcal = 4.184 kJ</p></p>
-<p><p>1 Å = 10<sup>-10</sup> m</p></p>
-<p><p>1 T = 1 N s C<sup>-1</sup> m<sup>-1</sup></p></p>
-<p><p>1 D (Debye) = 3.335 × 10<sup>-30</sup> C m</p></p>
-<p><p>1 e Å = 4.8 D</p>
---&gt;</p>
+<h4 id="11."><span style="color:blue">11.</span><a class="anchor-link" href="#11.">&#182;</a></h4><h3>Midterm Review #2:</h3><!--
+<p><strong>Physical constants</strong></p>
+<p>Boltzmann’s constant <em>k</em><sub>B</sub> = 1.38 × 10<sup>-23</sup> J K<sup>-1</sup></p>
+<p>Avogadro’s constant <em>N</em><sub>A</sub> = 6.022 × 10<sup>23</sup> mol<sup>−1</sup></p>
+<p>Ideal gas constant <em>R</em> = <em>k</em><sub>B</sub> <em>N</em><sub>A</sub> = 8.314 J K<sup>-1</sup> mol<sup>-1</sup></p>
+<p>= 1.987 cal K<sup>-1</sup> mol<sup>-1</sup></p>
+<p>bar (pressure) 1 bar = 10,000 Pa. = 10,000 N m<sup>-2</sup></p>
+<p>= 0.987 atm</p>
+<p>Planck’s constant <em>h</em> = 6.626 × 10<sup>-34</sup> J s</p>
+<p>ℏ = <em>h</em>/2π = 1.054 × 10<sup>-34</sup> J s</p>
+<p>The speed of light <em>c</em> = 3.00 × 10<sup>8</sup> m s<sup>-1</sup></p>
+<p>Electron charge <em>e</em> = 1.602 × 10<sup>-19</sup> C</p>
+<p>Electron mass <em>m­</em><sub>e</sub> = 9.109 × 10<sup>-31</sup> kg</p>
+<p>Proton mass <em>m­</em><sub>p</sub> = 1.672 × 10<sup>-27</sup> kg</p>
+<p>Permittivity of free space ε<sub>0</sub> = 8.854 × 10<sup>-12</sup> C<sup>2</sup> J<sup>-1</sup> m<sup>-1</sup></p>
+<p>Bohr radius <em>a</em><sub>0</sub> = 4πε<sub>0</sub>ℏ<sup>2</sup>/<em>m<sub>e</sub>e</em><sup>2</sup> = 0.529 Å</p>
+<p><strong>Conversions</strong></p>
+<p>1 kcal = 4.184 kJ</p>
+<p>1 Å = 10<sup>-10</sup> m</p>
+<p>1 T = 1 N s C<sup>-1</sup> m<sup>-1</sup></p>
+<p>1 D (Debye) = 3.335 × 10<sup>-30</sup> C m</p>
+<p>1 e Å = 4.8 D</p>
+-->
+
 <hr>
 </div>
 </div>
@@ -15201,23 +15253,74 @@ $$ \eta_{T} = 1 - \frac{\phi_{F}}{\phi_{F,0}}  = 1 - \frac{0.9\phi_{F,0}$}{\phi_
 <p><b>1. Calculate the dipole moment of formamide (in units D), given the bond lengths and partial charges below:</b></p>
 <img src="images/dipole_moment_formamide.png" width="300" height="300" align="center">
 
+$$\mu = \sum_{i}q_{i}\vec{r}_{i},$$
 
+<p>where $r=\sqrt{x^{2} + y^{2}+z^{2}}$ and so each component is considered in the resultant dipole vector $\mu = \sqrt{{\mu_{x}}^{2} + {\mu_{y}}^{2}+{\mu_{z}}^{2}}$.</p><p>Here, in this problem we are given a molecule and coordinates in 2-D space, therefore we will only have two components.</p>$$\mu_{x} = \sum_{i}q_{i}x_{i} \hspace{0.5cm} \text{and} \hspace{0.5cm} \mu_{y} = \sum_{i}q_{i}y_{i}  \tag{1}$$$$\mu = \sqrt{{\mu_{x}}^{2} + {\mu_{y}}^{2}} \tag{2}$$<p><u>See Page 428 for more details.</u></p><p><a href="https://www.chemistry.mcmaster.ca/adronov/resources/Common_Solvents_for_Organic_Reactions.pdf">Experimental value for dipole moment of formamide.</a></p>
 
-
-\begin{align}
-\mu_{fi} &= < \psi_{f} | \vec{\mu} | \psi_{i} > \\
-\mu_{10} &= < \psi_{1} | \vec{\mu} | \psi_{0} > = \int \psi_{1}(x) \space \vec{\mu} \space \psi_{0}(x) dx,
-\end{align}
-
-<p>where $\vec{\mu}$ is the electric dipole moment operator, and $ \psi_{i}$ and $ \psi_{f}$ are the wavefunctions for the initial and final states, respectively.  <u>See Page 469 for more details.</u></p>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># Creating a dictionary for each of the atoms in the molecule</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mf">1.602</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">19.</span><span class="p">)</span> <span class="c1"># C</span>
+<span class="n">atoms</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;H1&quot;</span><span class="p">:[</span><span class="mf">0.270</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.3</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.86</span><span class="p">)],</span> <span class="c1"># [charge, (x,y)] in e and Å</span>
+        <span class="s2">&quot;O&quot;</span><span class="p">:[</span><span class="o">-</span><span class="mf">0.571</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)],</span>
+        <span class="s2">&quot;N&quot;</span><span class="p">:[</span><span class="o">-</span><span class="mf">0.669</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.3</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)],</span>
+        <span class="s2">&quot;C&quot;</span><span class="p">:[</span><span class="mf">0.650</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)],</span>         <span class="c1"># deamed to be the origin</span>
+        <span class="s2">&quot;H2&quot;</span><span class="p">:[</span><span class="mf">0.270</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.3</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.86</span><span class="p">)],</span>
+        <span class="s2">&quot;H3&quot;</span><span class="p">:[</span><span class="mf">0.050</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.86</span><span class="p">)]}</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Atoms: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">[</span><span class="n">atom</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">atoms</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Charges: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">[</span><span class="n">charge</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">charge</span> <span class="ow">in</span> <span class="n">atoms</span><span class="o">.</span><span class="n">values</span><span class="p">()])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Positions: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">[</span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">atoms</span><span class="o">.</span><span class="n">values</span><span class="p">()])</span>
+<span class="n">mu_x</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">atom</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">e</span><span class="o">*</span><span class="n">atom</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mf">10.</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">atoms</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span> <span class="c1"># see eq 1 above</span>
+<span class="n">mu_y</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">atom</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">e</span><span class="o">*</span><span class="n">atom</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mf">10.</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">atoms</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span> <span class="c1"># see eq 1 above</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mu_x,mu_y = </span><span class="si">%0.4g</span><span class="s2">,</span><span class="si">%0.4g</span><span class="s2"> C m&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">mu_x</span><span class="p">,</span><span class="n">mu_y</span><span class="p">))</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mu_x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">mu_y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># see eq 2 above</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mu = </span><span class="si">%0.4g</span><span class="s2"> C m&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">mu</span><span class="p">))</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">mu</span><span class="o">/</span><span class="p">(</span><span class="mf">3.335</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">30.</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mu = </span><span class="si">%0.4g</span><span class="s2"> D&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">mu</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Experimental mu = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="mf">3.73</span><span class="p">)</span> <span class="c1"># Source given above</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Atoms: [&#39;H1&#39;, &#39;O&#39;, &#39;N&#39;, &#39;C&#39;, &#39;H2&#39;, &#39;H3&#39;]
+Charges: [0.27, -0.571, -0.669, 0.65, 0.27, 0.05]
+Positions: [(-1.8, 0.86), (0.5, 1.0), (-1.3, 0.0), (0.0, 0.0), (-1.8, -0.86), (0.5, -0.86)]
+mu_x,mu_y = -5.812e-30,-9.836e-30 C m
+mu = 1.143e-29 C m
+mu = 3.426 D
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><b>2. Two equal and opposite charges places 10 Å apart experience an attractive electrostatic force. Is this force stronger in water or in the gas phase? Why?</b></p>$$V(r) =  \frac{q_{1}q_{2}}{4 \pi  \underbrace{\epsilon_{0}}_{\text{Permittivity}\\\text{of free space}}  \hspace{1cm} \underbrace{\epsilon}_{\text{Dielectric Const.}\\\text{Electric field}\\\text{of interaction}} r^{2}}, $$<p></p>
-<p>where $q_{1}$ and $q_{2}$ are equal and opposite charges, the permittivity of free space $\epsilon_{0}$ = 8.854 × 10<sup>-12</sup> C<sup>2</sup> J<sup>-1</sup> m<sup>-1</sup>, $r=10 Å$ and the dielectric constant $\epsilon$ is different for both mediums.</p><p><b>3. True or False? The dielectric constant of water is 1.0.</b></p><p style="text-align:center"><b>False</b>. The dielectric constant of water is 78. The dielectric constant of vacuum is 1.0</p><p><b>4. Are the dielectric properties of polar solvents due mainly to (a) atomic or (b) molecular polarization?</b></p>
+<p><b>2. Two equal and opposite charges places 10 Å apart experience an attractive electrostatic force. Is this force stronger in water or in the gas phase? Why?</b></p>$$V(r) =  \frac{q_{1}q_{2}}{4 \pi \epsilon_{r}\epsilon_{0} r^{2}}, $$<p></p>
+<p>where $q_{1}$ and $q_{2}$ are equal and opposite charges, the permittivity of free space $\epsilon_{0}$ = 8.854 × 10<sup>-12</sup> C<sup>2</sup> J<sup>-1</sup> m<sup>-1</sup>, $r=10 Å$ and the dielectric constant $\epsilon_{r}$ is different for both cases and depends on the medium. The dielectric constant is related to the effective electric field generated by interactions with the medium.</p> 
+<p>Therefore, the potential energy of the two charges separated by bulk water is reduced by nearly two orders of magnitude compared to the value it would have if the charges were separated by a vacuum. <u>See Page 425 for more details.</u></p><p><b>3. True or False? The dielectric constant of water is 1.0.</b></p><p style="text-align:center"><b>False</b>. The dielectric constant of water is 78. The dielectric constant of vacuum is 1.0</p><p><b>4. Are the dielectric properties of polar solvents due mainly to (a) atomic or (b) molecular polarization?</b></p><p>The larger the polarizability of the molecule, the greater is the distortion cause by a given strength of electric field.  If the molecule contains large atoms with electrons some distance from the nucleus, the nuclear control is less and the polarizability of the molecule is greater. The polarizability also depends on the orientation of the molecule with respect to the field unless geometrically symmetric ($CH_{4}$, $SF_{6}$, etc.).  <u>See Pages 426-432 for more information.</u></p>
 </div>
 </div>
 </div>
@@ -15226,7 +15329,7 @@ $$ \eta_{T} = 1 - \frac{\phi_{F}}{\phi_{F,0}}  = 1 - \frac{0.9\phi_{F,0}$}{\phi_
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><b>5. Draw the Lennard-Jones potential, labeling the parts that are influenced by the <em>r</em><sup>-12</sup> term and the <em>r</em><sup>-6</sup> term.</b></p><h5 id="Lennard-Jones-Potential">Lennard-Jones Potential<a class="anchor-link" href="#Lennard-Jones-Potential">&#182;</a></h5>$$V(r) = 4\epsilon[\overbrace{(\frac{\sigma}{r})^{12}}^{\text{Repulsion}}  - \overbrace{(\frac{\sigma}{r})^{6}}^{\text{Attraction}}]$$<p> At short ranges, the main contribution from the potential energy function comes from $(\frac{1}{r})^{12}$, which corresponds to the repulsive interactions (Pauli repulsion due to overlap of electron orbitals).  At long ranges the main contribution from the potential energy function comes from $(\frac{1}{r})^{6}$,which corresponds to the attractive force (van der Waals force, or dispersion force).</p>
 <p>Recall that the force is related to the potential energy by</p>$$F = - \frac{dV(r)}{dr} $$<p><b>Find the distance $r$, at which the potential energy reaches a minimum.</b></p><p>Set the first derivative of the potential energy function equal to zero and solve for $r$.</p><p><b>Find $\sigma$, the distance $r$ at which the potential energy is <u>zero</u>.</b></p><p><img title="www.uh.edu" src="https://www.uh.edu/engines/lennardjonespotential.jpg" width="400" height="400" align="center" ></p>
-
+<p><u>See Page 436 for more details.</u></p>
 </div>
 </div>
 </div>
@@ -15241,15 +15344,16 @@ $$ \eta_{T} = 1 - \frac{\phi_{F}}{\phi_{F,0}}  = 1 - \frac{0.9\phi_{F,0}$}{\phi_
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Spectroscopy</strong></p>
-<p><b>7. The molar absorption coefficient for a dye is ϵ = 12000 L/mol/cm for light of wavelength λ = 590 nm. At a dye concentration of 100 mM, what is the cuvette path length necessary to decrease the intensity of light by a factor of 10?</b></p><p> Use equation (12.4a) and (12.5)</p>
+<p><b>7. The molar absorption coefficient for a dye is ϵ = 12000 L/mol/cm for light of wavelength λ = 590 nm. At a dye concentration of 100 mM, what is the cuvette path length necessary to decrease the intensity of light by a factor of 10?</b></p>$$A =  log(\frac{I_{0}}{I})  =  -log(T) = \epsilon b c$$$$ b = -\frac{log(T)}{\epsilon c},$$<p>where the intensity of light transmitted has decreased by a factor of 10, so $T=1-0.1 = 0.90$. Solve.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><b>8. What is an isobestic point? What does observing an isobestic point say about the system you are studying?</b></p><p>An sobestic point is a specific wavelength at which the absorbance intensity of a sample is invarient during a chemical reaction and comes about when there are at least two interrelated absorbing species in solution.</p>
-<p>This says that if an isosbestic point is to occur, then the two species involved are related linearly by stoichiometry, such that the absorbance is invariant for one particular wavelength. <u>See Page 469 for more details.</u></p><p><b>9. What is a transition dipole moment? Given a ground-state wavefunction ψ<sub>0</sub>(<em>x</em>) and an excited-state ψ<sub>1</sub>(<em>x</em>), write down the formula for the dipole moment.</b></p>\begin{align}
+<p><b>8. What is an isobestic point? What does observing an isobestic point say about the system you are studying?</b></p><p>The <b><u>isobestic point</u></b> is a specific wavelength at which the <b>absorbance</b> intensity of a sample is invariant during a chemical reaction and comes about when there are at least two interrelated absorbing species in solution.</p>
+<p>This says that if an isobestic point is to occur, then the two species involved are related linearly by stoichiometry, such that the absorbance is invariant for one particular wavelength. <u>See Page 469 for more details.</u></p>
+<p>Also note that the <b><u>isostillbic</u></b> point is for fluorescence spectra.</p><p><b>9. What is a transition dipole moment? Given a ground-state wavefunction ψ<sub>0</sub>(<em>x</em>) and an excited-state ψ<sub>1</sub>(<em>x</em>), write down the formula for the dipole moment.</b></p>\begin{align}
 \mu_{fi} &amp;= &lt; \psi_{f} | \vec{\mu} | \psi_{i} &gt; \\
 \mu_{10} &amp;= &lt; \psi_{1} | \vec{\mu} | \psi_{0} &gt; = \int \psi_{1}(x) \space \vec{\mu} \space \psi_{0}(x) dx,
 \end{align}<p>where $\vec{\mu}$ is the electric dipole moment operator, and $ \psi_{i}$ and $ \psi_{f}$ are the wavefunctions for the initial and final states, respectively.  <u>See Page 469 for more details.</u></p>
@@ -15274,19 +15378,33 @@ $$ \eta_{T} = 1 - \frac{\phi_{F}}{\phi_{F,0}}  = 1 - \frac{0.9\phi_{F,0}$}{\phi_
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><b>13. What kind of information can be obtained using FRET spectroscopy? What is the distance dependence of the FRET effect?</b></p><p>Förster resonance energy transfer (FRET) spectroscopy is useful for studying processes involving inter and intra-molecular energy transfer and can be used to measure distances (ranging from 1 to 9 nm) in biological systems. <u>See Pages 500,501 for more information.</u></p><h5> Förster theory:</h5><p>States that the efficiency of resonance energy transfer is related to the distance $R$ between donor-acceptor pairs by
+<p><b>13. What kind of information can be obtained using FRET spectroscopy? What is the distance dependence of the FRET effect?</b></p><p>Förster resonance energy transfer (FRET) spectroscopy is useful for studying processes involving inter and intra-molecular energy transfer and can be used to measure distances (ranging from 1 to 9 nm) in biological systems.  Furthermore, conformational changes can be studied, and also good for studying bulk distances. Single molecule FRET —create histograms of binned FRET distances, ultimately revealing states.<u>See Pages 500,501 for more information.</u></p><h5> Förster theory:</h5><p>States that the efficiency of resonance energy transfer is related to the distance $R$ between donor-acceptor pairs by
 
 $$\eta_{T} = \frac{{R_{0}}^{6}}{{R_{0}}^{6} + {R}^{6}}, $$
 
-<p>where $R_{0}$ is the distance at which $50 \%$ of the energy is transfered from donor to acceptor (<b>known value</b> and varified by experiment), and $R$ is the distance between donor and acceptor. This dependence is related by</p>$$\eta_{T} \propto {R}^{-6} $$<p><b>14. The fluorescence lifetime of tryptophan is τ<sub>0</sub> = 2.6 ns. The ratio of fluorescence intensity with quencher (I) and without quencher (I<sub>0</sub>) was measured for a series of quencher concentrations [Q], as shown below. What is the quenching rate <em>k</em><sub>Q</sub> for the quencher? Give correct units(!)</b></p><!--
-<img src="images/dipole_moment_formamide.png" width="300" height="300" align="center">
--->
-
-<p><strong>Diffraction and crystallography</strong></p><p><b>15. Draw two or more lines through the 2D lattice of points to show planes corresponding to Miller indices (2,1,0)</b>
+<p>where $R_{0}$ is the distance at which $50 \%$ of the energy is transfered from donor to acceptor (<b>known value</b> and varified by experiment), and $R$ is the distance between donor and acceptor. This dependence is related by</p>$$\eta_{T} \propto {R}^{-6} $$<p><b>14. The fluorescence lifetime of tryptophan is τ<sub>0</sub> = 2.6 ns. The ratio of fluorescence intensity with quencher (I) and without quencher (I<sub>0</sub>) was measured for a series of quencher concentrations [Q], as shown below. What is the quenching rate <em>k</em><sub>Q</sub> for the quencher? Give correct units(!)</b></p><p><img src="images/flour_lifetime_TRP.png" width="400" height="400" align="center"></p>
+<p>Because the fluorecence intensity and lifetime are both proportional to the fluorescence quantum yield, $I_{F,0}/I_{F}$ and $\tau_{0}/\tau$ against $[Q]$ should also be linear with the same slope and intercept. Therefore,</p>$$\frac{I_{F,0}}{I_{F}} = 1 + \tau_{0}k_{Q}[Q], $$<p>where the slope = $\tau_{0}k_{Q}$. Now, we pick two points and get the slope of the line. </p>$$ slope = m = \frac{(y_{2} - y_{1})}{(x_{2} - x_{1})} = \frac{(3 - 1)}{(15 - 0)} = 0.13333 mM^{-1}$$$$k_{Q} = \frac{m}{\tau_{0}} = \frac{0.13333 mM^{-1}}{2.6 ns}  = 0.0513 mM^{-1}ns^{-1}$$<p><strong>Rushed...Double check me</strong></p>
+<p><u>See Page 498 for more details.</u></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Diffraction and crystallography</strong></p>
+<p><b>15. Draw two or more lines through the 2D lattice of points to show planes corresponding to Miller indices (2,1,0)</b>
 </p><p><img src="images/lattice_points.png" width="300" height="300" align="center"></p>
 <p><b>16. The crystal unit cell of MDM2 has dimensions <em>a</em> = 43.4 Å, <em>b</em> = 100.5 Å, <em>c</em> = 54.8 Å. What is the spacing <em>d</em> of diffraction planes with Miller indices (2,1,0)?</b></p>
-<p>Use equation (11.10)</p><p><b>17. Describe the “phase problem” in X-ray crystallography, and at least one way the problem can be addressed (or at least circumvented to solve X-ray structures).</b></p>
-<p>See Page 420 for phase problem, See Page 421 for the way the problem can be addressed.</p><p><strong>Thermodynamics</strong></p><p><b>18. What is the First Law of Thermodynamics?</b></p><h3 id="Laws-of-Thermodynamics:"><a href="https://robraddi.github.io/TU_Chem/CHEM1035_Chemistry_For_Engineers/CHEM1035-Recitations.html#Laws-of-Thermodynamics:">Laws of Thermodynamics</a>:<a class="anchor-link" href="#Laws-of-Thermodynamics:">&#182;</a></h3><p>The <u>1st Law</u> is concerned with the internal energy. We postulate that it obeys two properties. The first assumption made is that <strong>internal energy is extensive, which means it is additive.</strong></p>
+<p></p>\begin{equation}
+\frac{1}{d^{2}}=\frac{h^{2}}{a^{2}}+\frac{k^{2}}{b^{2}}+\frac{l^{2}}{c^{2}}
+\end{equation}<p><u>See Page 418 for more information.</u></p><p><b>17. Describe the “phase problem” in X-ray crystallography, and at least one way the problem can be addressed (or at least circumvented to solve X-ray structures).</b></p><p><u>See Page 420 for phase problem, See Page 421 for the way the problem can be addressed.</u></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Thermodynamics</strong></p><p><b>18. What is the First Law of Thermodynamics?</b></p><h3 id="Laws-of-Thermodynamics:"><a href="https://robraddi.github.io/TU_Chem/CHEM1035_Chemistry_For_Engineers/CHEM1035-Recitations.html#Laws-of-Thermodynamics:">Laws of Thermodynamics</a>:<a class="anchor-link" href="#Laws-of-Thermodynamics:">&#182;</a></h3><p>The <u>1st Law</u> is concerned with the internal energy. We postulate that it obeys two properties. The first assumption made is that <strong>internal energy is extensive, which means it is additive.</strong></p>
 $$ U = U_{1} + U_{2} $$<p>The second assumption states that <strong>energy is conserved</strong>, states that energy can neither be created nor destroyed; energy can only be transfered or changed from one form to another e.g., $heat \rightarrow electrical$. Internal energy, $\Delta U$ of a system is the sum of the heat, $Q$ that flows across the system—surroundings barrier and the work, w done on the system by the surroundings:</p>
 $$ \Delta U = Q + w ,$$<p>where work is defined as organized motion that can transfer energy.</p>
 <p>where $Q &gt; 0$ is when heat is absorbed by the system, and $Q &lt; 0$ is when heat is transfered from system to surroundings. The previous equation can be summarized in the table below:</p>
@@ -15360,14 +15478,15 @@ dW &amp;= \int_{V_{i}}^{V_{f}}P_{ext}dV = P(V_{f} - V_{i})
 
 
 <p><b>22. Consider the following reaction performed at a constant pressure of 1 bar, at 25˚ C = 298 K, with all species in the gas phase:</b></p>$$2 {NH_{3}}_{(g)} \rightarrow {N_{2}}_{(g)} + 3 {H_{2}}_{(g)}$$<p>If we assume that all reactants and products behave like ideal gases, what is the expansion work done (in kJ/mol)? (Remember to carefully consider the <em>sign</em> of this value)</p><p><b>23. Draw a picture of the enthalpy <em>H</em> of water as a function of temperature <em>T</em>, from 75 ˚C to 125 ˚C (as it passes through the boiling point, <em>T</em><sub>b</sub> = 100 ˚C). Clearly label the heat of vaporization ∆<em>H</em><sub>vap</sub>.</b></p><p><img title="s3-us-west-2.amazonaws.com" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/752/2016/09/26195026/ating-20curve-20of-20water.jpeg" width="400" height="400" align="center" ></p>
-$$ \Delta H_{total} = mC_{ice}\Delta T_{-25°C\rightarrow0°C} + n\Delta H_{fusion} + mC_{water} \Delta T_{0°C\rightarrow100°C} + n \Delta H_{vaporization} $$
+$$ \Delta H_{total} = mC_{ice}\Delta T_{-25°C\rightarrow0°C} + n\Delta H_{fusion} + mC_{water} \Delta T_{0°C\rightarrow100°C} + n \Delta H_{vaporization} $$<p>Note that the temperature does not change during a phase change...</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><b>24. The heat capacity <em>C</em><sub>p</sub> of an unfolded protein is 8.0 kJ K<sup>-1</sup> mol<sup>-1</sup> at 350 K. Assuming <em>C</em><sub>p</sub> is relatively temperature-independent, calculate the change in enthalpy ∆<em>H</em> when the temperature is increased from 350 K to 375 K.</b></p>
+<p><b>24. The heat capacity <em>C</em><sub>p</sub> of an unfolded protein is 8.0 kJ K<sup>-1</sup> mol<sup>-1</sup> at 350 K. Assuming <em>C</em><sub>p</sub> is relatively temperature-independent, calculate the change in enthalpy ∆<em>H</em> when the temperature is increased from 350 K to 375 K.</b></p><p>The following expression is derived in problem 25.</p>
+$$C_{P} = (\frac{\partial H}{\partial T})_{P} \implies dH = C_{P} dT$$$$ \Delta H = C_{P} \Delta T$$
 </div>
 </div>
 </div>
