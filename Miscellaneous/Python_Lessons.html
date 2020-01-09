@@ -13019,45 +13019,30 @@ ul.typeahead-list  > li > a.pull-right {
     </style>
 <style type="text/css">
     
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
 
-.ansi-bold { font-weight: bold; }
 
-    </style>
-<style type="text/css">
-    <style>
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13121,16 +13106,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13141,12 +13118,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -13222,9 +13197,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Table-of-Contents:"><span style="color:black">Table of Contents:</span><a class="anchor-link" href="#Table-of-Contents:">&#182;</a></h4><table>
+<h4 style='color:black;text-align:center;'><space>Table of Contents</h4><table>
 <thead><tr>
-<th style="text-align:left">$$Topic$$</th>
+<th style="text-align:left"></th>
 </tr>
 </thead>
 <tbody>
@@ -13246,6 +13221,9 @@ div#notebook {
 <tr>
 <td style="text-align:left"><a href="#Strings">Strings</a></td>
 </tr>
+<tr>
+<td style="text-align:left"><a href="#Pandas-intro-using-DataFrame">Pandas - DataFrame</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -13261,7 +13239,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13646,7 +13624,7 @@ std(...) method of numpy.ndarray instance
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets use sympy to construct a matrix</span>
 <span class="c1">## Matrices from docs.sympy.org ##</span>
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="c1"># We can also make the output look pretty</span>
 <span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">M</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
@@ -14302,10 +14280,10 @@ x    5⋅x
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Constructing a large lil_matrix and add values to it ##</span>
-<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="k">import</span> <span class="n">lil_matrix</span>
-<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="k">import</span> <span class="n">spsolve</span>
-<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="k">import</span> <span class="n">solve</span><span class="p">,</span> <span class="n">norm</span>
-<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="k">import</span> <span class="n">rand</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">lil_matrix</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">spsolve</span>
+<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">solve</span><span class="p">,</span> <span class="n">norm</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">rand</span>
 <span class="c1">## Optimization ##</span>
 <span class="c1">#Minimization (steepest-decentm conjugate gradient), curve-fitting, least squares, root finding (Newton&#39;s method), annealing, etc. </span>
 <span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="k">as</span> <span class="nn">optimize</span>
@@ -14377,8 +14355,8 @@ x    5⋅x
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Matplotlib ##</span>
-<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="k">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">pylab</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">figure</span><span class="p">()</span>
@@ -15267,15 +15245,614 @@ The total number of characters in the list is 26
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pandas-intro-using-DataFrame">Pandas intro using <code>DataFrame</code><a class="anchor-link" href="#Pandas-intro-using-DataFrame">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># number of participants or &quot;members&quot;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of observations of position</span>
+
+<span class="n">observation_times</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;01-</span><span class="si">%0.2i</span><span class="s2">-2020&quot;</span><span class="o">%</span><span class="k">i</span> for i in range(n)])
+<span class="c1"># You can do the same thing using:  dates_index = pd.date_range(&quot;20200101&quot;, periods=m)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">))</span> <span class="c1"># creating a bunch (n x m) of random samples</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">observation_times</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;m</span><span class="si">%i</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">i</span> for i in range(m)])
+<span class="n">samples</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>m0</th>
+      <th>m1</th>
+      <th>m2</th>
+      <th>m3</th>
+      <th>m4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>01-00-2020</th>
+      <td>0.037611</td>
+      <td>0.656845</td>
+      <td>0.140001</td>
+      <td>0.886104</td>
+      <td>0.667229</td>
+    </tr>
+    <tr>
+      <th>01-01-2020</th>
+      <td>0.647753</td>
+      <td>0.977726</td>
+      <td>0.295408</td>
+      <td>0.732274</td>
+      <td>0.310976</td>
+    </tr>
+    <tr>
+      <th>01-02-2020</th>
+      <td>0.025785</td>
+      <td>0.764663</td>
+      <td>0.889219</td>
+      <td>0.635461</td>
+      <td>0.248914</td>
+    </tr>
+    <tr>
+      <th>01-03-2020</th>
+      <td>0.077782</td>
+      <td>0.977541</td>
+      <td>0.126935</td>
+      <td>0.937189</td>
+      <td>0.735266</td>
+    </tr>
+    <tr>
+      <th>01-04-2020</th>
+      <td>0.751781</td>
+      <td>0.658810</td>
+      <td>0.222319</td>
+      <td>0.410867</td>
+      <td>0.703010</td>
+    </tr>
+    <tr>
+      <th>01-05-2020</th>
+      <td>0.671324</td>
+      <td>0.114019</td>
+      <td>0.147262</td>
+      <td>0.568094</td>
+      <td>0.009472</td>
+    </tr>
+    <tr>
+      <th>01-06-2020</th>
+      <td>0.931435</td>
+      <td>0.436208</td>
+      <td>0.370047</td>
+      <td>0.752514</td>
+      <td>0.038555</td>
+    </tr>
+    <tr>
+      <th>01-07-2020</th>
+      <td>0.464833</td>
+      <td>0.739809</td>
+      <td>0.938925</td>
+      <td>0.300964</td>
+      <td>0.080938</td>
+    </tr>
+    <tr>
+      <th>01-08-2020</th>
+      <td>0.512085</td>
+      <td>0.142006</td>
+      <td>0.008359</td>
+      <td>0.195520</td>
+      <td>0.947673</td>
+    </tr>
+    <tr>
+      <th>01-09-2020</th>
+      <td>0.490614</td>
+      <td>0.539010</td>
+      <td>0.972949</td>
+      <td>0.687977</td>
+      <td>0.869855</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># gather specific memembers</span>
+<span class="n">sub_samples</span> <span class="o">=</span> <span class="n">samples</span><span class="p">[[</span><span class="s2">&quot;m2&quot;</span><span class="p">,</span><span class="s2">&quot;m4&quot;</span><span class="p">]]</span> <span class="c1"># grabbing only the 2nd and 4th members</span>
+<span class="n">sub_samples</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>m2</th>
+      <th>m4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>01-00-2020</th>
+      <td>0.140001</td>
+      <td>0.667229</td>
+    </tr>
+    <tr>
+      <th>01-01-2020</th>
+      <td>0.295408</td>
+      <td>0.310976</td>
+    </tr>
+    <tr>
+      <th>01-02-2020</th>
+      <td>0.889219</td>
+      <td>0.248914</td>
+    </tr>
+    <tr>
+      <th>01-03-2020</th>
+      <td>0.126935</td>
+      <td>0.735266</td>
+    </tr>
+    <tr>
+      <th>01-04-2020</th>
+      <td>0.222319</td>
+      <td>0.703010</td>
+    </tr>
+    <tr>
+      <th>01-05-2020</th>
+      <td>0.147262</td>
+      <td>0.009472</td>
+    </tr>
+    <tr>
+      <th>01-06-2020</th>
+      <td>0.370047</td>
+      <td>0.038555</td>
+    </tr>
+    <tr>
+      <th>01-07-2020</th>
+      <td>0.938925</td>
+      <td>0.080938</td>
+    </tr>
+    <tr>
+      <th>01-08-2020</th>
+      <td>0.008359</td>
+      <td>0.947673</td>
+    </tr>
+    <tr>
+      <th>01-09-2020</th>
+      <td>0.972949</td>
+      <td>0.869855</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub_samples</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>m2    4.111425
+m4    4.611888
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Subtract the element one row up from the current row</span>
+<span class="n">sub_samples</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>m2</th>
+      <th>m4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>01-00-2020</th>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>01-01-2020</th>
+      <td>0.155408</td>
+      <td>-0.356254</td>
+    </tr>
+    <tr>
+      <th>01-02-2020</th>
+      <td>0.593811</td>
+      <td>-0.062061</td>
+    </tr>
+    <tr>
+      <th>01-03-2020</th>
+      <td>-0.762284</td>
+      <td>0.486351</td>
+    </tr>
+    <tr>
+      <th>01-04-2020</th>
+      <td>0.095384</td>
+      <td>-0.032256</td>
+    </tr>
+    <tr>
+      <th>01-05-2020</th>
+      <td>-0.075058</td>
+      <td>-0.693538</td>
+    </tr>
+    <tr>
+      <th>01-06-2020</th>
+      <td>0.222786</td>
+      <td>0.029083</td>
+    </tr>
+    <tr>
+      <th>01-07-2020</th>
+      <td>0.568878</td>
+      <td>0.042384</td>
+    </tr>
+    <tr>
+      <th>01-08-2020</th>
+      <td>-0.930566</td>
+      <td>0.866734</td>
+    </tr>
+    <tr>
+      <th>01-09-2020</th>
+      <td>0.964590</td>
+      <td>-0.077817</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Subtract one column with the other</span>
+<span class="n">sub_samples</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[36]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>m2</th>
+      <th>m4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>01-00-2020</th>
+      <td>NaN</td>
+      <td>0.527229</td>
+    </tr>
+    <tr>
+      <th>01-01-2020</th>
+      <td>NaN</td>
+      <td>0.015567</td>
+    </tr>
+    <tr>
+      <th>01-02-2020</th>
+      <td>NaN</td>
+      <td>-0.640305</td>
+    </tr>
+    <tr>
+      <th>01-03-2020</th>
+      <td>NaN</td>
+      <td>0.608330</td>
+    </tr>
+    <tr>
+      <th>01-04-2020</th>
+      <td>NaN</td>
+      <td>0.480691</td>
+    </tr>
+    <tr>
+      <th>01-05-2020</th>
+      <td>NaN</td>
+      <td>-0.137790</td>
+    </tr>
+    <tr>
+      <th>01-06-2020</th>
+      <td>NaN</td>
+      <td>-0.331493</td>
+    </tr>
+    <tr>
+      <th>01-07-2020</th>
+      <td>NaN</td>
+      <td>-0.857987</td>
+    </tr>
+    <tr>
+      <th>01-08-2020</th>
+      <td>NaN</td>
+      <td>0.939313</td>
+    </tr>
+    <tr>
+      <th>01-09-2020</th>
+      <td>NaN</td>
+      <td>-0.103094</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Another way of getting a subset...</span>
+<span class="n">samples</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[37]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>m0</th>
+      <th>m1</th>
+      <th>m2</th>
+      <th>m3</th>
+      <th>m4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>01-01-2020</th>
+      <td>0.647753</td>
+      <td>0.977726</td>
+      <td>0.295408</td>
+      <td>0.732274</td>
+      <td>0.310976</td>
+    </tr>
+    <tr>
+      <th>01-02-2020</th>
+      <td>0.025785</td>
+      <td>0.764663</td>
+      <td>0.889219</td>
+      <td>0.635461</td>
+      <td>0.248914</td>
+    </tr>
+    <tr>
+      <th>01-03-2020</th>
+      <td>0.077782</td>
+      <td>0.977541</td>
+      <td>0.126935</td>
+      <td>0.937189</td>
+      <td>0.735266</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
