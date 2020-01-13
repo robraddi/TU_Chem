@@ -92,7 +92,7 @@ def simple_plot(x,y,xlabel='x',ylabel='y',name=None,size=111,Type='scatter',
         if color==False:
             ax.plot(x,y,'k')
         else:
-            ax.plot(x,y,color)
+            ax.plot(x,y,color=color)
     if fit==True:
         ax.plot(x,y,label="_nolegend_")
         z = np.polyfit(x, y, order)
