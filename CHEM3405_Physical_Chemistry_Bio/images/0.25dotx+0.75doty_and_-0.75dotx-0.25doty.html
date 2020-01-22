@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>- 0.75 x - 0.25 y</title>
+    
+</head>
+<body>
+
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "278b33649763447e80965acc162fb379": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "_dom_classes": [],
+        "_model_module": "@jupyter-widgets/controls",
+        "_model_module_version": "1.5.0",
+        "_model_name": "VBoxModel",
+        "_view_count": null,
+        "_view_module": "@jupyter-widgets/controls",
+        "_view_module_version": "1.5.0",
+        "_view_name": "VBoxView",
+        "box_style": "",
+        "children": [
+          "IPY_MODEL_910ff3e610ec45b99dffe0f00f8448d1"
+        ],
+        "layout": "IPY_MODEL_d1e5466b17e545998ea16c525bd64b43"
+      }
+    },
+    "910ff3e610ec45b99dffe0f00f8448d1": {
+      "model_name": "FigureModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.2",
+      "state": {
+        "_dom_classes": [],
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.2",
+        "_model_name": "FigureModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.2",
+        "_view_name": "FigureView",
+        "ambient_coefficient": 0.5,
+        "animation": 1000.0,
+        "animation_exponent": 1.0,
+        "camera": "IPY_MODEL_b10df69507aa4690a8e0822ab04c1eb0",
+        "camera_center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_control": "trackball",
+        "camera_fov": 45.0,
+        "capture_fps": null,
+        "cube_resolution": 512,
+        "diffuse_coefficient": 0.8,
+        "displayscale": 1.0,
+        "downscale": 1,
+        "eye_separation": 6.4,
+        "height": 500,
+        "layout": "IPY_MODEL_ef26c66123a643cfb0fb43bad031f789",
+        "matrix_projection": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix_world": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "meshes": [
+          "IPY_MODEL_114b964ba1a24049849ae94c32c4153e",
+          "IPY_MODEL_6ec582fd5da04132a9a1342b71e19d24",
+          "IPY_MODEL_3d886518d7dd4558ac28961415269de9",
+          "IPY_MODEL_0d9ea05af74244b0b216088d03c4732e"
+        ],
+        "mouse_mode": "normal",
+        "panorama_mode": "no",
+        "render_continuous": false,
+        "scatters": [],
+        "scene": "IPY_MODEL_a7e9cb0f4d2d4445b9c74f250be21643",
+        "selection_mode": "replace",
+        "selector": "lasso",
+        "show": "Volume",
+        "specular_coefficient": 0.5,
+        "specular_exponent": 5.0,
+        "stereo": false,
+        "style": {
+          "axes": {
+            "visible": true,
+            "label": {
+              "color": "rgb(38, 38, 38)"
+            },
+            "ticklabel": {
+              "color": "black"
+            },
+            "color": "white",
+            "x": {
+              "color": "rgb(38, 38, 38)"
+            },
+            "z": {
+              "color": "rgb(38, 38, 38)"
+            },
+            "y": {
+              "color": "rgb(38, 38, 38)"
+            }
+          },
+          "box": {
+            "visible": true
+          },
+          "background-color": "white",
+          "color": "rgb(38, 38, 38)",
+          "axes.x.color": "orange"
+        },
+        "volumes": [],
+        "width": 500,
+        "xlabel": "x",
+        "xlim": [
+          -100.0,
+          100.0
+        ],
+        "ylabel": "y",
+        "ylim": [
+          -100.0,
+          100.0
+        ],
+        "zlabel": "z",
+        "zlim": [
+          -100.0,
+          100.0
+        ]
+      }
+    },
+    "b10df69507aa4690a8e0822ab04c1eb0": {
+      "model_name": "PerspectiveCameraModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "PerspectiveCameraModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "aspect": 1.0,
+        "castShadow": false,
+        "children": [],
+        "far": 2000.0,
+        "focus": 10.0,
+        "fov": 46.0,
+        "frustumCulled": true,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixAutoUpdate": true,
+        "matrixWorld": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixWorldInverse": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixWorldNeedsUpdate": false,
+        "modelViewMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "name": "",
+        "near": 0.1,
+        "normalMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "position": [
+          -2.5634255282231537,
+          1.6904730469627978,
+          2.563425528223154
+        ],
+        "projectionMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "receiveShadow": false,
+        "renderOrder": 0,
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          "XYZ"
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "PerspectiveCamera",
+        "up": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "visible": true,
+        "zoom": 1.0
+      }
+    },
+    "ef26c66123a643cfb0fb43bad031f789": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "_model_module": "@jupyter-widgets/base",
+        "_model_module_version": "1.2.0",
+        "_model_name": "LayoutModel",
+        "_view_count": null,
+        "_view_module": "@jupyter-widgets/base",
+        "_view_module_version": "1.2.0",
+        "_view_name": "LayoutView",
+        "align_content": null,
+        "align_items": null,
+        "align_self": null,
+        "border": null,
+        "bottom": null,
+        "display": null,
+        "flex": null,
+        "flex_flow": null,
+        "grid_area": null,
+        "grid_auto_columns": null,
+        "grid_auto_flow": null,
+        "grid_auto_rows": null,
+        "grid_column": null,
+        "grid_gap": null,
+        "grid_row": null,
+        "grid_template_areas": null,
+        "grid_template_columns": null,
+        "grid_template_rows": null,
+        "height": null,
+        "justify_content": null,
+        "justify_items": null,
+        "left": null,
+        "margin": null,
+        "max_height": null,
+        "max_width": null,
+        "min_height": null,
+        "min_width": null,
+        "object_fit": null,
+        "object_position": null,
+        "order": null,
+        "overflow": null,
+        "overflow_x": null,
+        "overflow_y": null,
+        "padding": null,
+        "right": null,
+        "top": null,
+        "visibility": null,
+        "width": null
+      }
+    },
+    "114b964ba1a24049849ae94c32c4153e": {
+      "model_name": "MeshModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.2",
+      "state": {
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.2",
+        "_model_name": "MeshModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.2",
+        "_view_name": "MeshView",
+        "color": "orange",
+        "line_material": "IPY_MODEL_5d2920775aba4fc4a32f73b0c223e96e",
+        "lines": null,
+        "material": "IPY_MODEL_66513c62f6b84c62a72d1110c808ef12",
+        "sequence_index": 0,
+        "texture": null,
+        "triangles": [
+          {
+            "dtype": "uint32",
+            "shape": [
+              98,
+              3
+            ]
+          }
+        ],
+        "u": null,
+        "v": null,
+        "visible": true,
+        "x": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "y": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "z": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ]
+      },
+      "buffers": [
+        {
+          "encoding": "base64",
+          "path": [
+            "triangles",
+            0,
+            "data"
+          ],
+          "data": "AAAAAAgAAAAJAAAAAAAAAAkAAAABAAAAAQAAAAkAAAAKAAAAAQAAAAoAAAACAAAAAgAAAAoAAAALAAAAAgAAAAsAAAADAAAAAwAAAAsAAAAMAAAAAwAAAAwAAAAEAAAABAAAAAwAAAANAAAABAAAAA0AAAAFAAAABQAAAA0AAAAOAAAABQAAAA4AAAAGAAAABgAAAA4AAAAPAAAABgAAAA8AAAAHAAAACAAAABAAAAARAAAACAAAABEAAAAJAAAACQAAABEAAAASAAAACQAAABIAAAAKAAAACgAAABIAAAATAAAACgAAABMAAAALAAAACwAAABMAAAAUAAAACwAAABQAAAAMAAAADAAAABQAAAAVAAAADAAAABUAAAANAAAADQAAABUAAAAWAAAADQAAABYAAAAOAAAADgAAABYAAAAXAAAADgAAABcAAAAPAAAAEAAAABgAAAAZAAAAEAAAABkAAAARAAAAEQAAABkAAAAaAAAAEQAAABoAAAASAAAAEgAAABoAAAAbAAAAEgAAABsAAAATAAAAEwAAABsAAAAcAAAAEwAAABwAAAAUAAAAFAAAABwAAAAdAAAAFAAAAB0AAAAVAAAAFQAAAB0AAAAeAAAAFQAAAB4AAAAWAAAAFgAAAB4AAAAfAAAAFgAAAB8AAAAXAAAAGAAAACAAAAAhAAAAGAAAACEAAAAZAAAAGQAAACEAAAAiAAAAGQAAACIAAAAaAAAAGgAAACIAAAAjAAAAGgAAACMAAAAbAAAAGwAAACMAAAAkAAAAGwAAACQAAAAcAAAAHAAAACQAAAAlAAAAHAAAACUAAAAdAAAAHQAAACUAAAAmAAAAHQAAACYAAAAeAAAAHgAAACYAAAAnAAAAHgAAACcAAAAfAAAAIAAAACgAAAApAAAAIAAAACkAAAAhAAAAIQAAACkAAAAqAAAAIQAAACoAAAAiAAAAIgAAACoAAAArAAAAIgAAACsAAAAjAAAAIwAAACsAAAAsAAAAIwAAACwAAAAkAAAAJAAAACwAAAAtAAAAJAAAAC0AAAAlAAAAJQAAAC0AAAAuAAAAJQAAAC4AAAAmAAAAJgAAAC4AAAAvAAAAJgAAAC8AAAAnAAAAKAAAADAAAAAxAAAAKAAAADEAAAApAAAAKQAAADEAAAAyAAAAKQAAADIAAAAqAAAAKgAAADIAAAAzAAAAKgAAADMAAAArAAAAKwAAADMAAAA0AAAAKwAAADQAAAAsAAAALAAAADQAAAA1AAAALAAAADUAAAAtAAAALQAAADUAAAA2AAAALQAAADYAAAAuAAAALgAAADYAAAA3AAAALgAAADcAAAAvAAAAMAAAADgAAAA5AAAAMAAAADkAAAAxAAAAMQAAADkAAAA6AAAAMQAAADoAAAAyAAAAMgAAADoAAAA7AAAAMgAAADsAAAAzAAAAMwAAADsAAAA8AAAAMwAAADwAAAA0AAAANAAAADwAAAA9AAAANAAAAD0AAAA1AAAANQAAAD0AAAA+AAAANQAAAD4AAAA2AAAANgAAAD4AAAA/AAAANgAAAD8AAAA3AAAA"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "x",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "y",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAyMIAAMjCAADIwgAAyMIAAMjCAADIwgAAyMIAAJbCAACWwgAAlsIAAJbCAACWwgAAlsIAAJbCAACWwgAASMIAAEjCAABIwgAASMIAAEjCAABIwgAASMIAAEjCAADIwQAAyMEAAMjBAADIwQAAyMEAAMjBAADIwQAAyMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyEEAAMhBAADIQQAAyEEAAMhBAADIQQAAyEEAAMhBAABIQgAASEIAAEhCAABIQgAASEIAAEhCAABIQgAASEIAAJZCAACWQgAAlkIAAJZCAACWQgAAlkIAAJZCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "z",
+            0,
+            "data"
+          ],
+          "data": "AADIwgCAu8IAAK/CAICiwgAAlsIAgInCAAB6wgAAYcIAgKLCAACWwgCAicIAAHrCAABhwgAASMIAAC/CAAAWwgAAesIAAGHCAABIwgAAL8IAABbCAAD6wQAAyMEAAJbBAAAvwgAAFsIAAPrBAADIwQAAlsEAAEjBAADIwAAAAAAAAMjBAACWwQAASMEAAMjAAAAAAAAAyEAAAEhBAACWQQAAyMAAAAAAAADIQAAASEEAAJZBAADIQQAA+kEAABZCAABIQQAAlkEAAMhBAAD6QQAAFkIAAC9CAABIQgAAYUIAAPpBAAAWQgAAL0IAAEhCAABhQgAAekIAgIlCAACWQg=="
+        }
+      ]
+    },
+    "5d2920775aba4fc4a32f73b0c223e96e": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "66513c62f6b84c62a72d1110c808ef12": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "DoubleSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "6ec582fd5da04132a9a1342b71e19d24": {
+      "model_name": "MeshModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.2",
+      "state": {
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.2",
+        "_model_name": "MeshModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.2",
+        "_view_name": "MeshView",
+        "color": "red",
+        "line_material": "IPY_MODEL_80c7ac48f3764b52a671572c529d37fd",
+        "lines": [
+          {
+            "dtype": "uint32",
+            "shape": [
+              196,
+              2
+            ]
+          }
+        ],
+        "material": "IPY_MODEL_d64068cf9b9046cab9cfe4cc75e3cffd",
+        "sequence_index": 0,
+        "texture": null,
+        "triangles": null,
+        "u": null,
+        "v": null,
+        "visible": true,
+        "x": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "y": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "z": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ]
+      },
+      "buffers": [
+        {
+          "encoding": "base64",
+          "path": [
+            "lines",
+            0,
+            "data"
+          ],
+          "data": "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"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "x",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "y",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAyMIAAMjCAADIwgAAyMIAAMjCAADIwgAAyMIAAJbCAACWwgAAlsIAAJbCAACWwgAAlsIAAJbCAACWwgAASMIAAEjCAABIwgAASMIAAEjCAABIwgAASMIAAEjCAADIwQAAyMEAAMjBAADIwQAAyMEAAMjBAADIwQAAyMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyEEAAMhBAADIQQAAyEEAAMhBAADIQQAAyEEAAMhBAABIQgAASEIAAEhCAABIQgAASEIAAEhCAABIQgAASEIAAJZCAACWQgAAlkIAAJZCAACWQgAAlkIAAJZCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "z",
+            0,
+            "data"
+          ],
+          "data": "AADIwgCAu8IAAK/CAICiwgAAlsIAgInCAAB6wgAAYcIAgKLCAACWwgCAicIAAHrCAABhwgAASMIAAC/CAAAWwgAAesIAAGHCAABIwgAAL8IAABbCAAD6wQAAyMEAAJbBAAAvwgAAFsIAAPrBAADIwQAAlsEAAEjBAADIwAAAAAAAAMjBAACWwQAASMEAAMjAAAAAAAAAyEAAAEhBAACWQQAAyMAAAAAAAADIQAAASEEAAJZBAADIQQAA+kEAABZCAABIQQAAlkEAAMhBAAD6QQAAFkIAAC9CAABIQgAAYUIAAPpBAAAWQgAAL0IAAEhCAABhQgAAekIAgIlCAACWQg=="
+        }
+      ]
+    },
+    "80c7ac48f3764b52a671572c529d37fd": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "d64068cf9b9046cab9cfe4cc75e3cffd": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "DoubleSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "3d886518d7dd4558ac28961415269de9": {
+      "model_name": "MeshModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.2",
+      "state": {
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.2",
+        "_model_name": "MeshModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.2",
+        "_view_name": "MeshView",
+        "color": "orange",
+        "line_material": "IPY_MODEL_120d43d8ef7d4adc8ca3a05de0d49910",
+        "lines": null,
+        "material": "IPY_MODEL_9d3de489bc4d4bc7b46b1b54e8f7511d",
+        "sequence_index": 0,
+        "texture": null,
+        "triangles": [
+          {
+            "dtype": "uint32",
+            "shape": [
+              98,
+              3
+            ]
+          }
+        ],
+        "u": null,
+        "v": null,
+        "visible": true,
+        "x": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "y": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "z": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ]
+      },
+      "buffers": [
+        {
+          "encoding": "base64",
+          "path": [
+            "triangles",
+            0,
+            "data"
+          ],
+          "data": "AAAAAAgAAAAJAAAAAAAAAAkAAAABAAAAAQAAAAkAAAAKAAAAAQAAAAoAAAACAAAAAgAAAAoAAAALAAAAAgAAAAsAAAADAAAAAwAAAAsAAAAMAAAAAwAAAAwAAAAEAAAABAAAAAwAAAANAAAABAAAAA0AAAAFAAAABQAAAA0AAAAOAAAABQAAAA4AAAAGAAAABgAAAA4AAAAPAAAABgAAAA8AAAAHAAAACAAAABAAAAARAAAACAAAABEAAAAJAAAACQAAABEAAAASAAAACQAAABIAAAAKAAAACgAAABIAAAATAAAACgAAABMAAAALAAAACwAAABMAAAAUAAAACwAAABQAAAAMAAAADAAAABQAAAAVAAAADAAAABUAAAANAAAADQAAABUAAAAWAAAADQAAABYAAAAOAAAADgAAABYAAAAXAAAADgAAABcAAAAPAAAAEAAAABgAAAAZAAAAEAAAABkAAAARAAAAEQAAABkAAAAaAAAAEQAAABoAAAASAAAAEgAAABoAAAAbAAAAEgAAABsAAAATAAAAEwAAABsAAAAcAAAAEwAAABwAAAAUAAAAFAAAABwAAAAdAAAAFAAAAB0AAAAVAAAAFQAAAB0AAAAeAAAAFQAAAB4AAAAWAAAAFgAAAB4AAAAfAAAAFgAAAB8AAAAXAAAAGAAAACAAAAAhAAAAGAAAACEAAAAZAAAAGQAAACEAAAAiAAAAGQAAACIAAAAaAAAAGgAAACIAAAAjAAAAGgAAACMAAAAbAAAAGwAAACMAAAAkAAAAGwAAACQAAAAcAAAAHAAAACQAAAAlAAAAHAAAACUAAAAdAAAAHQAAACUAAAAmAAAAHQAAACYAAAAeAAAAHgAAACYAAAAnAAAAHgAAACcAAAAfAAAAIAAAACgAAAApAAAAIAAAACkAAAAhAAAAIQAAACkAAAAqAAAAIQAAACoAAAAiAAAAIgAAACoAAAArAAAAIgAAACsAAAAjAAAAIwAAACsAAAAsAAAAIwAAACwAAAAkAAAAJAAAACwAAAAtAAAAJAAAAC0AAAAlAAAAJQAAAC0AAAAuAAAAJQAAAC4AAAAmAAAAJgAAAC4AAAAvAAAAJgAAAC8AAAAnAAAAKAAAADAAAAAxAAAAKAAAADEAAAApAAAAKQAAADEAAAAyAAAAKQAAADIAAAAqAAAAKgAAADIAAAAzAAAAKgAAADMAAAArAAAAKwAAADMAAAA0AAAAKwAAADQAAAAsAAAALAAAADQAAAA1AAAALAAAADUAAAAtAAAALQAAADUAAAA2AAAALQAAADYAAAAuAAAALgAAADYAAAA3AAAALgAAADcAAAAvAAAAMAAAADgAAAA5AAAAMAAAADkAAAAxAAAAMQAAADkAAAA6AAAAMQAAADoAAAAyAAAAMgAAADoAAAA7AAAAMgAAADsAAAAzAAAAMwAAADsAAAA8AAAAMwAAADwAAAA0AAAANAAAADwAAAA9AAAANAAAAD0AAAA1AAAANQAAAD0AAAA+AAAANQAAAD4AAAA2AAAANgAAAD4AAAA/AAAANgAAAD8AAAA3AAAA"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "x",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "y",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAyMIAAMjCAADIwgAAyMIAAMjCAADIwgAAyMIAAJbCAACWwgAAlsIAAJbCAACWwgAAlsIAAJbCAACWwgAASMIAAEjCAABIwgAASMIAAEjCAABIwgAASMIAAEjCAADIwQAAyMEAAMjBAADIwQAAyMEAAMjBAADIwQAAyMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyEEAAMhBAADIQQAAyEEAAMhBAADIQQAAyEEAAMhBAABIQgAASEIAAEhCAABIQgAASEIAAEhCAABIQgAASEIAAJZCAACWQgAAlkIAAJZCAACWQgAAlkIAAJZCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "z",
+            0,
+            "data"
+          ],
+          "data": "AADIQgCAokIAAHpCAAAvQgAAyEEAAMhAAABIwQAA+sEAgLtCAACWQgAAYUIAABZCAACWQQAAAAAAAJbBAAAWwgAAr0IAgIlCAABIQgAA+kEAAEhBAADIwAAAyMEAAC/CAICiQgAAekIAAC9CAADIQQAAyEAAAEjBAAD6wQAASMIAAJZCAABhQgAAFkIAAJZBAAAAgAAAlsEAABbCAABhwgCAiUIAAEhCAAD6QQAASEEAAMjAAADIwQAAL8IAAHrCAAB6QgAAL0IAAMhBAADIQAAASMEAAPrBAABIwgCAicIAAGFCAAAWQgAAlkEAAAAAAACWwQAAFsIAAGHCAACWwg=="
+        }
+      ]
+    },
+    "120d43d8ef7d4adc8ca3a05de0d49910": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "9d3de489bc4d4bc7b46b1b54e8f7511d": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "DoubleSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "0d9ea05af74244b0b216088d03c4732e": {
+      "model_name": "MeshModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.2",
+      "state": {
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.2",
+        "_model_name": "MeshModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.2",
+        "_view_name": "MeshView",
+        "color": "red",
+        "line_material": "IPY_MODEL_21326c9ccc344fb3b4171f91856deb56",
+        "lines": [
+          {
+            "dtype": "uint32",
+            "shape": [
+              196,
+              2
+            ]
+          }
+        ],
+        "material": "IPY_MODEL_3c6cb41d3a124b27b8236ef8dd095b95",
+        "sequence_index": 0,
+        "texture": null,
+        "triangles": null,
+        "u": null,
+        "v": null,
+        "visible": true,
+        "x": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "y": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ],
+        "z": [
+          {
+            "dtype": "float32",
+            "shape": [
+              64
+            ]
+          }
+        ]
+      },
+      "buffers": [
+        {
+          "encoding": "base64",
+          "path": [
+            "lines",
+            0,
+            "data"
+          ],
+          "data": "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"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "x",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQgAAyMIAAJbCAABIwgAAyMEAAAAAAADIQQAASEIAAJZCAADIwgAAlsIAAEjCAADIwQAAAAAAAMhBAABIQgAAlkIAAMjCAACWwgAASMIAAMjBAAAAAAAAyEEAAEhCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "y",
+            0,
+            "data"
+          ],
+          "data": "AADIwgAAyMIAAMjCAADIwgAAyMIAAMjCAADIwgAAyMIAAJbCAACWwgAAlsIAAJbCAACWwgAAlsIAAJbCAACWwgAASMIAAEjCAABIwgAASMIAAEjCAABIwgAASMIAAEjCAADIwQAAyMEAAMjBAADIwQAAyMEAAMjBAADIwQAAyMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyEEAAMhBAADIQQAAyEEAAMhBAADIQQAAyEEAAMhBAABIQgAASEIAAEhCAABIQgAASEIAAEhCAABIQgAASEIAAJZCAACWQgAAlkIAAJZCAACWQgAAlkIAAJZCAACWQg=="
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "z",
+            0,
+            "data"
+          ],
+          "data": "AADIQgCAokIAAHpCAAAvQgAAyEEAAMhAAABIwQAA+sEAgLtCAACWQgAAYUIAABZCAACWQQAAAAAAAJbBAAAWwgAAr0IAgIlCAABIQgAA+kEAAEhBAADIwAAAyMEAAC/CAICiQgAAekIAAC9CAADIQQAAyEAAAEjBAAD6wQAASMIAAJZCAABhQgAAFkIAAJZBAAAAgAAAlsEAABbCAABhwgCAiUIAAEhCAAD6QQAASEEAAMjAAADIwQAAL8IAAHrCAAB6QgAAL0IAAMhBAADIQAAASMEAAPrBAABIwgCAicIAAGFCAAAWQgAAlkEAAAAAAACWwQAAFsIAAGHCAACWwg=="
+        }
+      ]
+    },
+    "21326c9ccc344fb3b4171f91856deb56": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "3c6cb41d3a124b27b8236ef8dd095b95": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "DoubleSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "a7e9cb0f4d2d4445b9c74f250be21643": {
+      "model_name": "SceneModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.1.0",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.1.0",
+        "_model_name": "SceneModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "autoUpdate": true,
+        "background": null,
+        "castShadow": false,
+        "children": [],
+        "fog": null,
+        "frustumCulled": true,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixAutoUpdate": true,
+        "matrixWorld": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixWorldNeedsUpdate": false,
+        "modelViewMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "name": "",
+        "normalMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "overrideMaterial": null,
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "receiveShadow": false,
+        "renderOrder": 0,
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          "XYZ"
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "Scene",
+        "up": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "visible": true
+      }
+    },
+    "d1e5466b17e545998ea16c525bd64b43": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "_model_module": "@jupyter-widgets/base",
+        "_model_module_version": "1.2.0",
+        "_model_name": "LayoutModel",
+        "_view_count": null,
+        "_view_module": "@jupyter-widgets/base",
+        "_view_module_version": "1.2.0",
+        "_view_name": "LayoutView",
+        "align_content": null,
+        "align_items": null,
+        "align_self": null,
+        "border": null,
+        "bottom": null,
+        "display": null,
+        "flex": null,
+        "flex_flow": null,
+        "grid_area": null,
+        "grid_auto_columns": null,
+        "grid_auto_flow": null,
+        "grid_auto_rows": null,
+        "grid_column": null,
+        "grid_gap": null,
+        "grid_row": null,
+        "grid_template_areas": null,
+        "grid_template_columns": null,
+        "grid_template_rows": null,
+        "height": null,
+        "justify_content": null,
+        "justify_items": null,
+        "left": null,
+        "margin": null,
+        "max_height": null,
+        "max_width": null,
+        "min_height": null,
+        "min_width": null,
+        "object_fit": null,
+        "object_position": null,
+        "order": null,
+        "overflow": null,
+        "overflow_x": null,
+        "overflow_y": null,
+        "padding": null,
+        "right": null,
+        "top": null,
+        "visibility": null,
+        "width": null
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "278b33649763447e80965acc162fb379"}
+</script>
+
+
+</body>
+</html>

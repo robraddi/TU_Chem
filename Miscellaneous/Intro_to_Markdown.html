@@ -13057,7 +13057,31 @@ ul.typeahead-list  > li > a.pull-right {
 
     </style>
 <style type="text/css">
-    <style>
+    
+
+
+
+<style>
+div.header {
+    display: block; text-align: center;
+    /*position: running(header);*/
+    position: header;
+}
+div.footer {
+    display: block; text-align: right;
+    /*position: running(footer);*/
+    position: footer;
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page {
+    @bottom-center { content: element(footer) }
+}
+
+
+
+<style>
     @font-face {
         font-family: "Computer Modern";
         src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
@@ -13121,16 +13145,8 @@ ul.typeahead-list  > li > a.pull-right {
         margin-top: 0.5em;
         display: block;
     }
-    .footer{
-    text-align: center;
-    font-family: arial, helvetica;
-    font-size: 11px;
-    }
-
 </style>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script>
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
@@ -13141,12 +13157,10 @@ ul.typeahead-list  > li > a.pull-right {
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}},
-                    linebreaks: { automatic: true }}
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
         });
 </script>
-
-
 
     </style>
 
@@ -13235,7 +13249,7 @@ Latest release: December 17, 2004 <br/>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Five-Examples">Five Examples<a class="anchor-link" href="#Five-Examples">&#182;</a></h1><h3 id="Lennard-Jones-potential:">Lennard-Jones potential:<a class="anchor-link" href="#Lennard-Jones-potential:">&#182;</a></h3>$$
-LJ(r) = 4\epsilon( {\frac{\sigma}{r}}^{12} - {\frac{\sigma}{r}}^{6} ) \tag{1}
+LJ(r) = 4\epsilon( ({\frac{\sigma}{r}})^{12} - ({\frac{\sigma}{r}})^{6} ) \tag{1}
 $$<h3 id="Application-of-Hooke's-Law-to-vibrational-frequency:">Application of Hooke's Law to vibrational frequency:<a class="anchor-link" href="#Application-of-Hooke's-Law-to-vibrational-frequency:">&#182;</a></h3>$$
 \displaystyle \widetilde{\nu}={\frac{1}{2\pi c}}{\sqrt {\frac {k_{force}}{\mu}}} \tag{2}
 $$<h3 id="Redox-Reaction:">Redox Reaction:<a class="anchor-link" href="#Redox-Reaction:">&#182;</a></h3>$$ 
