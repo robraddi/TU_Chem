@@ -13283,9 +13283,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<a href="First-Class.html">First Class</a>
-
 <h4 id="1."><span style="color:blue">1.</span><a class="anchor-link" href="#1.">&#182;</a></h4><!--
 <img src='' width="300" height="300" align="center" >
 -->
@@ -13351,6 +13348,295 @@ $$(\frac{\partial^{2} Asin(\frac{n\pi x}{L})}{\partial x^{2}}) = -\frac{n^{2}}{L
 $$ E\psi(x) = \frac{h^{2}n^{2}}{8mL^{2}} Asin(\frac{n\pi x}{L}) \implies E = \frac{h^{2}n^{2}}{8mL^{2}}$$<h2 id="Particle-in-a-Box-(PIB)">Particle in a Box (PIB)<a class="anchor-link" href="#Particle-in-a-Box-(PIB)">&#182;</a></h2><p><img src="http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/imgqua/pbox1.gif" width="200" height="200" align="center" ></p>
 $$E_{n} = \frac{h^{2}n^{2}}{8mL^{2}} $$<p>where the # of nodes = n-1, and the wavelength is $2\times L/n$, the length of the box.</p>
 $$ \lambda = \frac{2L}{n} $$<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2."><span style="color:blue">2.</span><a class="anchor-link" href="#2.">&#182;</a></h4><p><strong>Computer lab #1 – Intro to Spartan</strong></p>
+<p><strong>Goal</strong>: The goal of this exercise is to familiarize yourself with Spartan, and the kind of information you can get using it.</p>
+<p><strong>Introduction</strong></p>
+<p>In class, we have been discussing wavefunction solutions $\psi(x)$ to Schrödinger’s Equation, $H\psi = E\psi$, for an electron as a function of its position $x$. Computational chemistry programs approximate solutions to Schrödinger Equation, but for multi-electron systems—atoms and molecules:</p>
+$$\hat{H}\psi(x_{1}, x_{2},…x_{n}) = E\psi(x_{1}, x_{2},…x_{n}).$$<p>It turns out that if you <strong>assume the electrons do not interact</strong> (i.e. do not feel each others’ repulsion), then the <strong>wave function is separable</strong>, i.e. solutions are products of one-electron wavefunctions $\psi(x_{1}, x_{2},…x_{n}) = \psi_{1}(x_{1}) \psi_{2}(x_{2})… \psi_{n}(x_{n})$. The $\psi_{i}$ are called <em>orbitals</em>.</p>
+<p>Quantum chemistry methods try to solve for $\psi$ as a product of orbitals, with different ways of approximating the effects of electron interaction. The computed solution is a set of <em>molecular orbitals</em> (MOs), each a one-electron wavefunction that can be spread out over the entire molecule.</p>
+<p>As you might imagine, <strong>MOs are complicated entities, but can be represented as a <em>superposition</em> (i.e. a sum) of <em>atomic orbitals</em> (AOs)</strong>, i.e. wavefunctions of electrons bound to a specific nucleus. For reasons of computational efficiency, <strong>each AO in turn is (usually) represented by superposition of simpler functions called <em>basis functions</em></strong>. The more basis functions you use, the better the approximation, but at increased computational cost.</p>
+<p>In this lab we will explore the effects of using different <em>basis sets</em> (i.e. groups of basis functions) for an atomic orbital calculation. We will consider three different basis sets, STO-3G, 3-21G, and 6-31G* (Figure 1).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h2 id="Introduction-to-Hartree-Fock-and-Basis-Sets:">Introduction to Hartree Fock and Basis Sets:<a class="anchor-link" href="#Introduction-to-Hartree-Fock-and-Basis-Sets:">&#182;</a></h2><h3 id="Hartree-Fock-method">Hartree Fock method<a class="anchor-link" href="#Hartree-Fock-method">&#182;</a></h3><ul>
+<li>approximation (<strong>variational approach</strong>) for the determination of $\Psi$ and $E$ of a quantum many-body system in a stationary state</li>
+</ul>
+<p>This does a iterative search for $\psi$ where $E'$ is smallest compared to the actual E.</p>
+$$E'=\int \Psi^{*} H\Psi d\tau = &lt;\Psi^{*}|H|\Psi&gt;$$$$E'=\int \Psi^{*} E\Psi d\tau = E \int \Psi^{*}\Psi = E$$$$E′ &gt; E$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Slater-Type-Orbitals-(STO&#8217;s)">Slater-Type Orbitals (STO&#8217;s)<a class="anchor-link" href="#Slater-Type-Orbitals-(STO&#8217;s)">&#182;</a></h3><h4 id="Abbreviation:-STO-nG,-where-n-is-an-integer-that-represents-the-number-of-primitive-Gaussian-functions-within-a-single-basis-function.">Abbreviation: STO-nG, where n is an integer that represents the number of primitive Gaussian functions within a single basis function.<a class="anchor-link" href="#Abbreviation:-STO-nG,-where-n-is-an-integer-that-represents-the-number-of-primitive-Gaussian-functions-within-a-single-basis-function.">&#182;</a></h4><ul>
+<li>minimal basis set (cheaper computationally)</li>
+</ul>
+<p>For example, consider oxygen’s electronic configuration $1s^2 2s^2 2p^4$. We represent molecular orbitals (MOs) as a superposition of atomic orbitals (AOs):</p>
+$$\mathbf \Psi_{STO-3G}= \sum_{i}^{m} C_i\psi_{(STO-3G)}(i) = C_1\psi_{STO-3G}(1s) + C_2\psi_{STO-3G}(2s) + C_3\psi_{STO-3G}(2p_{x}) + C_4\psi_{STO-3G}(2p_{y}) + C_5\psi_{STO-3G}(2p_{z}),$$<p>where $n$ primitive Gaussian orbitals are fitted to a single Slater-type orbital (STO).  The core and valence orbitals are represented by the same number of primitive Gaussian functions $\mathbf \phi_i$. For example, an STO-3G basis set for the 1s, 2s and 2p orbital of the carbon atom are all linear combination of 3 primitive Gaussian functions. For example, a STO-3G s orbital is given by:</p>
+<!--A minimum basis set is where only sufficient orbitals are used to contain all the electrons in the neutral atom. Thus for the hydrogen atom, only a single 1s orbital is needed, while for a carbon atom, 1s, 2s and three 2p orbitals are needed. The core and valence orbitals are represented by the same number of primitive Gaussian functions $\mathbf \phi_i$.-->
+
+
+$$\mathbf \psi_{STO-3G}(s)= \sum_{i}^{n} c_i\phi_i = c_1\phi_1 + c_2\phi_2 + c_3\phi_3 ,$$<p>where</p>
+$$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}$$$$\mathbf \phi_2 = \left (\frac{2\alpha_2}{\pi} \right ) ^{3/4}e^{-\alpha_2 r^2}$$$$\mathbf \phi_3 = \left (\frac{2\alpha_3}{\pi} \right ) ^{3/4}e^{-\alpha_3 r^2}$$<p>The $\alpha_i$'s and $c_i$'s are tabulated values for each element and contained in a library within Spartan. The $C_{i}$'s are what is changing iteratively.</p>
+<h4 id="For-singlet,-the-method-treats-electrons-as-indistinguishable-(2-electrons-in-an-orbital-are-not-labeled).-For-triplet,-the-method-labels-&#945;-and-&#946;-electrons-to-2-electrons-in-an-orbital-(convention-is-to-start-from-&#945;-as-the-lowest-energy-one).">For singlet, the method treats electrons as <strong>indistinguishable</strong> (2 electrons in an orbital are not labeled). For triplet, the method labels &#945; and &#946; electrons to 2 electrons in an orbital (convention is to start from &#945; as the lowest energy one).<a class="anchor-link" href="#For-singlet,-the-method-treats-electrons-as-indistinguishable-(2-electrons-in-an-orbital-are-not-labeled).-For-triplet,-the-method-labels-&#945;-and-&#946;-electrons-to-2-electrons-in-an-orbital-(convention-is-to-start-from-&#945;-as-the-lowest-energy-one).">&#182;</a></h4><h4 id="6-31G-the-core-orbital-is-a-CGTO-made-of-6-Gaussians,-and-the-valence-is-described-by-two-orbitals-&#8212;-one-CGTO-made-of-3-Gaussians,-and-one-single-Gaussian.">6-31G the core orbital is a CGTO made of 6 Gaussians, and the valence is described by two orbitals &#8212; one CGTO made of 3 Gaussians, and one single Gaussian.<a class="anchor-link" href="#6-31G-the-core-orbital-is-a-CGTO-made-of-6-Gaussians,-and-the-valence-is-described-by-two-orbitals-&#8212;-one-CGTO-made-of-3-Gaussians,-and-one-single-Gaussian.">&#182;</a></h4><h4 id="6-31G*-[or-6-31G(d)]-is-6-31G-with-added-d-polarization-functions-on-non-hydrogen-atoms.">6-31G* [or 6-31G(d)] is 6-31G with added d polarization functions on non-hydrogen atoms.<a class="anchor-link" href="#6-31G*-[or-6-31G(d)]-is-6-31G-with-added-d-polarization-functions-on-non-hydrogen-atoms.">&#182;</a></h4><!--
+| STO-2G | α1 | c1 | α2 | c2 |
+| :--: | :--: | :--: | :--: | :--: |
+| 1s | 0.151623  | 0.678914 | 0.851819 | 0.430129 |
+| 2s | 0.0974545 | 0.963782 | 0.384244 | 0.0494718 |
+| 2p | 0.0974545 | 0.61282  | 0.384244 | 0.511541 |
+-->
+
+
+
+<hr>
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Directions:</strong></p>
+<ol>
+<li><p>Login to your account by using your tuid and password.</p>
+</li>
+<li><p>Open Spartan by clicking on its icon on the desktop.</p>
+</li>
+<li><p>File &gt; New Build (or click icon on upper left)</p>
+</li>
+<li><p>Build an oxygen <strong>atom</strong>:</p>
+<ol>
+<li><p>Select oxygen from panel and click anywhere in main window.</p>
+</li>
+<li><p>Remove bonds by using delete tool (build &gt; delete, or select eraser icon in the panel. You have to click it each time you want to delete an atom)</p>
+</li>
+</ol>
+</li>
+<li><p>Setup &gt; Calculations… Parameters:</p>
+<ol>
+<li><p><strong>Energy</strong> at <strong>ground</strong> state</p>
+</li>
+<li><p>With <strong>Hartree-Fock STO-3G</strong> in <strong>vacuum</strong>, total charge: <strong>neutral, zero unpaired electrons</strong></p>
+</li>
+<li><p>Check box for <strong>orbital and energy</strong></p>
+</li>
+<li><p>Check box for <strong>charges and bond orders</strong></p>
+</li>
+<li><p>Submit (it will ask you where to save the data, it is good to give them proper names and save them on Desktop).</p>
+</li>
+<li><p>Wait until calculation is done (a few seconds).</p>
+</li>
+</ol>
+</li>
+<li><p>Display &gt; orbital energies</p>
+<ol>
+<li>Record approximate HOMO and LUMO energies (click on spectrum to get values)</li>
+</ol>
+</li>
+<li><p>Display &gt; Surfaces:</p>
+<ol>
+<li><p>Add HOMO, LUMO and Electrostatic potential map</p>
+</li>
+<li><p>Look at different shape of HOMO, LUMO and electrostatic potential map by clicking on boxes next to them (Do this one by one).</p>
+</li>
+<li><p>Close this window.</p>
+</li>
+</ol>
+</li>
+<li><p>Display &gt; output:</p>
+<ol>
+<li>Record values for Basis set, HOMO, LUMO, and total energy in <strong>Results</strong> section below</li>
+</ol>
+</li>
+<li><p>Repeat calculations for these basis sets: STO-3G, 3-21G, 6-31G* and with these multiplicities: <strong>Singlet</strong> (choose 0 unpaired electrons) and <strong>triplet (</strong>choose 2 unpaired electrons, report “a” and “b” HOMO and LUMOs)</p>
+</li>
+</ol>
+<p><strong>About energies:</strong> the ground state of H-atom is -13.6 eV = ½ hartree.</p>
+<p>1 hartree = 27.2 eV</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Results:</strong></p>
+<table>
+<thead><tr>
+<th style="text-align:center">Basis set</th>
+<th style="text-align:center">Unpaired electrons</th>
+<th style="text-align:center">Multiplicity</th>
+<th style="text-align:center">HOMO energy  (eV)</th>
+<th style="text-align:center">LUMO energy (eV)</th>
+<th style="text-align:center">Total Energy (eV)</th>
+<th style="text-align:center">Total Energy (hartrees)</th>
+<th style="text-align:center">Total number of Basis $f^{\underline{n}}$'s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">STO-3G</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3-21G</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6-31G*</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">STO-3G</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3-21G</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6-31G*</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<!--
+<table>
+<thead><tr>
+<th style="text-align:center">Basis set</th>
+<th style="text-align:center">Unpaired electrons</th>
+<th style="text-align:center">Multiplicity</th>
+<th style="text-align:center">HOMO energy  (eV)</th>
+<th style="text-align:center">LUMO energy (eV)</th>
+<th style="text-align:center">Total Energy (eV)</th>
+<th style="text-align:center">Total Energy (hartrees)</th>
+<th style="text-align:center">Total number of Basis $f^{\underline{n}}$'s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">STO-3G</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">singlet</td>
+<td style="text-align:center">-11.10</td>
+<td style="text-align:center">6.39</td>
+<td style="text-align:center">-2003.6014</td>
+<td style="text-align:center">-73.661817</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">3-21G</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">singlet</td>
+<td style="text-align:center">-14.96</td>
+<td style="text-align:center">1.24</td>
+<td style="text-align:center">-2020.0746</td>
+<td style="text-align:center">-74.267450</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">6-31G*</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">singlet</td>
+<td style="text-align:center">-15.67</td>
+<td style="text-align:center">0.16</td>
+<td style="text-align:center">-2030.6596</td>
+<td style="text-align:center">-74.656604</td>
+<td style="text-align:center">15</td>
+</tr>
+<tr>
+<td style="text-align:center">STO-3G</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">triplet</td>
+<td style="text-align:center">$\alpha,\beta$ = -12.39, 10.27</td>
+<td style="text-align:center">—</td>
+<td style="text-align:center">-2007.4729</td>
+<td style="text-align:center">-73.804150</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">3-21G</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">triplet</td>
+<td style="text-align:center">$\alpha,\beta$ = -15.93, 4.67</td>
+<td style="text-align:center">$\alpha,\beta$ = 44.34, 47.62</td>
+<td style="text-align:center">-2023.5075</td>
+<td style="text-align:center">-74.393657</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">6-31G*</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">triplet</td>
+<td style="text-align:center">$\alpha,\beta$ = -16.44, 3.50</td>
+<td style="text-align:center">$\alpha,\beta$ = 23.89, 25.65</td>
+<td style="text-align:center">-2034.1230</td>
+<td style="text-align:center">-74.783934</td>
+<td style="text-align:center">15</td>
+</tr>
+</tbody>
+</table>-->
+<p>Checklist:</p>
+<ol>
+<li><p>Effect of basis set on calculations.</p>
+</li>
+<li><p>Effect of multiplicity on calculations.</p>
+</li>
+<li><p>Relative energies of HUMO and LUMO.</p>
+</li>
+<li><p>Electron Density (from electrostatic potential map)</p>
+</li>
+</ol>
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
