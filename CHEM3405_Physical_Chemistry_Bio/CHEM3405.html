@@ -13283,6 +13283,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
+<a href="First-Class.html">First Class</a>
+
 <h4 id="1."><span style="color:blue">1.</span><a class="anchor-link" href="#1.">&#182;</a></h4><!--
 <img src='' width="300" height="300" align="center" >
 -->
@@ -13351,6 +13354,7 @@ $$ \lambda = \frac{2L}{n} $$<h4 id="Jump-to-table-of-contents."><a href="#Table-
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13640,6 +13644,182 @@ $$\mathbf \phi_1 = \left (\frac{2\alpha_1}{\pi} \right ) ^{3/4}e^{-\alpha_1 r^2}
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+
+
+
+
+
+<h4 id="3."><span style="color:blue">3.</span><a class="anchor-link" href="#3.">&#182;</a></h4><p><strong>Computer lab #2 – Particle in a Box (PIB) - Polyenes</strong></p>
+<p><strong>Goal:</strong> The purpose of this lab is to illustrate the applicability of the particle-in-the-box (PIB)
+model to conjugated systems of π-orbitals.</p>
+<p><strong>Introduction:</strong></p>
+<p>Refer back to the notes on <a href="#1-D-time-independent-$Schr\ddot{o}dinger$-Equation-&amp;-1-D-Particle-in-a-Box">1-D time-independent $Schr\ddot{o}dinger$ Equation &amp; Particle in a Box</a> for more details.</p>
+<p>Let’s recall the PIB model, where the electron is confined to a 1-dimensional box of length $L$. The possible states of the electron are described by wavefunctions $\psi_{n}(x)$, for n = 1, 2, 3, ...</p>
+$$\psi_{n}(x) = \sqrt{\frac{2}{L}}sin(\frac{n\pi x}{L}),$$<p>with respective energies</p>
+$$ E_{n} = \frac{h^{2}n^{2}}{8mL^{2}}$$<p>Data Table:</p>
+<table>
+<thead><tr>
+<th style="text-align:center">"n"</th>
+<th style="text-align:center">${C_{3}H_{5}}^{+}$ (eV)</th>
+<th style="text-align:center">${C_{5}H_{7}}^{+}$ (eV)</th>
+<th style="text-align:center">${C_{7}H_{9}}^{+}$ (eV)</th>
+<th style="text-align:center">${C_{9}H_{11}}^{+}$ (eV)</th>
+<th style="text-align:center">${C_{11}H_{13}}^{+}$ (eV)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">LUMO=</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">LUMO=</td>
+<td style="text-align:center">HOMO=</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">LUMO=</td>
+<td style="text-align:center">HOMO=</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">LUMO=</td>
+<td style="text-align:center">HOMO=</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">LUMO=</td>
+<td style="text-align:center">HOMO=</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">HOMO=</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Analysis</p>
+<ol>
+<li>The PIB model predicts that the energy En is proportion to $n^{2}$. Pick one of the columns in Data Table above (for ${C_{5}H_{7}}^{+}$ or larger), and plot the data points on the axes below to see if this is true.</li>
+</ol>
+
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Recall: The zero-point energy, $E_{1}$ = -13.6 eV for Hydrogen.</p>
+<p><strong>2. Why doesn't PIB do a great job for certain energy levels?</strong></p>
+<!--<p>As we increase to larger levels i.e., as $n \rightarrow \infty$; $\lambda \rightarrow 0$ and the <a href="https://en.wikipedia.org/wiki/Correspondence_principle">correspondence principle</a> states that the particle behaves more classical.</p>-->
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>3. Another prediction of the PIB model is about how the energy gap ∆E between the HOMO and LUMO levels varies with the “box” length $L$.</strong></p>
+<p>Notice that when there k carbons in the molecule, the quantum number of the HOMO is always $n = \frac{(k-1)}{2}$. So, the HOMO/LUMO gap for $C_{k}H_{k+2}^{+}$ should be</p>
+$$ \Delta E = \frac{h^{2}}{8mL^{2}}[(n+1)^{2} - n^{2}] = \frac{h^{2}}{8mL^{2}}(2n+1)= \frac{h^{2}}{8mL^{2}}k$$
+<!--<p>If we also measure the “box” length L in terms of the number of carbon atoms, then L = k, and the energy gap should be inversely proportional to the number of carbons,</p>-->
+<!--$$ \Delta E \propto \frac{1}{k}$$-->
+<table>
+<thead><tr>
+<th style="text-align:center">k</th>
+<th style="text-align:center">$$(E_{LUMO} - E_{HOMO})\text{ for }C_{k}H_{k+2}^{+}\text{ (eV)}$$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 
     </div>
   </div>
