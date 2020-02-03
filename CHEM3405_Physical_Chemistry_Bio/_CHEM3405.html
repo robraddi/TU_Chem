@@ -13990,6 +13990,34 @@ $$\nu = \frac{c}{\lambda} = \tilde{\nu} c  = (2104\space cm^{-1}) (2.998 x 10^{1
 <p><strong>Part B. Vibrational Modes.</strong> It can be shown that there are <strong>3N-6</strong> and <strong>3N-5</strong> vibrational modes (in which N is the number of atoms in molecule) for non-linear and linear molecules; respectively. For example, we have 1 vibrational mode for CO molecule—as it is a linear molecule and N=2—which corresponds with $C \equiv O$ bond-stretching.
 For this part, let’s try to evaluate vibrational modes of $H_{2}O$ and $HCN$ ($H—C\equiv N$) molecules. To do so, calculate Equilibrium Geometry for the Ground State of these molecules, using <span style='color:Red'><b>DFT- B3LYP</b></span> with a modest basis set <span style='color:Red'><b>6-31G*</b></span>. Set total charge to “<span style='color:Red'><b>Neutral</b></span>” with <span style='color:Red'><b>0</b></span> unpaired electrons, and make sure the checkbox for <span style='color:Red'><b>Vibrational Modes</b></span> is selected.</p>
 <p><b>Quick Note: <span style='color:Blue'>The most fundamental difference between DFT and MO theory is that DFT optimizes electron density while MO theory optimizes a wave function.</span></b></p>
+<h4 id="Questions:">Questions:<a class="anchor-link" href="#Questions:">&#182;</a></h4><p><strong>Part A:</strong> In part A, you found the wavenumber corresponded to CO bond-stretching using DFT method. Convert the wavenumber of the predicted peak to frequency.
+Answer (from DFT):</p>
+<p>Now, let’s compare this frequency to the frequency of light we expect to be absorbed for excitation from the v = 0 → v = 1 states of a Harmonic Oscillator, given in Equation (1). The reported force constant for CO is $k_{f} = 1820\space N.m^{-1}$. To calculate the reduced mass, assume that the masses of the carbon and oxygen atoms are 12 $m_{p}$ and 16 $m_{p}$, where $m_{p} = 1.672 × 10^{-27}\space kg$ is the mass of the proton. Are these results comparable to the quantum mechanical calculations?
+Answer (from Harmonic Oscillator calculation):</p>
+$$ \mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}} = 1.147x10^{-26} \space kg $$<p>Now, calculating the energy for $v =1$:</p>
+$$ E_{v} = (v + \frac{1}{2})h\nu = (v + \frac{1}{2})\hbar\sqrt{\frac{k_{f}}{\mu}} = 6.302x10^{-20} \space J,$$<p>where $\tilde{\nu} = 2115 cm^{-1}$. The value obtained from $CO$'s calculated IR spectrum (Spartan) is $2104\space cm^{-1}$, which is different by approximately $11 cm^{-1}$.</p>
+<p>The QM harmonic oscillator models the potential energy through Hooke's Law, $V(X) = \frac{1}{2}k_{f}x^{2}$ where $k_{f} = m \omega^2$ and $\omega = 2\pi \nu$. Thinking of the bond as a spring with a mass $m$ attached to the end is a very nice model for the $C=O$ stretch, therefore the answer is (as it should be) close to the DFT calculations from <em>Spartan</em>.</p>
+<p><strong>Part B: Vibrational Modes.</strong> Based on your results, complete the following table for H2O and HCN molecules.</p>
+<table>
+<thead><tr>
+<th style="text-align:center">Molecule</th>
+<th style="text-align:center">$\text{Wavenumber},\space \tilde{\nu}\space (cm^{-1})$</th>
+<th style="text-align:center">$$\text{Which atoms are involved in each vibrational mode?}\\ \text{Also, classify each one in terms of Symmetric-stretch, Asymmetric stretch, and Bending.}$$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$H_{2}O$</td>
+<td style="text-align:center">$\tilde{\nu_{1}} = 3554 \text{ (symmetric stretch)} \\ \tilde{\nu_{2}} = 1628 \text{ (bend)} \\ \tilde{\nu_{3}} = 3669\text{ (asymmetric stretch)}$</td>
+<td style="text-align:center"><img src="http://www1.lsbu.ac.uk/water/images/v1.gif" title="http://www1.lsbu.ac.uk/water/images/v1.gif" width="300" height="300" align="center"></td>
+</tr>
+<tr>
+<td style="text-align:center">$HCN$</td>
+<td style="text-align:center">$\tilde{\nu_{1}} = 3313 \text{ (C-H stretching)} \\ \tilde{\nu_{2}} = 2109 \text{ ($C\equiv N$ stretching)} \\ \tilde{\nu_{3}} = 731\text{ ($H-C\equiv N$ bending)} \\ \tilde{\nu_{4}} = 731\text{ ($H-C\equiv N$ bending)} $</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
 <h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4><!--
 import numpy as np
 v = 1.
