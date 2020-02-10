@@ -13018,45 +13018,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
     <style>
     @font-face {
         font-family: "Computer Modern";
@@ -13507,13 +13468,30 @@ $$ |J| = \sqrt{l(l + 1)}\hbar$$<p>(a) $l = 0 \implies |J| = 0$</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="4."><span style="color:blue">4.</span><a class="anchor-link" href="#4.">&#182;</a></h4><!--
-HW4: Chapter #10: 19, 23, 26   Chapter #11: 4 
+HW4: Chapter #10: 14, 15, 19, 23, 26 
+-->
+
+
+<p><strong>10.14 Show that $S = \int h_{1}h_{2} d\tau = 0$, where $h_{1} = s + p_{x} + p_{y} + p_{z}$ and $h_{2} = s − p_{x} − p_{y} + p_{z}$ are hybrid orbitals. Hint: Each atomic orbital is individually normalized to 1. Also, note that $S = \int sp d\tau = 0$, and that p orbitals with perpendicular orientations have zero overlap.</strong></p>
+<p><strong>10.15 Show that the $sp^{2}$ hybrid orbital $(s + 2^{1/2}p)/3^{1/2}$ is normalized to 1 if the s and p orbitals are each normalized to 1.</strong></p>
+<p><strong>10.19 Suppose that a molecular orbital has the form N(0.145A+0.844B). Find a linear combination of the orbitals A and B that has <u>zero overlap</u> with this combination.</strong></p>
+<p>If we are looking for zero overlap, then we are looking for a function that is orthogonal to the function that was given.  Furthermore, we are looking for a molecular orbital that has the same form as $N(0.145A+ 0.844B)$, which would be: $N(aA+ bB)$.</p>
+<!--
+<iframe src="images/0.25dotx+0.75doty_and_-0.75dotx-0.25doty.html" width="500" height="500" align="center"></iframe>
 -->
 
 
 
-<p><strong>10.19 Suppose that a molecular orbital has the form N(0.145A+ 0.844B). Find a linear combination of the orbitals A and B that has zero overlap with this combination.</strong></p>
-<p><strong>10.23 Give the ground state electron configurations of (a) H2−, (b )N2, and (c) O2.</strong></p>
+$$\int \psi\psi\prime d\tau = \int N(0.145A+ 0.844B)N(aA+ bB) d\tau = 0$$$$\int N^{2} (0.145A+ 0.844B)(aA+ bB) d\tau = 0$$$$N^{2} \int [0.145a \overbrace{A^{2}}^{1} + 0.145b\overbrace{AB}^{0} + 0.844a\overbrace{BA}^{0} + 0.844b\overbrace{B^{2}}^{1}] d\tau = 0,$$<p>where we know that the overlap integral goes to zero i.e., $\int ABd\tau=0$ and we know: $\int A^{2}d\tau=1$, $\int B^{2}d\tau=1$.</p>
+<p>Therefore, after integration we are left with</p>
+$$N^{2}( 0.145a + 0.844b )= 0 $$$$\implies a = -\frac{0.844}{0.145}b$$$$\therefore \space N(0.844A - 0.145B) \text { or } N(-0.844A + 0.145B)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>10.23 Give the ground state electron configurations of (a) $H_{2}^{−}$, (b ) $N_{2}$, and (c) $O_{2}$.</strong></p>
 <p><strong>10.26 Give the (g,u) parities of the wavefunctions for the first four levels of a particle in a box.</strong></p>
 <p><strong>11.4 Describe the formation of a hydrogen bond in terms of (a) an electrostatic interaction and (b) molecular orbital theory.</strong></p>
 <h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
@@ -13544,7 +13522,50 @@ HW4: Chapter #10: 19, 23, 26   Chapter #11: 4
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="8."><span style="color:blue">8.</span><a class="anchor-link" href="#8.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
+<h4 id="8."><span style="color:blue">8.</span><a class="anchor-link" href="#8.">&#182;</a></h4><h4 id="10."><span style="color:blue">10.</span><a class="anchor-link" href="#10.">&#182;</a></h4><p><strong>12.37 When benzophenone is illuminated with ultraviolet radiation, it is excited into a singlet state. This singlet changes rapidly into a triplet, which phosphoresces. Triethylamine acts as a quencher for the triplet. In an experiment in methanol as solvent, the phosphorescence intensity Iphos varied with amine concentration as shown below. A time-resolved laser spectroscopy experiment had also shown that the half-life of the fluorescence in the absence of quencher is 29 ms. What is the value of kQ?</strong></p>
+<table>
+<thead><tr>
+<th style="text-align:center">Species</th>
+<th style="text-align:center">$\text{}$</th>
+<th style="text-align:center">$\text{}$</th>
+<th style="text-align:center">$\text{}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">[Q]/(moldm−3)</td>
+<td style="text-align:center">0.0010</td>
+<td style="text-align:center">0.0050</td>
+<td style="text-align:center">0.0100</td>
+</tr>
+<tr>
+<td style="text-align:center">Iphos/(arbitraryunits)</td>
+<td style="text-align:center">0.41</td>
+<td style="text-align:center">0.25</td>
+<td style="text-align:center">0.16</td>
+</tr>
+</tbody>
+</table>
+<p>First, we need to write out the mechanism that is given in the question:</p>
+<blockquote><p>When benzophenone is illuminated with ultraviolet radiation, it is excited into a singlet state.</p>
+</blockquote>
+$$ M + h\nu_{i} \rightarrow M^{*} \tag{}$$<blockquote><p>This singlet changes rapidly into a triplet, which phosphoresces.</p>
+</blockquote>
+$$ M^{*} \rightarrow M + h\nu_{phos} \tag{}$$<blockquote><p>Triethylamine acts as a quencher for the triplet.</p>
+</blockquote>
+$$ M^{*} + Q \rightarrow M + Q \tag{}$$<hr>
+
+<p>To model this process, we apply the steady state approximation on $[M^{*}]$ to obtain $I_{phos}$... (Do this to get your own "stern-volmer" equation that models what the questions provides).</p>
+<p><strong>Steady State</strong> is an assumption that the rate of (production/destruction) is equal to zero i.e., at equilibrium.</p>
+<hr>
+
+
+<p>The quantum efficiency of fluorescence is $\phi_{F}$, where</p>
+<!--$$\phi_{F} = \frac{\text{rate of fluor}}{I_{abs}} = \frac{k_{F} [M^{*}]}{I_{abs}} $$-->
+
+$$\phi_{F} = \frac{\text{rate of fluor}}{I_{abs}} $$<p>Observed fluorescence lifetime $\tau_{0}$ is defined as</p>
+$$\tau_{0} = \frac{\phi_{F}}{k_{F}} $$<p>The question gives data for $I_{phos}$, and you need to extract the slope to obtain $k_{Q}$.</p>
+<h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4><h4 id="Jump-to-table-of-contents."><a href="#Table-of-Contents:">Jump to table of contents.</a><a class="anchor-link" href="#Jump-to-table-of-contents.">&#182;</a></h4>
 </div>
 </div>
 </div>
