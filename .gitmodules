@@ -1,3 +1,6 @@
 [submodule "ThinkDSP"]
 	path = ThinkDSP
 	url = https://github.com/AllenDowney/ThinkDSP.git
+[submodule "ThinkDSP"]
+	path = Miscellaneous/Scientific_Comp_JupyterNotebook/ThinkDSP
+	url = https://github.com/AllenDowney/ThinkDSP.git
