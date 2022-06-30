@@ -12947,24 +12947,29 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -12977,15 +12982,15 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .na { color: #687822 } /* Name.Attribute */
 .highlight .nb { color: #008000 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nl { color: #767600 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
@@ -13002,11 +13007,11 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
@@ -13016,152 +13021,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
-    </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
-    
-
-
-
-<style>
-div.header {
-    display: block; text-align: center;
-    /*position: running(header);*/
-    position: header;
-}
-div.footer {
-    display: block; text-align: right;
-    /*position: running(footer);*/
-    position: footer;
-}
-@page {
-    @top-center { content: element(header) }
-}
-@page {
-    @bottom-center { content: element(footer) }
-}
-
-
-
-<style>
-    @font-face {
-        font-family: "Computer Modern";
-        src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-    }
-    #notebook { /* centers the page content */
-    padding-left:8%;
-    padding-right:9%;
-    }
-    #ipython-main-app {
-        position: relative;
-    }
-    #jupyter-main-app {
-        position: relative;
-    }
-    div.cell{
-        width:98%;
-        margin-left:4% !important;*/
-        margin-right:4%;
-    }
-    h1 {
-        font-family: "Charis SIL", Palatino, serif;
-        text-align: center;
-    }
-    h4{
-        margin-top:12px;
-        margin-bottom: 3px;
-       }
-    div.text_cell_render{
-        font-family: Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-        line-height: 145%;
-        font-size: 12pt;
-        width:99%;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    .output_png {
-        display: block;/*table-cell;*/
-        text-align: center;
-        align: center;
-        vertical-align: middle;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-    div.output_area pre {font-weight: normal; text-align: justify; }
-    .warning{
-        color: rgb( 240, 20, 20 )
-        }
-    .CodeMirror{
-            font-family: "Source Code Pro", source-code-pro,Consolas, monospace;
-    }
-    .prompt{
-        display: None;
-    }
-    .text_cell_render h5 {
-        font-weight: 300;
-        font-size: 16pt;
-        color: #4057A1;
-        font-style: italic;
-        margin-bottom: .5em;
-        margin-top: 0.5em;
-        display: block;
-    }
-</style>
-<script>
-    MathJax.Hub.Config({
-                        TeX: {
-                           extensions: ["AMSmath.js"]
-                           },
-                tex2jax: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-                },
-                displayAlign: 'center', // Change this to 'center' to center equations.
-                "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
-                }
-        });
-</script>
-
     </style>
 
 
@@ -13196,7 +13055,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13613,7 +13472,7 @@ $$ Q = \frac{[FeSCN]^{2+}}{[Fe^{3+}][SCN^{-}]} $$$${\displaystyle E=E^{0}+{\frac
 <h5 id="Buffers">Buffers<a class="anchor-link" href="#Buffers">&#182;</a></h5><p>Buffers are solutions that resists a change in pH.</p>
 <h5 id="$Henderson-Hasselbach$-equation">$Henderson-Hasselbach$ equation<a class="anchor-link" href="#$Henderson-Hasselbach$-equation">&#182;</a></h5><p>The $Henderson-Hasselbach$ equation is used when calculating the pH of buffer solution. Let's derive this expression now.</p>
 <p>Suppose we have the general chemical equation for an acid undergoing <a href="https://en.wikipedia.org/wiki/Hydrolysis">hydrolysis</a>.</p>
-$$ HA + H_{2}O \rightleftharpoons H_{3}O^{+} + A^{-} \hspace{1.5cm} K_{a} \frac{[H_{3}O^{+}][A^{-}]}{[HA]}$$<p>We can rearrange the acid dissociation</p>
+$$ HA + H_{2}O \rightleftharpoons H_{3}O^{+} + A^{-} \hspace{1.5cm} K_{a} =\frac{[H_{3}O^{+}][A^{-}]}{[HA]}$$<p>We can rearrange the acid dissociation</p>
 $$ [H_{3}O^{+}] = Ka \frac{[HA]}{[A^{-}]}= Ka \frac{[Acid]}{[Base]},$$<p>where $[H_{3}O^{+}] = 10^{-pH}$ and we know from the laws of logarithms that $log_{10}(10^{-pH}) = -pH$.</p>
 $$ - log_{10}(10^{-pH}) = pH = - log_{10}(Ka \frac{[HA]}{[A^{-}]}) = - log_{10}(Ka) -  log_{10}(\frac{[HA]}{[A^{-}]}), $$<p>where we also know that the $pKa$ is defined as $pKa = - log_{10}(Ka)$.</p>
 $$ pH = pKa - log_{10}(\frac{[HA]}{[A^{-}]})$$<p>If we remove the negative sign before the log, then we have to take the inverse of whatever is being operated on, which gives the most common form of the $Henderson-Hasselbach$ equation.</p>
@@ -13708,7 +13567,7 @@ $$\mathrm{Na}_{2} \mathrm{B}_{4} \mathrm{O}_{r}• 10 \mathrm{H}_{2} \mathrm{O}(
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="11."><span style="color:blue">11.</span><a class="anchor-link" href="#11.">&#182;</a></h4><h3 id="-Experiment-#11-Electrochemical-Cells-"><span style="color:red"> Experiment #11 Electrochemical Cells </span><a class="anchor-link" href="#-Experiment-#11-Electrochemical-Cells-">&#182;</a></h3><h4 id="WHY?">WHY?<a class="anchor-link" href="#WHY?">&#182;</a></h4><p>This experiment</p>
 <hr>
-<h2 id="Electrochemistry">Electrochemistry<a class="anchor-link" href="#Electrochemistry">&#182;</a></h2><h3 id="Electrolysis-of-$H_{2}O$">Electrolysis of $H_{2}O$<a class="anchor-link" href="#Electrolysis-of-$H_{2}O$">&#182;</a></h3><p><img title="www.nebb.com" src="https://www.nebb.com/sites/default/files/pictures/electrolysis.jpg" width="300" height="300" align="center" >
+<h2 id="Electrochemistry">Electrochemistry<a class="anchor-link" href="#Electrochemistry">&#182;</a></h2><h3 id="Electrolysis-of-$H_{2}O$">Electrolysis of $H_{2}O$<a class="anchor-link" href="#Electrolysis-of-$H_{2}O$">&#182;</a></h3><p><img title="" src="https://cdn1.byjus.com/wp-content/uploads/2021/04/Solid-Oxide-Electrolyzer.png" width="500" height="500" align="center" >
 Decomposition of pure water into hydrogen and oxygen at standard temperature and pressure is not favorable in thermodynamic terms.</p>
 <p>Cathode (reduction):</p>
 $$2 {H^{+}}_{(aq)} + 2e^{−} \rightarrow {H_{2}}_{(g)} \hspace{0.25cm};\hspace{0.25cm} {E°}\text{ = 0.00 V}$$<p>Anode (oxidation):</p>
